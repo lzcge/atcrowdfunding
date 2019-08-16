@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="atcrowdfunding-main:war">
+    <output-path>$PROJECT_DIR$/atcrowdfunding-main/target</output-path>
+    <root id="archive" name="atcrowdfunding-main-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="atcrowdfunding-main:war exploded" />
+    </root>
+  </artifact>
+</component>

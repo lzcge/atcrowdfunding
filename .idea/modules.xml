@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding.iml" filepath="$PROJECT_DIR$/atcrowdfunding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding-common/atcrowdfunding-common.iml" filepath="$PROJECT_DIR$/atcrowdfunding-common/atcrowdfunding-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding-entity/atcrowdfunding-entity.iml" filepath="$PROJECT_DIR$/atcrowdfunding-entity/atcrowdfunding-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding-main/atcrowdfunding-main.iml" filepath="$PROJECT_DIR$/atcrowdfunding-main/atcrowdfunding-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding-manager-api/atcrowdfunding-manager-api.iml" filepath="$PROJECT_DIR$/atcrowdfunding-manager-api/atcrowdfunding-manager-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/atcrowdfunding-manager-impl.iml" filepath="$PROJECT_DIR$/atcrowdfunding-manager-impl/atcrowdfunding-manager-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding-potal-api/atcrowdfunding-potal-api.iml" filepath="$PROJECT_DIR$/atcrowdfunding-potal-api/atcrowdfunding-potal-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding-potal-impl/atcrowdfunding-potal-impl.iml" filepath="$PROJECT_DIR$/atcrowdfunding-potal-impl/atcrowdfunding-potal-impl.iml" />
+    </modules>
+  </component>
+</project>
