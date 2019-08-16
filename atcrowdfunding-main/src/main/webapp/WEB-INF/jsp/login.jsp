@@ -151,7 +151,7 @@
     }
 
     /**
-     *获取验证码
+     *获取验证码jhh
      */
     function getVerifyCode() {
         var phoneNumber = $("#fphoneNumber");
