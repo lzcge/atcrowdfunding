@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="lzcge.crowdfunding.manager.dao.RoleMapper" >
+    <resultMap id="BaseResultMap" type="lzcge.crowdfunding.entity.Role" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+    </resultMap>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from t_role
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+
+    <delete id="deleteRoleList" parameterType="java.util.List">
+        DELETE FROM t_role
+        WHERE id IN
+        <foreach collection="list" item="role" open="(" separator="," close=")">
+            #{role.id}
+        </foreach>
+    </delete>
+
+
+    <insert id="insert" parameterType="lzcge.crowdfunding.entity.Role" useGeneratedKeys="true" keyProperty="id">
+        insert into t_role (id, name)
+        values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR})
+    </insert>
+
+
+    <update id="updateByPrimaryKey" parameterType="lzcge.crowdfunding.entity.Role" >
+        update t_role
+        set name = #{name,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select id, name
+        from t_role
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <select id="selectAll" resultMap="BaseResultMap" >
+        select id, name
+        from t_role
+    </select>
+
+    <select id="queryPage"  resultMap="BaseResultMap">
+        select id,name
+        from t_role
+        <if test="queryIndexVo.queryText !=null and queryIndexVo.queryText !=''">
+            <where>
+                name LIKE concat("%",#{queryIndexVo.queryText},"%")
+            </where>
+        </if>
+        limit #{startIndex},#{queryIndexVo.pageSize}
+
+    </select>
+
+
+    <select id="selectAllCount" parameterType="lzcge.crowdfunding.vo.QueryIndexVo" resultType="Integer">
+        select count(*)
+        from t_role
+        <if test="queryText !=null and queryText !=''">
+            <where>
+                name LIKE concat("%",#{queryText},"%")
+            </where>
+        </if>
+    </select>
+
+
+</mapper>

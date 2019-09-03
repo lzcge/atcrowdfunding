@@ -36,24 +36,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li style="padding-top:8px;">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default btn-success dropdown-toggle" data-toggle="dropdown">
-                            <i class="glyphicon glyphicon-user"></i> 张三 <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 个人设置</a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
-                            <li class="divider"></li>
-                            <li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li style="margin-left:10px;padding-top:8px;">
-                    <button type="button" class="btn btn-default btn-danger">
-                        <span class="glyphicon glyphicon-question-sign"></span> 帮助
-                    </button>
-                </li>
+                <jsp:include page="/WEB-INF/jsp/common/top.jsp"/>
             </ul>
             <form class="navbar-form navbar-right">
                 <input type="text" class="form-control" placeholder="Search...">
@@ -66,68 +49,7 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <div class="tree">
-                <ul style="padding-left:0px;" class="list-group">
-                    <li class="list-group-item tree-closed" >
-                        <a href="main.html"><i class="glyphicon glyphicon-dashboard"></i> 控制面板</a>
-                    </li>
-                    <li class="list-group-item">
-                        <span><i class="glyphicon glyphicon glyphicon-tasks"></i> 权限管理 <span class="badge" style="float:right">3</span></span>
-                        <ul style="margin-top:10px;">
-                            <li style="height:30px;">
-                                <a href="${APP_PATH }/user/toIndex.do" style="color:red;"><i class="glyphicon glyphicon-user"></i> 用户维护</a>
-                            </li>
-                            <li style="height:30px;">
-                                <a href="role.html"><i class="glyphicon glyphicon-king"></i> 角色维护</a>
-                            </li>
-                            <li style="height:30px;">
-                                <a href="permission.html"><i class="glyphicon glyphicon-lock"></i> 许可维护</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-group-item tree-closed">
-                        <span><i class="glyphicon glyphicon-ok"></i> 业务审核 <span class="badge" style="float:right">3</span></span>
-                        <ul style="margin-top:10px;display:none;">
-                            <li style="height:30px;">
-                                <a href="auth_cert.html"><i class="glyphicon glyphicon-check"></i> 实名认证审核</a>
-                            </li>
-                            <li style="height:30px;">
-                                <a href="auth_adv.html"><i class="glyphicon glyphicon-check"></i> 广告审核</a>
-                            </li>
-                            <li style="height:30px;">
-                                <a href="auth_project.html"><i class="glyphicon glyphicon-check"></i> 项目审核</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-group-item tree-closed">
-                        <span><i class="glyphicon glyphicon-th-large"></i> 业务管理 <span class="badge" style="float:right">7</span></span>
-                        <ul style="margin-top:10px;display:none;">
-                            <li style="height:30px;">
-                                <a href="cert.html"><i class="glyphicon glyphicon-picture"></i> 资质维护</a>
-                            </li>
-                            <li style="height:30px;">
-                                <a href="type.html"><i class="glyphicon glyphicon-equalizer"></i> 分类管理</a>
-                            </li>
-                            <li style="height:30px;">
-                                <a href="process.html"><i class="glyphicon glyphicon-random"></i> 流程管理</a>
-                            </li>
-                            <li style="height:30px;">
-                                <a href="advertisement.html"><i class="glyphicon glyphicon-hdd"></i> 广告管理</a>
-                            </li>
-                            <li style="height:30px;">
-                                <a href="message.html"><i class="glyphicon glyphicon-comment"></i> 消息模板</a>
-                            </li>
-                            <li style="height:30px;">
-                                <a href="project_type.html"><i class="glyphicon glyphicon-list"></i> 项目分类</a>
-                            </li>
-                            <li style="height:30px;">
-                                <a href="tag.html"><i class="glyphicon glyphicon-tags"></i> 项目标签</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-group-item tree-closed" >
-                        <a href="param.html"><i class="glyphicon glyphicon-list-alt"></i> 参数管理</a>
-                    </li>
-                </ul>
+                <jsp:include page="/WEB-INF/jsp/common/menu.jsp"/>
             </div>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -145,7 +67,7 @@
                         </div>
                         <button id="queryButton" type="button" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i> 查询</button>
                     </form>
-                    <button type="button" class="btn btn-danger" style="float:right;margin-left:10px;"><i class=" glyphicon glyphicon-remove"></i> 删除</button>
+                    <button type="button" id="deleteListBtn" class="btn btn-danger" style="float:right;margin-left:10px;"><i class=" glyphicon glyphicon-remove"></i> 删除</button>
                     <button id="addBtn" type="button" class="btn btn-primary" style="float:right;" onclick="window.location.href='add.html'"><i class="glyphicon glyphicon-plus"></i> 新增</button>
                     <br>
                     <hr style="clear:both;">
@@ -154,7 +76,7 @@
                             <thead>
                             <tr >
                                 <th width="30">#</th>
-                                <th width="30"><input type="checkbox"></th>
+                                <th width="30"><input id="allCheckbox" type="checkbox"></th>
                                 <th>账号</th>
                                 <th>名称</th>
                                 <th>邮箱地址</th>
@@ -246,12 +168,12 @@
                             $("tbody").append(
                                 '<tr>'+
                                     '<td>'+(index+1)+'</td>'+
-                                    '<td><input type="checkbox"></td>'+
+                                    '<td><input id="'+value.id+'" type="checkbox"></td>'+
                                     '<td>'+value.loginacct+'</td>'+
                                     '<td>'+value.username+'</td>'+
                                     '<td>'+value.email+'</td>'+
                                     '<td>'+
-                                    '<button type="button" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>'+
+                                    '<button id="assignRoleBtn" onclick="window.location.href=\'${APP_PATH}/user/toAssignRole.htm?id='+value.id+'\'" type="button" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>'+
                                     '<button id="updateBtn" onclick=updateUser('+value.id+') type="button" class="btn btn-primary btn-xs"><i class=" glyphicon glyphicon-pencil"></i></button>'+
                                     '<button id="removeBtn" onclick=deleteUser('+value.id+',\''+value.username+'\')  type="button" class="btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button>'+
                                     '</td>'+
@@ -344,6 +266,62 @@
 
 
     }
+
+    //批量操作选择框
+    $("#allCheckbox").click(function () {
+       var checkStatus = this.checked;
+       $("tbody tr td input[type='checkbox']").prop("checked",checkStatus);
+
+
+    });
+
+    //批量删除
+    $("#deleteListBtn").click(function () {
+        var selectedChecks = $("tbody tr td input:checked");
+        //封装json传输数据对象
+        var list = new Array();
+        $.each(selectedChecks,function (i,value) {
+            var user = {
+                id:value.id
+            };
+            list[i] = user;
+        });
+        //发送删除请求
+        if(list.length===0){
+            layer.msg("请先选中",{time:1000,icon:0,shift:0})
+        }else{
+
+            layer.confirm("确认删除这些用户吗？",{icon: 3, title:'提示'}, function(cindex){
+                layer.close(cindex);
+                var data={
+                    "userList":list
+                };
+                $.ajax({
+                    type:"POST",
+                    url:"${APP_PATH}/user/doDeleteList.do",
+                    data:JSON.stringify(data),
+                    dataType:"JSON",
+                    contentType:"application/json",
+                    success:function (result) {
+                        if(result.info=='success'){
+                            layer.msg("删除成功",{time:1000,icon:1,shift:0},function () {
+                                window.location.href="${APP_PATH}/user/toIndex.htm"
+                            });
+                        }else{
+                            layer.msg("删除失败",{time:1000,icon:0,shift:0});
+                        }
+                    },
+                    error:function () {
+                        layer.msg("网络连接异常",{time:1000,icon:0,shift:0});
+                    }
+
+                })
+            }, function(cindex){
+                layer.close(cindex);
+            });
+
+        }
+    });
 
 
 

@@ -1,19 +1,19 @@
 package lzcge.crowdfunding.manager.service;
 
 
+import lzcge.crowdfunding.entity.Role;
 import lzcge.crowdfunding.entity.User;
 import lzcge.crowdfunding.exception.LoginFailException;
 import lzcge.crowdfunding.manager.dao.UserMapper;
 import lzcge.crowdfunding.util.Const;
 import lzcge.crowdfunding.util.MD5Util;
 import lzcge.crowdfunding.util.Page;
-import lzcge.crowdfunding.vo.QueryUserVo;
+import lzcge.crowdfunding.vo.QueryIndexVo;
+import lzcge.crowdfunding.vo.RoleListVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.xml.crypto.Data;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -45,14 +45,14 @@ public class UserServiceImpl implements UserService{
 	 * @return
 	 */
 	@Override
-	public Page queryPage(QueryUserVo queryUserVo) {
-		Page page = new Page(queryUserVo.getPageNo(),queryUserVo.getPageSize());
+	public Page queryPage(QueryIndexVo queryIndexVo) {
+		Page page = new Page(queryIndexVo.getPageNo(), queryIndexVo.getPageSize());
 		Map<String,Object> map = new HashMap<>();
 		map.put("startIndex",page.getStartIndex());
-		map.put("queryUserVo",queryUserVo);
+		map.put("queryIndexVo", queryIndexVo);
 		List<User> userList = userMapper.queryPage(map);
 		page.setDatas(userList);
-		Integer totalSize = userMapper.selectAllCount(queryUserVo);
+		Integer totalSize = userMapper.selectAllCount(queryIndexVo);
 		page.setTotalSize(totalSize);
 		return page;
 	}
@@ -93,5 +93,54 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public int deleteUser(User user) {
 		return userMapper.deleteByPrimaryKey(user.getId());
+	}
+
+
+	@Transactional
+	@Override
+	public void deleteUserList(List<User> userList) {
+		userMapper.deleteUserList(userList);
+	}
+
+
+	/**
+	 * 查询所有当前用户已将分配的角色
+	 * @param id
+	 * @return
+	 */
+	@Override
+	public List<Role> selectRoleByUserId(Integer id) {
+		return userMapper.selectRoleByUserId(id);
+	}
+
+
+	/**
+	 * 查询所有角色
+	 * @return
+	 */
+	@Override
+	public List<Role> selectAllRole() {
+		return userMapper.selectAllRole();
+	}
+
+	/**
+	 * 给用户分配角色，批量插入
+	 * @param roleListVo
+	 */
+	@Transactional
+	@Override
+	public void saveUserAndRoleList(RoleListVo roleListVo) {
+		userMapper.saveUserAndRoleList(roleListVo);
+	}
+
+
+	/**
+	 * 删除用户角色关联
+	 * @param roleListVo
+	 */
+	@Transactional
+	@Override
+	public void deleteUserAndRoleList(RoleListVo roleListVo) {
+		userMapper.deleteUserAndRoleList(roleListVo);
 	}
 }

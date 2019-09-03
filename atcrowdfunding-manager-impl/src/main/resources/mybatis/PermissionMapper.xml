@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="lzcge.crowdfunding.manager.dao.PermissionMapper" >
+
+    <resultMap id="BaseResultMap" type="lzcge.crowdfunding.entity.Permission">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="pid" property="pid" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="icon" property="icon" jdbcType="VARCHAR"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+          SELECT id,pid,name,icon,url FROM t_permission
+    </select>
+
+    <insert id="insert" parameterType="lzcge.crowdfunding.entity.Permission" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_permission(pid,name,icon,url)
+        VALUES (#{pid},#{name},#{icon},#{url})
+    </insert>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        DELETE FROM t_permission
+        WHERE id=#{id,jdbcType=INTEGER}
+
+    </delete>
+
+    <update id="updateByPrimaryKey" parameterType="lzcge.crowdfunding.entity.Permission">
+        UPDATE t_permission SET
+        <trim suffixOverrides=",">
+            <if test="name!=null and name!=''">
+                name=#{name,jdbcType=VARCHAR},
+            </if>
+            <if test="url!=null and url!=''">
+                url=#{url,jdbcType=VARCHAR},
+            </if>
+        </trim>
+        WHERE id=#{id,jdbcType=INTEGER}
+
+    </update>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap"   parameterType="java.lang.Integer">
+        select id, pid, name, icon, url
+        from t_permission
+        where id
+        = #{id,jdbcType=INTEGER}
+    </select>
+
+</mapper>

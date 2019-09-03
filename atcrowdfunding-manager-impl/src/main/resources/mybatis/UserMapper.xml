@@ -12,9 +12,26 @@
 		<result column="email" property="email" jdbcType="VARCHAR" />
 		<result column="createtime" property="createtime" jdbcType="CHAR" />
 	</resultMap>
+
 	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
 		delete from t_user
 		where id = #{id,jdbcType=INTEGER}
+	</delete>
+
+    <delete id="deleteUserList" parameterType="java.util.List">
+		delete from t_user
+		where id IN
+		<foreach collection="list" item="user" open="(" separator="," close=")">
+            #{user.id}
+        </foreach>
+	</delete>
+
+    <delete id="deleteUserAndRoleList" parameterType="lzcge.crowdfunding.vo.RoleListVo">
+		delete from t_user_role
+		where userid=#{roleListVo.user.id,jdbcType=INTEGER} AND roleid IN
+		<foreach collection="roleListVo.roleList" item="role" open="(" separator="," close=")">
+            #{role.id,jdbcType=INTEGER}
+        </foreach>
 	</delete>
 
 	<insert id="insert" parameterType="lzcge.crowdfunding.entity.User" useGeneratedKeys="true" keyProperty="id">
@@ -28,6 +45,16 @@
 		#{username,jdbcType=VARCHAR},
 		#{email,jdbcType=VARCHAR}, #{createtime,jdbcType=CHAR}
 		)
+	</insert>
+
+    <insert id="saveUserAndRoleList" parameterType="lzcge.crowdfunding.vo.RoleListVo" >
+		insert into t_user_role (userid,roleid)
+		values
+        <trim suffixOverrides=",">
+            <foreach collection="roleListVo.roleList" item="role" separator="," >
+                (#{roleListVo.user.id,jdbcType=INTEGER},#{role.id,jdbcType=INTEGER})
+            </foreach>
+        </trim>
 	</insert>
 
 
@@ -78,17 +105,17 @@
         select id, loginacct, userpswd,
         username, email, createtime
         from t_user
-        <if test="queryUserVo.queryText !=null and queryUserVo.queryText !=''">
+        <if test="queryIndexVo.queryText !=null and queryIndexVo.queryText !=''">
             <where>
-                loginacct LIKE concat("%",#{queryUserVo.queryText},"%")
+                loginacct LIKE concat("%",#{queryIndexVo.queryText},"%")
             </where>
         </if>
-        limit #{startIndex},#{queryUserVo.pageSize}
+        limit #{startIndex},#{queryIndexVo.pageSize}
 
     </select>
 
 
-    <select id="selectAllCount" parameterType="lzcge.crowdfunding.vo.QueryUserVo"  resultType="Integer">
+    <select id="selectAllCount" parameterType="lzcge.crowdfunding.vo.QueryIndexVo" resultType="Integer">
         select count(*)
         from t_user
         <if test="queryText !=null and queryText !=''">
@@ -96,6 +123,16 @@
                 loginacct LIKE concat("%",#{queryText},"%")
             </where>
         </if>
+    </select>
+
+
+    <select id="selectRoleByUserId" parameterType="java.lang.Integer" resultType="lzcge.crowdfunding.entity.Role">
+          SELECT r.id,r.name FROM t_role r,t_user_role ur WHERE r.id=ur.roleid AND ur.userid=#{id}
+
+    </select>
+
+    <select id="selectAllRole" resultType="lzcge.crowdfunding.entity.Role">
+        SELECT id,name FROM t_role
     </select>
 
 </mapper>

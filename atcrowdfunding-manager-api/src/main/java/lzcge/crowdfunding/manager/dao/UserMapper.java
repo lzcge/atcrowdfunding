@@ -1,7 +1,9 @@
 package lzcge.crowdfunding.manager.dao;
 
+import lzcge.crowdfunding.entity.Role;
 import lzcge.crowdfunding.entity.User;
-import lzcge.crowdfunding.vo.QueryUserVo;
+import lzcge.crowdfunding.vo.QueryIndexVo;
+import lzcge.crowdfunding.vo.RoleListVo;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -24,6 +26,16 @@ public interface UserMapper {
 
 	List<User> queryPage(Map<String,Object> map);
 
-	Integer selectAllCount(QueryUserVo queryUserVo);
+	Integer selectAllCount(QueryIndexVo queryIndexVo);
+
+	void deleteUserList(List<User> userList);
+
+	List<Role> selectRoleByUserId(Integer id);
+
+	List<Role> selectAllRole();
+
+	void saveUserAndRoleList(@Param("roleListVo") RoleListVo roleListVo);
+
+	void deleteUserAndRoleList(@Param("roleListVo") RoleListVo roleListVo);
 
 }
