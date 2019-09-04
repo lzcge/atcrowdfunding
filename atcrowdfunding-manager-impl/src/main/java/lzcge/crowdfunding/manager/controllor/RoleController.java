@@ -1,15 +1,24 @@
 package lzcge.crowdfunding.manager.controllor;
 
+import lzcge.crowdfunding.entity.Permission;
 import lzcge.crowdfunding.entity.Role;
+import lzcge.crowdfunding.manager.service.PermissionService;
 import lzcge.crowdfunding.manager.service.RoleService;
 import lzcge.crowdfunding.result.JsonResult;
 import lzcge.crowdfunding.util.Page;
+import lzcge.crowdfunding.vo.Data;
 import lzcge.crowdfunding.vo.QueryIndexVo;
 import lzcge.crowdfunding.vo.RoleListVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @description:
@@ -24,6 +33,9 @@ public class RoleController {
 
 	@Autowired
 	private RoleService roleService;
+
+	@Autowired
+	private PermissionService permissionService;
 
 	/**
 	 * 角色主界面跳转
@@ -53,6 +65,15 @@ public class RoleController {
 		Role role = roleService.selectByRoleId(id);
 		model.addAttribute("role",role);
 		return "role/update";
+	}
+
+	/**
+	 * 分配权限
+	 * @return
+	 */
+	@RequestMapping("/assignPermission")
+	public String assiginPermission(@RequestParam  Integer roleId, Model model){
+		return "role/assignPermission";
 	}
 
 
@@ -168,6 +189,71 @@ public class RoleController {
 
 	}
 
+
+
+	/**
+	 * 异步获取权限树数据
+	 * @return
+	 */
+	@PostMapping("/loadPermissionDate")
+	@ResponseBody
+	public Object loadPermissionDate(@RequestParam Integer roleId){
+
+		List<Permission> root = new ArrayList<>();
+		try {
+			//查询出所有权限
+			List<Permission> permissionList = permissionService.selectAll();
+			//查询出当前角色已经拥有的权限
+			List<Integer> permissionIdsForRoleList = permissionService.selectPermissionIdsForRole(roleId);
+			Map<Integer,Permission> permissionMap = new HashMap<>();
+			for (int i = 0; i < permissionList.size(); i++) {
+				Permission permission = permissionList.get(i);
+				permissionMap.put(permission.getId(),permission);
+				//如果被分配就设置checked为true，用于回显
+				if(permissionIdsForRoleList.contains(permission.getId())){
+					permission.setChecked(true);
+				}
+			}
+
+			for (int i = 0; i < permissionList.size(); i++) {
+				Permission permission = permissionList.get(i);  //假设为子菜单
+				if(permission.getPid()==null) root.add(permission);
+				else{
+					Permission parent = permissionMap.get(permission.getPid());
+					parent.getChildren().add(permission);
+				}
+			}
+
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+
+		return root;
+	}
+
+
+	/**
+	 * 分配权限
+	 * @return
+	 */
+	@PostMapping("/doAssignPermission")
+	@ResponseBody
+	public JsonResult doAssignPermission(Integer roleid, Data datas){
+		JsonResult jsonResult = new JsonResult();
+		try {
+			permissionService.deleteRoleAndPermission(roleid);
+
+			permissionService.saveRoleAndPermission(roleid,datas);
+
+			jsonResult.setInfo("success");
+		}catch (Exception e){
+			jsonResult.setInfo("error");
+			e.printStackTrace();
+		}
+		jsonResult.setData(1);
+
+		return jsonResult;
+	}
 
 
 

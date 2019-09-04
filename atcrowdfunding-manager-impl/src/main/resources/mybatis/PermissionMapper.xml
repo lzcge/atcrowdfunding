@@ -19,9 +19,20 @@
         VALUES (#{pid},#{name},#{icon},#{url})
     </insert>
 
+    <insert id="saveRoleAndPermission"  >
+        INSERT INTO t_role_permission(roleid,permissionid)
+        VALUES (#{roleid},#{permissionid})
+    </insert>
+
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
         DELETE FROM t_permission
         WHERE id=#{id,jdbcType=INTEGER}
+
+    </delete>
+
+    <delete id="deleteRoleAndPermission" parameterType="java.lang.Integer">
+        DELETE FROM t_role_permission
+        WHERE roleid=#{roleid,jdbcType=INTEGER}
 
     </delete>
 
@@ -45,5 +56,15 @@
         where id
         = #{id,jdbcType=INTEGER}
     </select>
+
+
+    <select id="selectPermissionIdsForRole" resultType="java.lang.Integer"   parameterType="java.lang.Integer">
+        select permissionid
+        from t_role_permission
+        where roleid
+        = #{roleId,jdbcType=INTEGER}
+    </select>
+
+
 
 </mapper>

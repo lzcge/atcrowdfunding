@@ -161,7 +161,7 @@
                                 '<td><input id="'+value.id+'" type="checkbox"></td>'+
                                     '<td>'+value.name+'</td>'+
                                 '<td>'+
-                                    '<button type="button" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>'+
+                                    '<button onclick="window.location.href=\'${APP_PATH}/role/assignPermission.htm?roleId='+value.id+'\' " type="button" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>'+
                                     '<button onclick="window.location.href=\'${APP_PATH}/role/toUpdate.htm?id='+value.id+'\' " type="button" class="btn btn-primary btn-xs"><i class=" glyphicon glyphicon-pencil"></i></button>'+
                                     '<button onclick=deleteRole('+value.id+',\''+value.name+'\') type="button" class="btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button>'+
                                 '</td>'+

@@ -1,6 +1,8 @@
 package lzcge.crowdfunding.manager.service;
 
 import lzcge.crowdfunding.entity.Permission;
+import lzcge.crowdfunding.vo.Data;
+
 
 import java.util.List;
 
@@ -20,4 +22,10 @@ public interface PermissionService {
 	int update(Permission permission);
 
 	Permission selectByid(Integer id);
+
+	List<Integer> selectPermissionIdsForRole(Integer roleId);
+
+	void deleteRoleAndPermission(Integer roleId);
+
+	void saveRoleAndPermission(Integer roleId,Data datas);
 }
