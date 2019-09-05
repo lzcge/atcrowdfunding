@@ -1,5 +1,6 @@
 package lzcge.crowdfunding.manager.service;
 
+import lzcge.crowdfunding.entity.Permission;
 import lzcge.crowdfunding.entity.Role;
 import lzcge.crowdfunding.entity.User;
 import lzcge.crowdfunding.util.Page;
@@ -36,4 +37,6 @@ public interface UserService {
 	void saveUserAndRoleList(RoleListVo roleListVo);
 
 	void deleteUserAndRoleList(RoleListVo roleListVo);
+
+	Permission getUserPermission(User user);
 }

@@ -66,5 +66,17 @@
     </select>
 
 
+    <select id="selectPermissionsByUser" resultMap="BaseResultMap"   parameterType="java.lang.Integer">
+        SELECT DISTINCT permission.id,permission.pid,permission.name,permission.icon,permission.url
+        from t_user us,t_role role,t_permission permission,t_role_permission role_permission,t_user_role user_role
+        where us.id = user_role.userid
+        AND role.id = user_role.roleid
+        AND role.id = role_permission.roleid
+        AND permission.id = role_permission.permissionid
+        AND us.id = #{userid,jdbcType=INTEGER}
+    </select>
+
+
+
 
 </mapper>

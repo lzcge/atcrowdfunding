@@ -1,9 +1,11 @@
 package lzcge.crowdfunding.manager.service;
 
 
+import lzcge.crowdfunding.entity.Permission;
 import lzcge.crowdfunding.entity.Role;
 import lzcge.crowdfunding.entity.User;
 import lzcge.crowdfunding.exception.LoginFailException;
+import lzcge.crowdfunding.manager.dao.PermissionMapper;
 import lzcge.crowdfunding.manager.dao.UserMapper;
 import lzcge.crowdfunding.util.Const;
 import lzcge.crowdfunding.util.MD5Util;
@@ -32,6 +34,9 @@ public class UserServiceImpl implements UserService{
 
 	@Autowired
 	private UserMapper userMapper;
+
+	@Autowired
+	private PermissionMapper permissionMapper;
 
 	@Override
 	public User selectById(Integer id) {
@@ -142,5 +147,26 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public void deleteUserAndRoleList(RoleListVo roleListVo) {
 		userMapper.deleteUserAndRoleList(roleListVo);
+	}
+
+
+	@Override
+	public Permission getUserPermission(User user) {
+		Permission permission = null;
+		List<Permission> permissionList = permissionMapper.selectPermissionsByUser(user.getId());
+		Map<Integer,Permission> map = new HashMap<>();
+		for (Permission per:permissionList) {
+			map.put(per.getId(),per);
+		}
+
+		for(Permission per:permissionList){
+			if(per.getPid()==null) permission = per;
+			else{
+				Permission parent = map.get(per.getPid());
+				parent.getChildren().add(per);
+			}
+		}
+
+		return permission;
 	}
 }

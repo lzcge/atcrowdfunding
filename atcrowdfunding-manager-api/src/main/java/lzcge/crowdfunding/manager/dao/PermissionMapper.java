@@ -22,4 +22,6 @@ public interface PermissionMapper {
 	void deleteRoleAndPermission(@Param("roleid") Integer roleId);
 
 	void saveRoleAndPermission(@Param("roleid") Integer roleId,@Param("permissionid") Integer permissionId);
+
+	List<Permission> selectPermissionsByUser(@Param("userid") Integer userid);
 }
