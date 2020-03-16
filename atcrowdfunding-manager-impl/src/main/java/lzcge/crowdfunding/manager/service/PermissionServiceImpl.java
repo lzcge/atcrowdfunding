@@ -76,4 +76,10 @@ public class PermissionServiceImpl implements PermissionService{
 			permissionMapper.saveRoleAndPermission(roleId,ids.get(i));
 		}
 	}
+
+
+	@Override
+	public List<Permission> selectPermissionsByUser(Integer userid) {
+		return permissionMapper.selectPermissionsByUser(userid);
+	}
 }

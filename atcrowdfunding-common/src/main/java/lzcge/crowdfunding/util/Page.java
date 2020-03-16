@@ -11,10 +11,10 @@ import java.util.List;
  * @create: 2019-08-08
  **/
 
-public class Page {
+public class Page<T> {
 	private Integer pageNo;
 	private Integer pageSize;
-	private List<?> datas;
+	private List<T> datas;
 	private Integer totalSize;
 	private Integer totalNo;
 
@@ -38,7 +38,7 @@ public class Page {
 		return datas;
 	}
 
-	public void setDatas(List<?> datas) {
+	public void setDatas(List<T> datas) {
 		this.datas = datas;
 	}
 

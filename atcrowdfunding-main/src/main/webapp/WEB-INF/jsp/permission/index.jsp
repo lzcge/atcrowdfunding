@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="${APP_PATH}/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="${APP_PATH}/css/font-awesome.min.css">
     <link rel="stylesheet" href="${APP_PATH}/css/main.css">
+    <script type="text/javascript" src="${APP_PATH }/script/menu.js"></script>
     <link rel="stylesheet" href="${APP_PATH}/ztree/zTreeStyle.css" type="text/css">
     <style>
         .tree li {
@@ -34,7 +35,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <div><a class="navbar-brand" style="font-size:32px;" href="#">众筹平台 - 角色维护</a></div>
+            <div><a class="navbar-brand" style="font-size:32px;" href="#">人人筹 - 角色维护</a></div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -87,6 +88,8 @@
             }
         });
         localdata();
+        //菜单点击标红，并默认展开
+        showMenu();
 
 
     });
@@ -107,7 +110,8 @@
             },
             addHoverDom: function(treeId, treeNode){   //设置自定义按钮组,在节点后面悬停显示增删改按钮组.
                 var aObj = $("#" + treeNode.tId + "_a"); // tId = permissionTree_1, ==> $("#permissionTree_1_a")
-                aObj.attr("href", "javascript:;"); // 取消当前链接事件.
+                aObj.attr("href", "javascript:void(0)"); // 取消当前链接事件.  javascript:;
+                aObj.attr("target","_self"); // 当前页面打开
                 if (treeNode.editNameFlag || $("#btnGroup"+treeNode.tId).length>0) return;
                 var s = '<span id="btnGroup'+treeNode.tId+'">';
                 if ( treeNode.level == 0 ) { //根节点

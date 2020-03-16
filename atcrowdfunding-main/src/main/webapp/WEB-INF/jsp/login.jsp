@@ -27,7 +27,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <div><a class="navbar-brand" href="index.html" style="font-size:32px;">尚筹网-创意产品众筹平台</a></div>
+            <div><a class="navbar-brand" href="index.html" style="font-size:32px;">人人筹-创意产品众筹平台</a></div>
         </div>
     </div>
 </nav>
@@ -56,8 +56,8 @@
         </div>
         <div class="form-group has-success has-feedback">
             <select class="form-control" id="ftype" name="type">
-                <option value="member">会员</option>
-                <option value="user" selected>管理</option>
+                <option value="member" selected>会员</option>
+                <option value="user" >管理</option>
             </select>
         </div>
         <div class="checkbox">

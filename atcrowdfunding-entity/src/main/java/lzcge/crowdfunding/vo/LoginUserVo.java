@@ -2,15 +2,20 @@ package lzcge.crowdfunding.vo;
 
 import lzcge.crowdfunding.entity.User;
 
-/**
- * @description:
- * @author: lzcge
- * @create: 2019-08-03
- **/
+
 public class LoginUserVo {
 	private User user;
 	private String type;
 	private String verifyCode;
+	private String phone;
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 
 	public String getVerifyCode() {
 		return verifyCode;

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="lzcge.crowdfunding.potal.dao.MemberMapper">
+
+
+
+	<resultMap id="BaseResultMap" type="lzcge.crowdfunding.entity.Member">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="loginacct" property="loginacct" jdbcType="VARCHAR" />
+		<result column="userpswd" property="userpswd" jdbcType="CHAR" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="authstatus" property="authstatus" jdbcType="CHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="realname" property="realname" jdbcType="VARCHAR" />
+		<result column="cardnum" property="cardnum" jdbcType="VARCHAR" />
+		<result column="accttype" property="accttype" jdbcType="CHAR" />
+	</resultMap>
+
+
+	<insert id="insert" parameterType="lzcge.crowdfunding.entity.Member" useGeneratedKeys="true" keyProperty="id">
+		insert into t_member (loginacct, userpswd,
+		username, email, authstatus,usertype,phone,realname,cardnum,
+		accttype
+		)
+		values
+		(#{loginacct,jdbcType=VARCHAR},
+		#{userpswd,jdbcType=CHAR},
+		#{username,jdbcType=VARCHAR},
+		#{email,jdbcType=VARCHAR},
+		#{authstatus,jdbcType=CHAR},
+		#{usertype,jdbcType=CHAR},
+		#{phone,jdbcType=VARCHAR},
+		#{realname,jdbcType=VARCHAR},
+		#{cardnum,jdbcType=VARCHAR},
+		#{accttype,jdbcType=CHAR}
+		)
+	</insert>
+
+
+	<select id="selectByAcct" resultMap="BaseResultMap"	parameterType="lzcge.crowdfunding.entity.Member">
+		select id, loginacct
+		from t_member
+		where loginacct = #{loginacct,jdbcType=VARCHAR}
+	</select>
+
+    <select id="selectByEmail" resultMap="BaseResultMap"	parameterType="lzcge.crowdfunding.entity.Member">
+		select id, email
+		from t_member
+		where email = #{email,jdbcType=VARCHAR}
+	</select>
+
+    <select id="selectByPhone" resultMap="BaseResultMap"	parameterType="lzcge.crowdfunding.entity.Member">
+		select id, phone
+		from t_member
+		where phone = #{phone,jdbcType=VARCHAR}
+	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>

@@ -7,13 +7,135 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8d94f20-eaa4-46e7-8b85-f9f7804d095b" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_java6_2_3_13.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_2_3_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/DesUtil.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/Advert.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/Ticket.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/interceptor/AuthorVisitInterceptor.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/interceptor/LoginInterceptor.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/task/FinishWorkTask.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/bpmn/ac_test.bpmn" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/bpmn/ac_test2.bpmn" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/bpmn/ac_test3.bpmn" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/bpmn/ac_test4.bpmn" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/spring/spring-flow.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/spring/spring-mail.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/spring/spring-timer.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/advert/add.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/advert/edit.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/advert/index.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/advert/index_bak.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/process/index.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/process/showimg.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/css/pagination.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/jquery/jquery-form/code.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/jquery/jquery-form/jquery-form.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/jquery/jquery-form/jquery.form.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/jquery/pagination/jquery.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/jquery/pagination/jquery.pagination.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/jquery/pagination/pagination.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/pics/adv/note.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/pics/cert/note.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/script/menu.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/test/java/Activity_Test.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/test/java/SpringJavaMailTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/dao/AdvertMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/AdvertService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/AdvertController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/ProcessController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/AdvertServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/resources/mybatis/AdvertMapper.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/dao/MemberMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/dao/TicketMapper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/service/MemberService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/service/TicketService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/controllor/MemberController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/service/MemberServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/service/TicketServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/resources/mybatis/MemberMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/atcrowdfunding_main_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/atcrowdfunding_main_war_exploded.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_jta_1_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_unknown.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_1_8_5.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/common/menu.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/common/menu.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-common/atcrowdfunding-common.iml" afterPath="$PROJECT_DIR$/atcrowdfunding-common/atcrowdfunding-common.iml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-common/pom.xml" afterPath="$PROJECT_DIR$/atcrowdfunding-common/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/result/JsonResult.java" afterPath="$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/result/JsonResult.java" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/Const.java" afterPath="$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/Const.java" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/Page.java" afterPath="$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/Page.java" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-common/target/classes/lzcge/crowdfunding/result/JsonResult$PagerCode.class" afterPath="$PROJECT_DIR$/atcrowdfunding-common/target/classes/lzcge/crowdfunding/result/JsonResult$PagerCode.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-common/target/classes/lzcge/crowdfunding/result/JsonResult$StatCode.class" afterPath="$PROJECT_DIR$/atcrowdfunding-common/target/classes/lzcge/crowdfunding/result/JsonResult$StatCode.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-common/target/classes/lzcge/crowdfunding/result/JsonResult.class" afterPath="$PROJECT_DIR$/atcrowdfunding-common/target/classes/lzcge/crowdfunding/result/JsonResult.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-common/target/classes/lzcge/crowdfunding/util/Const.class" afterPath="$PROJECT_DIR$/atcrowdfunding-common/target/classes/lzcge/crowdfunding/util/Const.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-common/target/classes/lzcge/crowdfunding/util/Page.class" afterPath="$PROJECT_DIR$/atcrowdfunding-common/target/classes/lzcge/crowdfunding/util/Page.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/Member.java" afterPath="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/Member.java" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/LoginUserVo.java" afterPath="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/LoginUserVo.java" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-entity/target/classes/lzcge/crowdfunding/entity/Member.class" afterPath="$PROJECT_DIR$/atcrowdfunding-entity/target/classes/lzcge/crowdfunding/entity/Member.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-entity/target/classes/lzcge/crowdfunding/vo/LoginUserVo.class" afterPath="$PROJECT_DIR$/atcrowdfunding-entity/target/classes/lzcge/crowdfunding/vo/LoginUserVo.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/atcrowdfunding-main.iml" afterPath="$PROJECT_DIR$/atcrowdfunding-main/atcrowdfunding-main.iml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/pom.xml" afterPath="$PROJECT_DIR$/atcrowdfunding-main/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/listener/StartSystemListener.java" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/listener/StartSystemListener.java" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/spring/springmvc-context.xml" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/spring/springmvc-context.xml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/main.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/main.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/add.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/add.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/index.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/update.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/update.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/reg.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/reg.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/add.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/add.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/assignPermission.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/assignPermission.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/update.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/update.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/add.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/add.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/assignRole.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/assignRole.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/index.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/update.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/update.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT.war" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/classes/lzcge/crowdfunding/controller/DispatcherController.class" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/classes/lzcge/crowdfunding/controller/DispatcherController.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/classes/lzcge/crowdfunding/listener/StartSystemListener.class" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/classes/lzcge/crowdfunding/listener/StartSystemListener.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/classes/spring/springmvc-context.xml" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/classes/spring/springmvc-context.xml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/main.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/main.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/reg.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/reg.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/user/add.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/user/add.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/user/index.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/user/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/user/update.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/jsp/user/update.jsp" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/atcrowdfunding-common-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/atcrowdfunding-common-1.0-SNAPSHOT.jar" />
       <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/atcrowdfunding-entity-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/atcrowdfunding-entity-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/dao/PermissionMapper.java" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/dao/PermissionMapper.java" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/UserService.java" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/UserService.java" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/atcrowdfunding-manager-api-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/atcrowdfunding-manager-api-1.0-SNAPSHOT.jar" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/atcrowdfunding-manager-impl-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/atcrowdfunding-manager-impl-1.0-SNAPSHOT.jar" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/atcrowdfunding-potal-impl-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/atcrowdfunding-potal-impl-1.0-SNAPSHOT.jar" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/jta-1.1.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/quartz-1.8.5.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/classes/lzcge/crowdfunding/controller/DispatcherController.class" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/classes/lzcge/crowdfunding/controller/DispatcherController.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/classes/lzcge/crowdfunding/listener/StartSystemListener.class" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/classes/lzcge/crowdfunding/listener/StartSystemListener.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/classes/mapper/mapper-user.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/classes/spring/springmvc-context.xml" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/classes/spring/springmvc-context.xml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-api/atcrowdfunding-manager-api.iml" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-api/atcrowdfunding-manager-api.iml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-api/pom.xml" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-api/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/PermissionService.java" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/PermissionService.java" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/TestService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-api/target/classes/lzcge/crowdfunding/manager/dao/PermissionMapper.class" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-api/target/classes/lzcge/crowdfunding/manager/dao/PermissionMapper.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-api/target/classes/lzcge/crowdfunding/manager/service/TestService.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-api/target/classes/lzcge/crowdfunding/manager/service/UserService.class" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-api/target/classes/lzcge/crowdfunding/manager/service/UserService.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-impl/atcrowdfunding-manager-impl.iml" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-impl/atcrowdfunding-manager-impl.iml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-impl/pom.xml" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-impl/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/UserController.java" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/UserController.java" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/PermissionServiceImpl.java" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/PermissionServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/UserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/resources/mybatis/PermissionMapper.xml" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/resources/mybatis/PermissionMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-impl/target/classes/lzcge/crowdfunding/manager/service/UserServiceImpl.class" afterPath="$PROJECT_DIR$/atcrowdfunding-manager-impl/target/classes/lzcge/crowdfunding/manager/service/UserServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-impl/target/classes/managerControllor/testController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-manager-impl/target/classes/mybatis/mapper-user.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-potal-api/atcrowdfunding-potal-api.iml" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-api/atcrowdfunding-potal-api.iml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-potal-impl/atcrowdfunding-potal-impl.iml" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-impl/atcrowdfunding-potal-impl.iml" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/resources/mybatis/mapper-user.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/atcrowdfunding-potal-impl/target/classes/mybatis/mapper-user.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,109 +157,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/index.jsp">
+      <file leaf-file-name="MemberMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/dao/MemberMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
-              <caret line="102" column="18" lean-forward="true" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/common/menu.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="979">
-              <caret line="53" column="67" lean-forward="true" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="67" />
+            <state relative-caret-position="168">
+              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="29" />
               <folding>
-                <element signature="n#style#0;n#span#0;n#span#0;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1567648563113" expanded="false" signature="1995:2006" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="2055:2071" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="2109:2121" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="2198:2208" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="2325:2337" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="2522:2534" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="2892:2903" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="2952:2981" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="3019:3031" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="3205:3217" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="3388:3400" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="3748:3759" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="3808:3837" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="3875:3887" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="4056:4068" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="4239:4251" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="4422:4434" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="4608:4620" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="4792:4804" ph="..." />
-                <marker date="1567648563113" expanded="false" signature="4978:4990" ph="..." />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DispatcherController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/controller/DispatcherController.java">
+      <file leaf-file-name="MemberService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/service/MemberService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="859">
-              <caret line="153" column="39" lean-forward="false" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="39" />
+            <state relative-caret-position="312">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
-                <element signature="e#3209#3210#0" expanded="true" />
-                <element signature="e#3260#3261#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PermissionMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/dao/PermissionMapper.java">
+      <file leaf-file-name="MemberController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/controllor/MemberController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-              <folding />
+            <state relative-caret-position="464">
+              <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PermissionMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/resources/mybatis/PermissionMapper.xml">
+      <file leaf-file-name="MemberServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/service/MemberServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="75" column="46" lean-forward="true" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
+            <state relative-caret-position="576">
+              <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
               <folding>
-                <marker date="1567648833706" expanded="true" signature="704:749" ph="SELECT id,pi... t_permission" />
-                <marker date="1567648833706" expanded="true" signature="892:982" ph="INSERT INTO t_permission... " />
-                <marker date="1567648833706" expanded="true" signature="1048:1141" ph="INSERT INTO t_role_permission... " />
-                <marker date="1567648833706" expanded="true" signature="1236:1300" ph="DELETE FROM t_permission... " />
-                <marker date="1567648833706" expanded="true" signature="1401:1478" ph="DELETE FROM t_role_permission... " />
-                <marker date="1567648833706" expanded="true" signature="1593:1616" ph="UPDATE t_permission... " />
-                <marker date="1567648833706" expanded="true" signature="1593:1929" ph="UPDATE t_permission... " />
-                <marker date="1567648833706" expanded="true" signature="2053:2160" ph="select id, p... t_permission" />
-                <marker date="1567648833706" expanded="true" signature="2297:2405" ph="select permi... t_role_permission" />
-                <marker date="1567648833706" expanded="true" signature="2534:2967" ph="SELECT DISTI... t_user" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,27 +211,58 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="XMLMybatis" />
         <option value="Interface" />
         <option value="Jsp File" />
+        <option value="XMLMybatis" />
+        <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="BpmnFile" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>core</find>
       <find>Atcrowdfunding</find>
       <find>org.springframework.context.event.internalEventListenerProcessor</find>
-      <find>form-control</find>
       <find>btn-block</find>
       <find>.btn</find>
       <find>.</find>
       <find>用户</find>
+      <find>doAssignRole</find>
+      <find>t</find>
+      <find>group</find>
+      <find>QueryIndexVo</find>
+      <find>list-group-item</find>
+      <find>pageno</find>
+      <find>pagesize</find>
+      <find>pagetext</find>
+      <find>result.page</find>
+      <find>deleteAdvert</find>
+      <find>人人筹 - 广告维护</find>
+      <find>众筹平台</find>
+      <find>advpic</find>
+      <find>form-control</find>
+      <find>&lt;version&gt;4.3.20.RELEASE&lt;/version&gt;</find>
+      <find>spring-webmvc</find>
+      <find>quartz</find>
+      <find>AjaxResult</find>
+      <find>result.setSuccess(false);</find>
+      <find>result.info(&quot;false&quot;);</find>
+      <find>result.setinfo(&quot;false&quot;);</find>
+      <find>menu.js</find>
+      <find>processDefFile</find>
+      <find>User</find>
     </findStrings>
     <replaceStrings>
       <replace>atcrowdfunding</replace>
       <replace>权限</replace>
+      <replace>pageNo</replace>
+      <replace>queryText</replace>
+      <replace>&lt;version&gt;${springVersion}&lt;/version&gt;</replace>
+      <replace>JsonResult</replace>
+      <replace>result.info(&quot;false&quot;);</replace>
+      <replace>result.SetInfo(&quot;false&quot;);</replace>
+      <replace>Member</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\IDEA_workspace\众筹\atcrowdfunding\atcrowdfunding-main\src\main\webapp\WEB-INF\jsp\user</dir>
@@ -191,57 +284,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/listener/MySpecialListener.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/MD5Util.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/StringUtil.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/common/top.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/css/login.css" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/bpmn/ac_test.bpmn" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/test/java/Activity_Test.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/spring/spring-mail.xml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/DesUtil.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/test/java/SpringJavaMailTest.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/spring/spring-flow.xml" />
         <option value="$PROJECT_DIR$/atcrowdfunding-main/pom.xml" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/LoginUserVo.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/Page.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/test/java/test.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/test/java/test.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-entity/pom.xml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/spring/spring-timer.xml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/UserController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/atcrowdfunding-common/pom.xml" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/QueryUserVo.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/Const.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/login.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/UserListVo.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/main.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/add.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/update.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/dao/UserMapper.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/RoleListVo.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/assignRole.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/UserController.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/QueryIndexVo.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/add.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/update.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/index.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/RoleService.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/resources/mybatis/RoleMapper.xml" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/dao/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/RoleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/resources/mybatis/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/Permission.java" />
         <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/add.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/index.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/PermissionController.java" />
         <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/update.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/assignPermission.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/Data.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/PermissionService.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/PermissionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/add.jsp" />
         <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/assignPermission.jsp" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/RoleController.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/UserService.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/common/menu.jsp" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/update.jsp" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/add.jsp" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/assignRole.jsp" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/update.jsp" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/task/FinishWorkTask.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/advert/add.jsp" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/advert/edit.jsp" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/advert/index.jsp" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/process/showimg.jsp" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/bpmn/ac_test4.bpmn" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/process/index.jsp" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/interceptor/AuthorVisitInterceptor.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/listener/StartSystemListener.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/LoginUserVo.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/Member.java" />
         <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/controller/DispatcherController.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/dao/PermissionMapper.java" />
-        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/resources/mybatis/PermissionMapper.xml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/MemberService.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/dao/MemberMapper.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/interceptor/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/resources/mybatis/MemberMapper.xml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/reg.jsp" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/MemberServiceImpl.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/ProcessController.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/Ticket.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/service/TicketMapper.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/service/MemberService(1).java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/dao/TicketMapper.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/service/TicketServiceImpl.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/service/TicketService.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/dao/MemberMapper.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/controllor/MemberController.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/service/MemberServiceImpl.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/service/MemberService.java" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/resources/mybatis/MemberMapper.xml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/MemberController.java" />
       </list>
     </option>
   </component>
@@ -273,7 +366,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-15" />
+    <option name="x" value="-8" />
+    <option name="y" value="2" />
     <option name="width" value="1934" />
     <option name="height" value="1086" />
   </component>
@@ -296,7 +390,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -307,57 +402,6 @@
             <path>
               <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
               <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-entity" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-entity" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
               <item name="atcrowdfunding-main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -396,20 +440,7 @@
               <item name="atcrowdfunding-main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
@@ -437,17 +468,6 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
@@ -463,96 +483,6 @@
             <path>
               <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
               <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="role" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
               <item name="atcrowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -594,79 +524,198 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lzcge" type="462c0819:PsiDirectoryNode" />
               <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-              <item name="controllor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
-              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
-              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
-              <item name="atcrowdfunding-manager-impl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
               <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
               <item name="atcrowdfunding-potal-api" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
+              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
+              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="potal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
+              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="potal" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
+              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="potal" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
+              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
+              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="potal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
+              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="potal" type="462c0819:PsiDirectoryNode" />
+              <item name="controllor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lzcge" type="462c0819:PsiDirectoryNode" />
+              <item name="crowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="potal" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atcrowdfunding" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atcrowdfunding" type="462c0819:PsiDirectoryNode" />
+              <item name="atcrowdfunding-potal-impl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="spring" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.51058203" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
@@ -675,19 +724,23 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IDEA_workspace\众筹\atcrowdfunding\atcrowdfunding-main\src\main\resources\bpmn" />
       <recent name="D:\IDEA_workspace\众筹\atcrowdfunding\atcrowdfunding-main\src\main\webapp\WEB-INF\jsp" />
       <recent name="D:\IDEA_workspace\众筹\atcrowdfunding\Atcrowdfunding-main\src\main\resources\config" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lzcge.crowdfunding.potal.controllor" />
+      <recent name="lzcge.crowdfunding.manager.service" />
+      <recent name="lzcge.crowdfunding.manager.dao" />
+      <recent name="lzcge.crowdfunding.manager.controllor" />
       <recent name="lzcge.crowdfunding.util" />
-      <recent name="lzcge.crowdfunding.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IDEA_workspace\众筹\atcrowdfunding\atcrowdfunding-main\src\main\webapp\WEB-INF\jsp\role" />
-      <recent name="D:\IDEA_workspace\众筹\atcrowdfunding\atcrowdfunding-main\src\main\webapp\WEB-INF\jsp\permission" />
-      <recent name="D:\IDEA_workspace\众筹\atcrowdfunding\atcrowdfunding-main\src\main\webapp\ztree" />
-      <recent name="D:\IDEA_workspace\众筹\atcrowdfunding\atcrowdfunding-manager-impl\src\main\resources\mybatis" />
-      <recent name="D:\IDEA_workspace\众筹\atcrowdfunding\atcrowdfunding-main\src\main\webapp\WEB-INF\jsp" />
+      <recent name="D:\IDEA_workspace\my_atcrowdfunding\atcrowdfunding\atcrowdfunding-potal-impl\src\main\resources\mybatis" />
+      <recent name="D:\IDEA_workspace\my_atcrowdfunding\atcrowdfunding\atcrowdfunding-potal-impl\src\main\java\lzcge\crowdfunding\potal\service" />
+      <recent name="D:\IDEA_workspace\my_atcrowdfunding\atcrowdfunding\atcrowdfunding-potal-api\src\main\java\lzcge\crowdfunding\potal\dao" />
+      <recent name="D:\IDEA_workspace\my_atcrowdfunding\atcrowdfunding\atcrowdfunding-potal-api\src\main\java\lzcge\crowdfunding\potal\service" />
+      <recent name="D:\IDEA_workspace\my_atcrowdfunding\atcrowdfunding\atcrowdfunding-entity\src\main\java\lzcge\crowdfunding\entity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -723,33 +776,105 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Activity_Test.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
       <module name="atcrowdfunding-main" />
-      <envs />
-    </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Activity_Test" />
+      <option name="METHOD_NAME" value="test02" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="atcrowdfunding-manager-impl" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
+    </configuration>
+    <configuration name="Activity_Test.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="atcrowdfunding-main" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Activity_Test" />
+      <option name="METHOD_NAME" value="test04" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="Activity_Test.test06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="atcrowdfunding-main" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Activity_Test" />
+      <option name="METHOD_NAME" value="test06" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="Activity_Test.testTask2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="atcrowdfunding-main" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Activity_Test" />
+      <option name="METHOD_NAME" value="testTask2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="SpringJavaMailTest.sendMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="atcrowdfunding-main" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SpringJavaMailTest" />
+      <option name="METHOD_NAME" value="sendMail" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -806,6 +931,7 @@
       <listeners />
     </configuration>
     <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.50" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
@@ -816,7 +942,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_atcrowdfunding_7" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_atcrowdfunding_9" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -825,7 +951,7 @@
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="18900" />
+        <option name="DEBUG_PORT" value="22301" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -884,15 +1010,21 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="3">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="Application.test" />
-      <item index="2" class="java.lang.String" itemvalue="Application.test (1)" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.Activity_Test.test02" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.Activity_Test.test04" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Activity_Test.testTask2" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Activity_Test.test06" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.SpringJavaMailTest.sendMail" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.test (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.test" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SpringJavaMailTest.sendMail" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Activity_Test.test06" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.Activity_Test.testTask2" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.Activity_Test.test04" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.Activity_Test.test02" />
       </list>
     </recent_temporary>
   </component>
@@ -929,7 +1061,36 @@
       <workItem from="1566966394585" duration="46992000" />
       <workItem from="1567256579448" duration="8822000" />
       <workItem from="1567507918343" duration="15153000" />
-      <workItem from="1567645210843" duration="5050000" />
+      <workItem from="1567645210843" duration="19746000" />
+      <workItem from="1568597696713" duration="1119000" />
+      <workItem from="1569119139839" duration="4192000" />
+      <workItem from="1569288166691" duration="3868000" />
+      <workItem from="1569816118266" duration="1092000" />
+      <workItem from="1569978561354" duration="90000" />
+      <workItem from="1570325511688" duration="1281000" />
+      <workItem from="1570586196093" duration="593000" />
+      <workItem from="1570709947180" duration="584000" />
+      <workItem from="1570864023819" duration="1973000" />
+      <workItem from="1571312833329" duration="598000" />
+      <workItem from="1573174584725" duration="18000" />
+      <workItem from="1578757350297" duration="2131000" />
+      <workItem from="1582881230043" duration="1732000" />
+      <workItem from="1583288237931" duration="15492000" />
+      <workItem from="1583333560805" duration="2554000" />
+      <workItem from="1583398037087" duration="16180000" />
+      <workItem from="1583463657199" duration="5801000" />
+      <workItem from="1583478023004" duration="682000" />
+      <workItem from="1583805629399" duration="3252000" />
+      <workItem from="1583809251135" duration="13537000" />
+      <workItem from="1583937527561" duration="13098000" />
+      <workItem from="1584028457553" duration="3056000" />
+      <workItem from="1584031560265" duration="2331000" />
+      <workItem from="1584033932596" duration="711000" />
+      <workItem from="1584064789038" duration="199000" />
+      <workItem from="1584150277702" duration="13857000" />
+      <workItem from="1584165203308" duration="21577000" />
+      <workItem from="1584203415532" duration="834000" />
+      <workItem from="1584328375438" duration="2140000" />
     </task>
     <task id="LOCAL-00001" summary="第二天">
       <created>1564231401378</created>
@@ -1008,11 +1169,50 @@
       <option name="project" value="LOCAL" />
       <updated>1567603390654</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="权限许可菜单">
+      <created>1567668267125</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1567668267125</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Activity_Test_test02 - 2020.03.10 at 17h 12m 39s.xml">
+      <configuration name="Activity_Test.test02" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Activity_Test_test04 - 2020.03.10 at 17h 13m 56s.xml">
+      <configuration name="Activity_Test.test04" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Activity_Test_test06 - 2020.03.10 at 17h 39m 48s.xml">
+      <configuration name="Activity_Test.test06" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Activity_Test_testTask - 2020.03.10 at 16h 35m 44s.xml">
+      <configuration name="Activity_Test.testTask" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Activity_Test_testTask2 - 2020.03.10 at 16h 42m 08s.xml">
+      <configuration name="Activity_Test.testTask2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Activity_Test_testTask2 - 2020.03.10 at 16h 46m 04s.xml">
+      <configuration name="Activity_Test.testTask2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Activity_Test_testTask2 - 2020.03.10 at 17h 16m 40s.xml">
+      <configuration name="Activity_Test.testTask2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringJavaMailTest_sendMail - 2020.03.12 at 17h 44m 40s.xml">
+      <configuration name="SpringJavaMailTest.sendMail" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringJavaMailTest_sendMail - 2020.03.12 at 17h 45m 20s.xml">
+      <configuration name="SpringJavaMailTest.sendMail" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringJavaMailTest_sendMail - 2020.03.12 at 22h 47m 19s.xml">
+      <configuration name="SpringJavaMailTest.sendMail" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283751000" />
+    <option name="totallyTimeSpent" value="433019000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1024,37 +1224,39 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37971953" sideWeight="0.50858366" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50627136" sideWeight="0.5107296" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40668824" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2772384" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13568985" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09578107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51564187" sideWeight="0.4914163" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09169363" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14937286" sideWeight="0.4892704" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2473176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25375536" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="BPMN Editor" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1074,11 +1276,12 @@
     <MESSAGE value="test" />
     <MESSAGE value="权限管理" />
     <MESSAGE value="角色分配权限" />
-    <option name="LAST_COMMIT_MESSAGE" value="角色分配权限" />
+    <MESSAGE value="权限许可菜单" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限许可菜单" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1087,501 +1290,425 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/UserListVo.java">
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/reg.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3658">
-          <caret line="178" column="9" lean-forward="false" selection-start-line="178" selection-start-column="9" selection-end-line="178" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/listener/StartSystemListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/dao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/util/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="77" column="32" lean-forward="false" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/common/top.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="141" column="37" lean-forward="true" selection-start-line="141" selection-start-column="37" selection-end-line="141" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/update.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="63" column="44" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/QueryIndexVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/RoleListVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/RoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="27" column="45" lean-forward="true" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/RoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+        <state relative-caret-position="168">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
           <folding>
-            <element signature="e#1312#1313#0" expanded="false" />
-            <element signature="e#1359#1360#0" expanded="false" />
-            <element signature="e#1421#1422#0" expanded="false" />
-            <element signature="e#1463#1464#0" expanded="false" />
-            <element signature="e#1529#1530#0" expanded="false" />
-            <element signature="e#1579#1580#0" expanded="false" />
-            <element signature="e#1659#1660#0" expanded="false" />
-            <element signature="e#1701#1702#0" expanded="false" />
+            <element signature="e#259#260#0" expanded="false" />
+            <element signature="e#284#285#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/ztree/img/line_conn.gif">
-      <provider selected="true" editor-type-id="images">
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/bpmn/ac_test3.bpmn">
+      <provider selected="true" editor-type-id="bpmn-editor">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/ztree/img/loading.gif">
-      <provider selected="true" editor-type-id="images">
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/advert/add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2533">
+          <caret line="39" column="21" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="39" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/bpmn/ac_test4.bpmn">
+      <provider selected="true" editor-type-id="bpmn-editor">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/ztree/jquery.ztree.core-3.5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4536">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/bpmn/ac_test.bpmn">
+      <provider selected="true" editor-type-id="bpmn-editor">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/dao/RoleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/resources/mybatis/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <marker date="1567004607599" expanded="true" signature="768:822" ph="delete from t_user... " />
-            <marker date="1567004607599" expanded="true" signature="901:933" ph="delete from t_user... " />
-            <marker date="1567004607599" expanded="true" signature="1519:1788" ph="insert into t_user... " />
-            <marker date="1567004607599" expanded="true" signature="1891:2180" ph="insert into t_user_role... " />
-            <marker date="1567004607599" expanded="true" signature="2278:2960" ph="update t_user... " />
-            <marker date="1567004607599" expanded="true" signature="3071:3182" ph="select id, l... t_user" />
-            <marker date="1567004607599" expanded="true" signature="3247:3322" ph="select id, l... t_user" />
-            <marker date="1567004607599" expanded="true" signature="3431:3560" ph="select id, l... t_user" />
-            <marker date="1567004607599" expanded="true" signature="3637:3724" ph="select id, l... t_user" />
-            <marker date="1567004607599" expanded="true" signature="3637:3987" ph="select id, l... t_user" />
-            <marker date="1567004607599" expanded="true" signature="4118:4153" ph="select count... t_user" />
-            <marker date="1567004607599" expanded="true" signature="4466:4554" ph="SELECT r.id,... t_role" />
-            <marker date="1567004607599" expanded="true" signature="4655:4681" ph="SELECT id,na... t_role" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/resources/mybatis/RoleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="54" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="54" />
-          <folding>
-            <marker date="1566977218164" expanded="true" signature="512:572" ph="delete from t_role... " />
-            <marker date="1566977218164" expanded="true" signature="661:693" ph="DELETE FROM t_role... " />
-            <marker date="1566977218164" expanded="true" signature="661:699" ph="DELETE FROM t_role... " />
-            <marker date="1566977218164" expanded="true" signature="960:1055" ph="insert into t_role... " />
-            <marker date="1566977218164" expanded="true" signature="1165:1264" ph="update t_role... " />
-            <marker date="1566977218164" expanded="true" signature="1385:1462" ph="select id, n... t_role" />
-            <marker date="1566977218164" expanded="true" signature="1540:1575" ph="select id, n... t_role" />
-            <marker date="1566977218164" expanded="true" signature="1654:1946" ph="select id,na... t_role" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-common/src/main/java/lzcge/crowdfunding/result/JsonResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2985">
-          <caret line="144" column="49" lean-forward="false" selection-start-line="144" selection-start-column="44" selection-end-line="144" selection-end-column="49" />
-          <folding>
-            <element signature="e#3503#3510#1#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/update.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2584">
-          <caret line="32" column="65" lean-forward="false" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/update.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="146" column="43" lean-forward="true" selection-start-line="146" selection-start-column="43" selection-end-line="146" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="154" column="9" lean-forward="true" selection-start-line="154" selection-start-column="9" selection-end-line="154" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/assignPermission.jsp" />
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/assignRole.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="158" column="35" lean-forward="false" selection-start-line="158" selection-start-column="27" selection-end-line="158" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="39" column="65" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4440">
-          <caret line="185" column="51" lean-forward="false" selection-start-line="185" selection-start-column="17" selection-end-line="185" selection-end-column="51" />
-          <folding>
-            <marker date="1567512331435" expanded="true" signature="4964:4997" ph="..." />
-            <marker date="1567512331435" expanded="true" signature="5074:5080" ph="&amp;nbsp;" />
-            <marker date="1567512331435" expanded="true" signature="5080:5086" ph="&amp;nbsp;" />
-            <marker date="1567512331435" expanded="true" signature="5846:5879" ph="..." />
-            <marker date="1567512331435" expanded="true" signature="5956:5962" ph="&amp;nbsp;" />
-            <marker date="1567512331435" expanded="true" signature="5962:5968" ph="&amp;nbsp;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/PermissionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="83" column="0" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="83" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#773#774#0" expanded="false" />
-            <element signature="e#805#806#0" expanded="false" />
-            <element signature="e#857#858#0" expanded="false" />
-            <element signature="e#887#888#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/Permission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_191/src.zip!/javax/xml/crypto/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/script/echarts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="71095" column="17" lean-forward="false" selection-start-line="71095" selection-start-column="17" selection-end-line="71095" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="46" column="24" lean-forward="false" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#488#489#0" expanded="false" />
-            <element signature="e#510#511#0" expanded="false" />
-            <element signature="e#559#560#0" expanded="false" />
-            <element signature="e#590#591#0" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#642#643#0" expanded="false" />
-            <element signature="e#685#686#0" expanded="false" />
-            <element signature="e#710#711#0" expanded="false" />
-            <element signature="e#744#745#0" expanded="false" />
-            <element signature="e#761#762#0" expanded="false" />
-            <element signature="e#803#804#0" expanded="false" />
-            <element signature="e#824#825#0" expanded="false" />
-            <element signature="e#866#867#0" expanded="false" />
-            <element signature="e#888#889#0" expanded="false" />
-            <element signature="e#943#944#0" expanded="false" />
-            <element signature="e#974#975#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/PermissionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="29" column="50" lean-forward="false" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/PermissionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="76" column="9" lean-forward="false" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#631#632#0" expanded="false" />
-            <element signature="e#673#674#0" expanded="false" />
-            <element signature="e#746#747#0" expanded="false" />
-            <element signature="e#795#796#0" expanded="false" />
-            <element signature="e#868#869#0" expanded="false" />
-            <element signature="e#937#938#0" expanded="false" />
-            <element signature="e#1011#1012#0" expanded="false" />
-            <element signature="e#1072#1073#0" expanded="false" />
-            <element signature="e#1128#1129#0" expanded="false" />
-            <element signature="e#1181#1182#0" expanded="false" />
-            <element signature="e#1409#1410#0" expanded="false" />
-            <element signature="e#1464#1465#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/role/assignPermission.jsp">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3480">
-          <caret line="145" column="18" lean-forward="false" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="18" />
+          <caret line="157" column="37" lean-forward="false" selection-start-line="157" selection-start-column="37" selection-end-line="157" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/RoleController.java">
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/advert/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3343">
-          <caret line="252" column="30" lean-forward="true" selection-start-line="252" selection-start-column="30" selection-end-line="252" selection-end-column="30" />
+        <state relative-caret-position="1224">
+          <caret line="51" column="29" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="51" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/AdvertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1051">
+          <caret line="86" column="8" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1613#1614#0" expanded="false" />
-            <element signature="e#1650#1651#0" expanded="false" />
+            <element signature="e#5681#5697#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/test/java/Activity_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="41" column="90" lean-forward="false" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/process/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="228" column="35" lean-forward="true" selection-start-line="228" selection-start-column="35" selection-end-line="228" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/process/showimg.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="803">
+          <caret line="96" column="15" lean-forward="true" selection-start-line="96" selection-start-column="15" selection-end-line="96" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.2/commons-io-2.2.jar!/org/apache/commons/io/IOUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1080">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/index.jsp">
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/task/FinishWorkTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="102" column="18" lean-forward="true" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
+        <state relative-caret-position="336">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/LoginUserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="116" column="58" lean-forward="false" selection-start-line="116" selection-start-column="55" selection-end-line="116" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="153" column="39" lean-forward="false" selection-start-line="153" selection-start-column="22" selection-end-line="153" selection-end-column="39" />
-          <folding>
-            <element signature="e#3209#3210#0" expanded="true" />
-            <element signature="e#3260#3261#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1047">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/UserService.java">
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/RoleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="42" />
+        <state relative-caret-position="-2016">
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/assignRole.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="234" column="74" lean-forward="false" selection-start-line="234" selection-start-column="74" selection-end-line="234" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2155">
+          <caret line="59" column="49" lean-forward="true" selection-start-line="59" selection-start-column="49" selection-end-line="59" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1560">
+          <caret line="238" column="23" lean-forward="false" selection-start-line="238" selection-start-column="13" selection-end-line="238" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-463">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/vo/RoleListVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-883">
+          <caret line="96" column="51" lean-forward="false" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/resources/mybatis/MemberMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="49" column="29" lean-forward="false" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/user/add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4080">
+          <caret line="170" column="31" lean-forward="false" selection-start-line="170" selection-start-column="31" selection-end-line="170" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/listener/StartSystemListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/interceptor/AuthorVisitInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="65" column="24" lean-forward="true" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/reg.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="158" column="44" lean-forward="false" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/controller/DispatcherController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/dao/PermissionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/resources/mybatis/PermissionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="75" column="46" lean-forward="true" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
+        <state relative-caret-position="744">
+          <caret line="59" column="21" lean-forward="false" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="21" />
           <folding>
-            <marker date="1567648833706" expanded="true" signature="704:749" ph="SELECT id,pi... t_permission" />
-            <marker date="1567648833706" expanded="true" signature="892:982" ph="INSERT INTO t_permission... " />
-            <marker date="1567648833706" expanded="true" signature="1048:1141" ph="INSERT INTO t_role_permission... " />
-            <marker date="1567648833706" expanded="true" signature="1236:1300" ph="DELETE FROM t_permission... " />
-            <marker date="1567648833706" expanded="true" signature="1401:1478" ph="DELETE FROM t_role_permission... " />
-            <marker date="1567648833706" expanded="true" signature="1593:1616" ph="UPDATE t_permission... " />
-            <marker date="1567648833706" expanded="true" signature="1593:1929" ph="UPDATE t_permission... " />
-            <marker date="1567648833706" expanded="true" signature="2053:2160" ph="select id, p... t_permission" />
-            <marker date="1567648833706" expanded="true" signature="2297:2405" ph="select permi... t_role_permission" />
-            <marker date="1567648833706" expanded="true" signature="2534:2967" ph="SELECT DISTI... t_user" />
+            <element signature="e#1416#1417#0" expanded="false" />
+            <element signature="e#1437#1438#0" expanded="false" />
+            <element signature="e#1519#1520#0" expanded="false" />
+            <element signature="e#1540#1541#0" expanded="false" />
+            <element signature="e#1623#1624#0" expanded="false" />
+            <element signature="e#1642#1643#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/common/menu.jsp">
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/java/lzcge/crowdfunding/interceptor/LoginInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="979">
-          <caret line="53" column="67" lean-forward="true" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="67" />
+        <state relative-caret-position="336">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/ProcessController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/service/TicketMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/dao/TicketMapper(1).java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/dao/TicketMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#span#0;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1567648563113" expanded="false" signature="1995:2006" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="2055:2071" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="2109:2121" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="2198:2208" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="2325:2337" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="2522:2534" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="2892:2903" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="2952:2981" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="3019:3031" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="3205:3217" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="3388:3400" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="3748:3759" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="3808:3837" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="3875:3887" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="4056:4068" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="4239:4251" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="4422:4434" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="4608:4620" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="4792:4804" ph="..." />
-            <marker date="1567648563113" expanded="false" signature="4978:4990" ph="..." />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-entity/src/main/java/lzcge/crowdfunding/entity/Ticket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/service/TicketService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/dao/MemberMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-api/src/main/java/lzcge/crowdfunding/manager/service/MemberService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="37" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/service/MemberServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/service/TicketServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/resources/mybatis/MemberMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <marker date="1584329976998" expanded="true" signature="1084:1521" ph="insert into t_member... " />
+            <marker date="1584329976998" expanded="true" signature="1640:1726" ph="select id, l... t_member" />
+            <marker date="1584329976998" expanded="true" signature="1848:1922" ph="select id, e... t_member" />
+            <marker date="1584329976998" expanded="true" signature="2044:2118" ph="select id, p... t_member" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/dao/MemberMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/service/MemberService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/controllor/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/spring/springmvc-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/spring/spring-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="47" column="11" lean-forward="true" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-manager-impl/src/main/java/lzcge/crowdfunding/manager/controllor/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/permission/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2304">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1583466792267" expanded="true" signature="5160:5193" ph="..." />
+            <marker date="1583466792267" expanded="true" signature="5270:5276" ph="&amp;nbsp;" />
+            <marker date="1583466792267" expanded="true" signature="5276:5282" ph="&amp;nbsp;" />
+            <marker date="1583466792267" expanded="true" signature="6042:6075" ph="..." />
+            <marker date="1583466792267" expanded="true" signature="6152:6158" ph="&amp;nbsp;" />
+            <marker date="1583466792267" expanded="true" signature="6158:6164" ph="&amp;nbsp;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/service/MemberServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1640,7 +1767,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>atcrowdfunding-manager-api</last-edited>
+          <last-edited>atcrowdfunding-potal-impl</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

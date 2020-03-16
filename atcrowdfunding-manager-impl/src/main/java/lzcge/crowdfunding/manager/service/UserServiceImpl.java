@@ -75,6 +75,11 @@ public class UserServiceImpl implements UserService{
 	}
 
 
+	/**
+	 * 新增用户
+	 * @param user
+	 * @return
+	 */
 	@Transactional
 	@Override
 	public int insert(User user) {
@@ -86,6 +91,7 @@ public class UserServiceImpl implements UserService{
 		return userMapper.insert(user);
 
 	}
+
 
 	@Transactional
 	@Override

@@ -137,7 +137,7 @@ public class UserController {
 	}
 
 	/**
-	 * 页面数据的异步加载
+	 * 用户新增
 	 *
 	 * @return
 	 */

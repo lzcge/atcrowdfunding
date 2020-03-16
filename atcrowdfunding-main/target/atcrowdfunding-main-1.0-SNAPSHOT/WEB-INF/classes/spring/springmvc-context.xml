@@ -60,7 +60,21 @@
 
     <!--文件上传-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" p:defaultEncoding="UTF-8">
+        <!--文件上传大小-->
         <property name="maxUploadSize" value="2097152"/>
+        <!--文件上传延迟-->
         <property name="resolveLazily" value="true"/>
     </bean>
+
+
+    <!--用户登录拦截器-->
+    <mvc:interceptors>
+        <bean id="loginInterceptor" class="lzcge.crowdfunding.interceptor.LoginInterceptor"/>
+    </mvc:interceptors>
+
+
+    <!--访问权限拦截器，当前用户只能访问其权限内的内容-->
+    <mvc:interceptors>
+        <bean id="authorVisitInterceptor" class="lzcge.crowdfunding.interceptor.AuthorVisitInterceptor"/>
+    </mvc:interceptors>
 </beans>

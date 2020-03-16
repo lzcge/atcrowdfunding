@@ -1,5 +1,7 @@
 package lzcge.crowdfunding.result;
 
+import lzcge.crowdfunding.util.Page;
+
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -19,6 +21,8 @@ public class JsonResult extends LinkedHashMap<String, Object> {
 	 */
 	private static final String INFO = "info";
 
+
+	private Page page;
 	/**
 	 * 响应数据域
 	 */
@@ -45,6 +49,14 @@ public class JsonResult extends LinkedHashMap<String, Object> {
 		this.put(CODE, StatCode.SUCCESS);
 		this.put(INFO, "");
 		this.put(DATA, new Object());
+	}
+
+	public Page getPage() {
+		return page;
+	}
+
+	public void setPage(Page page) {
+		this.page = page;
 	}
 
 	public void setFail() {

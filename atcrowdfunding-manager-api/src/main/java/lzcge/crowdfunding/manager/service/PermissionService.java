@@ -2,6 +2,7 @@ package lzcge.crowdfunding.manager.service;
 
 import lzcge.crowdfunding.entity.Permission;
 import lzcge.crowdfunding.vo.Data;
+import org.apache.ibatis.annotations.Param;
 
 
 import java.util.List;
@@ -28,4 +29,6 @@ public interface PermissionService {
 	void deleteRoleAndPermission(Integer roleId);
 
 	void saveRoleAndPermission(Integer roleId,Data datas);
+
+	List<Permission> selectPermissionsByUser(Integer userid);
 }
