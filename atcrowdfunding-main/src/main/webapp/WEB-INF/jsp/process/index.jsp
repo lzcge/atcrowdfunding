@@ -43,9 +43,9 @@
 				<%--</button>--%>
 			<%--</li>--%>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
+          <%--<form class="navbar-form navbar-right">--%>
+            <%--<input type="text" class="form-control" placeholder="Search...">--%>
+          <%--</form>--%>
         </div>
       </div>
     </nav>

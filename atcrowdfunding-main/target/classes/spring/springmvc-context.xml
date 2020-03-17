@@ -47,16 +47,16 @@
 
 
     <!--异常处理器-->
-    <bean id="exceptionResolver"
-        class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-        <!--<property name="exceptionAttribute" value="exception"/>-->
-        <property name="exceptionMappings">
-            <props>
-                <prop key="java.lang.Exception">error/error</prop>
-                <prop key="lzcge.crowdfunding.exception.LoginFailException">login</prop>
-            </props>
-        </property>
-    </bean>
+    <!--<bean id="exceptionResolver"-->
+        <!--class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+        <!--&lt;!&ndash;<property name="exceptionAttribute" value="exception"/>&ndash;&gt;-->
+        <!--<property name="exceptionMappings">-->
+            <!--<props>-->
+                <!--<prop key="java.lang.Exception">error/error</prop>-->
+                <!--<prop key="lzcge.crowdfunding.exception.LoginFailException">login</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+    <!--</bean>-->
 
     <!--文件上传-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" p:defaultEncoding="UTF-8">

@@ -32,9 +32,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <jsp:include page="/WEB-INF/jsp/common/top.jsp"/>
             </ul>
-            <form class="navbar-form navbar-right">
-                <input type="text" class="form-control" placeholder="Search...">
-            </form>
+            <%--<form class="navbar-form navbar-right">--%>
+                <%--<input type="text" class="form-control" placeholder="Search...">--%>
+            <%--</form>--%>
         </div>
     </div>
 </nav>
@@ -63,6 +63,10 @@
                         <div class="form-group">
                             <label for="fusername">用户名称</label>
                             <input type="text" class="form-control" id="fusername" value="${user.username}">
+                        </div>
+                        <div class="form-group">
+                            <label for="fphone">电话</label>
+                            <input type="text" class="form-control" id="fphone" value="${user.phone}">
                         </div>
                         <div class="form-group">
                             <label for="femail">邮箱地址</label>
@@ -128,6 +132,7 @@
     $("#updateBtn").click(function () {
         var floginacct = $("#floginacct");
         var fusername = $("#fusername");
+        var fphone = $("#fphone");
         var femail = $("#femail");
 
 
@@ -140,6 +145,11 @@
             layer.msg("用户名不能为空",{time:1000,icon:0,shift:0},function () {
                 fusername.val("");
                 fusername.focus();
+            });
+        }else if($.trim(fphone.val())==''){
+            layer.msg("电话不能为空",{time:1000,icon:0,shift:0},function () {
+                fphone.val("");
+                fphone.focus();
             });
         }else if($.trim(femail.val())==''){
 
@@ -158,6 +168,7 @@
                 var data={
                     "loginacct":floginacct.val(),
                     "username":fusername.val(),
+                    "phone":fphone.val(),
                     "email":femail.val(),
                     "id": "${user.id}"
                 };

@@ -8,6 +8,7 @@ import lzcge.crowdfunding.exception.LoginFailException;
 import lzcge.crowdfunding.manager.dao.PermissionMapper;
 import lzcge.crowdfunding.manager.dao.UserMapper;
 import lzcge.crowdfunding.util.Const;
+import lzcge.crowdfunding.util.ExceptionUtil;
 import lzcge.crowdfunding.util.MD5Util;
 import lzcge.crowdfunding.util.Page;
 import lzcge.crowdfunding.vo.QueryIndexVo;
@@ -22,11 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @description:
- * @author: lzcge
- * @create: 2019-07-28
- **/
+
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -63,20 +60,29 @@ public class UserServiceImpl implements UserService{
 	}
 
 
+	/**
+	 * 管理员登录
+	 * @param user
+	 * @return
+	 */
 	@Override
 	public User login(User user) {
 		//密码加密
 		user.setUserpswd(MD5Util.digest(user.getUserpswd()));
 		User user1 = userMapper.login(user);
 		if(user1==null){
-			throw new LoginFailException("登录失败，账号或密码错误");
+			ExceptionUtil.isTrue(false,"登录失败，账号或密码错误");
+//			throw new LoginFailException("登录失败，账号或密码错误");
+		}else if(!user1.getPhone().equals(user.getPhone())){
+			ExceptionUtil.isTrue(false,"登录失败，手机号错误");
+//			throw new LoginFailException("登录失败，手机号错误");
 		}
 		return user1;
 	}
 
 
 	/**
-	 * 新增用户
+	 * 新增管理员用户
 	 * @param user
 	 * @return
 	 */

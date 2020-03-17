@@ -1,5 +1,6 @@
 package lzcge.crowdfunding.interceptor;
 
+import lzcge.crowdfunding.entity.Member;
 import lzcge.crowdfunding.entity.User;
 import lzcge.crowdfunding.util.Const;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -32,7 +33,10 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 
 		//判断是否登录
 		User user = (User) request.getSession().getAttribute(Const.LOGIN_USER);
-		if(user!=null){
+
+		Member member = (Member) request.getSession().getAttribute(Const.LOGIN_MEMBER);
+
+		if(user!=null || member!=null){
 			return true;
 		}else{
 			//跳转到登录页面

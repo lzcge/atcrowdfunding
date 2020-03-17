@@ -1,20 +1,21 @@
 package lzcge.crowdfunding.vo;
 
+import lzcge.crowdfunding.entity.Member;
 import lzcge.crowdfunding.entity.User;
 
 
 public class LoginUserVo {
 	private User user;
+	private Member member;
 	private String type;
 	private String verifyCode;
-	private String phone;
 
-	public String getPhone() {
-		return phone;
+	public Member getMember() {
+		return member;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setMember(Member member) {
+		this.member = member;
 	}
 
 	public String getVerifyCode() {

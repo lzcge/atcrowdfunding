@@ -56,6 +56,12 @@
 		where phone = #{phone,jdbcType=VARCHAR}
 	</select>
 
+    <select id="login" parameterType="lzcge.crowdfunding.entity.Member" resultMap="BaseResultMap">
+        select id, loginacct, userpswd,
+		username, email, authstatus,usertype,phone,realname,cardnum,accttype
+        from t_member where loginacct=#{loginacct} and userpswd=#{userpswd}
+    </select>
+
 
 
 

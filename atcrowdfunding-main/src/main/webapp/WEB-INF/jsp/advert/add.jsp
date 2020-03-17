@@ -39,9 +39,9 @@
 				<%--</button>--%>
 			<%--</li>--%>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
+          <%--<form class="navbar-form navbar-right">--%>
+            <%--<input type="text" class="form-control" placeholder="Search...">--%>
+          <%--</form>--%>
         </div>
       </div>
     </nav>
@@ -55,8 +55,8 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 				<ol class="breadcrumb">
-				  <li><a href="#">首页</a></li>
-				  <li><a href="#">数据列表</a></li>
+				  <li><a href="${APP_PATH}/main.htm">首页</a></li>
+				  <li><a href="${APP_PATH}/advert/index.htm">数据列表</a></li>
 				  <li class="active">新增</li>
 				</ol>
 			<div class="panel panel-default">

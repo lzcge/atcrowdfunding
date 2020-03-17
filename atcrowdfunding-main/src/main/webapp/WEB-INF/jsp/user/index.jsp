@@ -38,9 +38,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <jsp:include page="/WEB-INF/jsp/common/top.jsp"/>
             </ul>
-            <form class="navbar-form navbar-right">
-                <input type="text" class="form-control" placeholder="Search...">
-            </form>
+            <%--<form class="navbar-form navbar-right">--%>
+                <%--<input type="text" class="form-control" placeholder="Search...">--%>
+            <%--</form>--%>
         </div>
     </div>
 </nav>

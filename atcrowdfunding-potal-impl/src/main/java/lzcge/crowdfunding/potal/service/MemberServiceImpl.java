@@ -4,8 +4,10 @@ import java.util.List;
 import java.util.Map;
 
 import lzcge.crowdfunding.entity.Member;
+import lzcge.crowdfunding.entity.User;
 import lzcge.crowdfunding.potal.dao.MemberMapper;
 import lzcge.crowdfunding.result.JsonResult;
+import lzcge.crowdfunding.util.ExceptionUtil;
 import lzcge.crowdfunding.util.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +19,25 @@ public class MemberServiceImpl implements MemberService {
 
 	@Autowired
 	private MemberMapper memberMapper ;
+
+
+	/**
+	 * 普通会员登录
+	 * @param member
+	 * @return
+	 */
+	@Override
+	public Member login(Member member) {
+		//密码加密
+		member.setUserpswd(MD5Util.digest(member.getUserpswd()));
+		Member member1 = memberMapper.login(member);
+		if(member1==null){
+			ExceptionUtil.isTrue(false,"登录失败，账号或密码错误");
+		}else if(!member1.getPhone().equals(member.getPhone())){
+			ExceptionUtil.isTrue(false,"登录失败，手机号错误");
+		}
+		return member1;
+	}
 
 
 

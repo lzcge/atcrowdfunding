@@ -9,6 +9,8 @@ public interface MemberMapper {
 
 	int insert(Member member);
 
+	Member login(Member member);
+
 
 	List<Member> selectByAcct(Member member);
 

@@ -61,15 +61,15 @@
             </select>
         </div>
         <div class="checkbox">
-            <label>
-                <input type="checkbox" value="remember-me"> 记住我
-            </label>
+            <%--<label>--%>
+                <%--<input type="checkbox" value="remember-me"> 记住我--%>
+            <%--</label>--%>
             <br>
             <label>
                 忘记密码
             </label>
             <label style="float:right">
-                <a href="reg.html">我要注册</a>
+                <a href="${APP_PATH}/reg.htm">我要注册</a>
             </label>
         </div>
         <a class="btn btn-lg btn-success btn-block" onclick="dologin()" > 登录</a>
@@ -85,6 +85,8 @@
         var fuserpswd = $("#fuserpswd");
         var ftype = $("#ftype");
         var fverifyCode = $("#fverifyCode");
+        var phone = $("#fphoneNumber");
+
         if($.trim(floginacct.val())==""){
             // alert("账号不能为空");
             //time显示的时间，icon图标的index，shift  0-6有不同的显示效果，如抖动这些
@@ -100,6 +102,10 @@
                 fuserpswd.focus();
             });
 
+        }else if($.trim(phone.val())==""){
+            alert("电话不能为空");
+            phone.val("");
+            phone.focus();
         }else if($.trim(ftype.val())==""){
             // alert("类型不能为空");
             layer.msg("类型不能为空",{time:1000,icon:0,shift:0},function () {
@@ -115,35 +121,72 @@
             });
 
         }else{
-            var data={
-                "user":{
-                    "loginacct":floginacct.val(),
-                    "userpswd":fuserpswd.val()
-                },
-                "type":ftype.val(),
-                "verifyCode":fverifyCode.val()
-            };
-            $.ajax({
-                type: "POST",
-                url: "${APP_PATH}/doLogin.do",
-                contentType: "application/json",
-                dataType: "JSON",
-                data: JSON.stringify(data),
-                success: function (obj) {
-                    console.log(obj);
-                    if(obj.data=='登录成功'){
-                        window.location.href="${APP_PATH}/main.htm";
-                    }else{
-                        layer.msg(obj.data, {time:2000, icon:4, shift:0});
-                        // alert(obj.data);
-                        fverifyCode.val("");
+            // alert(ftype.val());
+            //管理员登录接口
+            if($.trim(ftype.val())=="user"){
+                var data={
+                    "user":{
+                        "loginacct":floginacct.val(),
+                        "userpswd":fuserpswd.val(),
+                        "phone":phone.val()
+                    },
+                    "type":ftype.val(),
+                    "verifyCode":fverifyCode.val()
+                };
+                $.ajax({
+                    type: "POST",
+                    url: "${APP_PATH}/doLogin.do",
+                    contentType: "application/json",
+                    dataType: "JSON",
+                    data: JSON.stringify(data),
+                    success: function (obj) {
+                        console.log(obj);
+                        if(obj.data=='登录成功'){
+                            window.location.href="${APP_PATH}/main.htm";
+                        }else{
+                            layer.msg(obj.data, {time:2000, icon:4, shift:0});
+                            // alert(obj.data);
+                            fverifyCode.val("");
+                        }
+                    },
+                    error: function () {
+                        layer.msg("登录失败，检查网络是否正常", {time:2000, icon:5, shift:0});
                     }
-                },
-                error: function () {
-                    layer.msg("登录失败，检查网络是否正常", {time:2000, icon:5, shift:0});
-                }
 
-            })
+                })
+            }else if($.trim(ftype.val())=="member"){  //会员登录接口
+                var data={
+                    "member":{
+                        "loginacct":floginacct.val(),
+                        "userpswd":fuserpswd.val(),
+                        "phone":phone.val()
+                    },
+                    "type":ftype.val(),
+                    "verifyCode":fverifyCode.val()
+                };
+                $.ajax({
+                    type: "POST",
+                    url: "${APP_PATH}/doLogin.do",
+                    contentType: "application/json",
+                    dataType: "JSON",
+                    data: JSON.stringify(data),
+                    success: function (obj) {
+                        console.log(obj);
+                        if(obj.data=='登录成功'){
+                            window.location.href="${APP_PATH}/member.htm";
+                        }else{
+                            layer.msg(obj.data, {time:2000, icon:4, shift:0});
+                            // alert(obj.data);
+                            fverifyCode.val("");
+                        }
+                    },
+                    error: function () {
+                        layer.msg("登录失败，检查网络是否正常", {time:2000, icon:5, shift:0});
+                    }
+
+                })
+
+            }
 
         }
 
