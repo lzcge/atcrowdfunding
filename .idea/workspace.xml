@@ -7,29 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8d94f20-eaa4-46e7-8b85-f9f7804d095b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/resources/bpmn/realNameAuth.bpmn" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/img/auth1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/img/auth2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/img/auth3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/img/auth4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/img/man.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/img/women.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/listener/PassListener.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/listener/RefuseListener.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/member/accttype.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/member/accttype.jsp" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/member/basicinfo.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/member/basicinfo.jsp" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/member/member.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/member/member.jsp" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/member/uploadCert.jsp" afterPath="$PROJECT_DIR$/atcrowdfunding-main/src/main/webapp/WEB-INF/jsp/member/uploadCert.jsp" />
       <change beforePath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/atcrowdfunding-potal-impl-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/atcrowdfunding-main/target/atcrowdfunding-main-1.0-SNAPSHOT/WEB-INF/lib/atcrowdfunding-potal-impl-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-potal-api/pom.xml" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-api/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/dao/MemberMapper.java" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/dao/MemberMapper.java" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/service/MemberService.java" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-api/src/main/java/lzcge/crowdfunding/potal/service/MemberService.java" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-potal-impl/atcrowdfunding-potal-impl.iml" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-impl/atcrowdfunding-potal-impl.iml" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-potal-impl/pom.xml" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-impl/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/controllor/MemberController.java" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/controllor/MemberController.java" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/service/MemberServiceImpl.java" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/java/lzcge/crowdfunding/potal/service/MemberServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/resources/mybatis/MemberMapper.xml" afterPath="$PROJECT_DIR$/atcrowdfunding-potal-impl/src/main/resources/mybatis/MemberMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1174,7 +1153,7 @@
       <workItem from="1584165203308" duration="21577000" />
       <workItem from="1584203415532" duration="834000" />
       <workItem from="1584328375438" duration="36583000" />
-      <workItem from="1584523597279" duration="17317000" />
+      <workItem from="1584523597279" duration="17495000" />
     </task>
     <task id="LOCAL-00001" summary="第二天">
       <created>1564231401378</created>
@@ -1274,7 +1253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584440726554</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="会员认证（认证状态显示、认证账户类型、基本信息）">
+      <created>1584552085325</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1584552085325</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1310,7 +1296,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="484779000" />
+    <option name="totallyTimeSpent" value="484957000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1376,7 +1362,8 @@
     <MESSAGE value="权限许可菜单" />
     <MESSAGE value="广告管理、流程管理、会员注册" />
     <MESSAGE value="资质管理、资质维护、权限管理完善、" />
-    <option name="LAST_COMMIT_MESSAGE" value="资质管理、资质维护、权限管理完善、" />
+    <MESSAGE value="会员认证（认证状态显示、认证账户类型、基本信息）" />
+    <option name="LAST_COMMIT_MESSAGE" value="会员认证（认证状态显示、认证账户类型、基本信息）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
