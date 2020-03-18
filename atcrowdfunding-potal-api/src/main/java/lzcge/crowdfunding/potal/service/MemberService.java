@@ -14,5 +14,14 @@ public interface MemberService {
 
 	Member login(Member member);
 
+	//更新账户类型
+	void updateAcctType(Member member);
+
+	//更新账户认证真实信息
+	void updateBasicinfo(Member member);
+
+	Member selectById(Member member);
+
+
 
 }

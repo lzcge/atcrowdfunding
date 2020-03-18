@@ -56,13 +56,33 @@
 		where phone = #{phone,jdbcType=VARCHAR}
 	</select>
 
+    <select id="selectById" resultMap="BaseResultMap"	parameterType="lzcge.crowdfunding.entity.Member">
+		select id, loginacct, userpswd,
+		username, email, authstatus,usertype,phone,realname,cardnum,accttype
+		from t_member
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+
     <select id="login" parameterType="lzcge.crowdfunding.entity.Member" resultMap="BaseResultMap">
         select id, loginacct, userpswd,
 		username, email, authstatus,usertype,phone,realname,cardnum,accttype
         from t_member where loginacct=#{loginacct} and userpswd=#{userpswd}
     </select>
 
+    <update id="updateAcctType" parameterType="lzcge.crowdfunding.entity.Member" >
+        update t_member
+        set
+        accttype = #{accttype,jdbcType=CHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
 
+    <update id="updateBasicinfo" parameterType="lzcge.crowdfunding.entity.Member" >
+        update t_member
+        set
+        realname = #{realname,jdbcType=VARCHAR},
+        cardnum = #{cardnum,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
 
 
 

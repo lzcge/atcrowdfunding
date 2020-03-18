@@ -26,17 +26,17 @@
 			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			  <div class="container">
 				<div class="navbar-header">
-				  <a class="navbar-brand" href="index.html" style="font-size:32px;">尚筹网-创意产品众筹平台</a>
+				  <a class="navbar-brand" href="index.html" style="font-size:32px;">人人筹-创意产品众筹平台</a>
 				</div>
             <div id="navbar" class="navbar-collapse collapse" style="float:right;">
               <ul class="nav navbar-nav">
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> 张三<span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> ${sessionScope.member.username}<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="member.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
+                    <li><a href="${APP_PATH}/member.htm"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
                     <li class="divider"></li>
-                    <li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
+                    <li><a href="${APP_PATH}/logout.htm"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
                   </ul>
                 </li>
               </ul>
@@ -62,17 +62,17 @@
 		<form role="form" style="margin-top:20px;">
 		  <div class="form-group">
 			<label for="realname">真实名称</label>
-			<input type="text" class="form-control" id="realname" placeholder="请输入真实名称">
+			<input type="text" class="form-control" id="realname" value="${member.realname}" placeholder="请输入真实名称">
 		  </div>
 		  <div class="form-group">
 			<label for="cardnum">身份证号码</label>
-			<input type="text" class="form-control" id="cardnum" placeholder="请输入身份证号码">
+			<input type="text" class="form-control" id="cardnum" value="${member.cardnum}" placeholder="请输入身份证号码">
 		  </div>
-		  <div class="form-group">
-			<label for="tel">电话号码</label>
-			<input type="text" class="form-control" id="tel" placeholder="请输入电话号码">
-		  </div>
-          <button type="button" onclick="window.location.href='accttype.html'" class="btn btn-default">上一步</button>
+		  <%--<div class="form-group">--%>
+			<%--<label for="tel">电话号码</label>--%>
+			<%--<input type="text" class="form-control" id="tel" value="${member.phone}" placeholder="请输入电话号码">--%>
+		  <%--</div>--%>
+          <button type="button" onclick="window.location.href='${APP_PATH}/member/realNameAuth.htm'" class="btn btn-default">上一步</button>
 		  <button id="nextBtn" type="button"  class="btn btn-success">下一步</button>
 		</form>
 		<hr>
@@ -82,10 +82,10 @@
                 <div class="col-md-12 column">
                     <div id="footer">
                         <div class="footerNav">
-                             <a rel="nofollow" href="http://www.atguigu.com">关于我们</a> | <a rel="nofollow" href="http://www.atguigu.com">服务条款</a> | <a rel="nofollow" href="http://www.atguigu.com">免责声明</a> | <a rel="nofollow" href="http://www.atguigu.com">网站地图</a> | <a rel="nofollow" href="http://www.atguigu.com">联系我们</a>
+                            <a rel="nofollow" href="http://www.lzcge.com">关于我们</a> | <a rel="nofollow" href="http://www.lzcge.com">服务条款</a> | <a rel="nofollow" href="http://www.lzcge.com">免责声明</a> | <a rel="nofollow" href="http://www.lzcge.com">网站地图</a> | <a rel="nofollow" href="http://www.lzcge.com">联系我们</a>
                         </div>
                         <div class="copyRight">
-                            Copyright ?2017-2017 atguigu.com 版权所有
+                            Copyright ?2017-2017lzcge.com 版权所有
                         </div>
                     </div>
                     
@@ -95,6 +95,7 @@
     <script src="${APP_PATH }/jquery/jquery-2.1.1.min.js"></script>
     <script src="${APP_PATH }/bootstrap/js/bootstrap.min.js"></script>
 	<script src="${APP_PATH }/script/docs.min.js"></script>
+ <script type="text/javascript" src="${APP_PATH }/jquery/layer/layer.js"></script>
 	<script>
         $('#myTab a').click(function (e) {
           e.preventDefault()
@@ -103,22 +104,43 @@
         
         
         $("#nextBtn").click(function(){
-	       	$.ajax({
-	       		type : "POST",
-	       		url  : "${APP_PATH}/member/updateBasicinfo.do",
-	       		data : {
-	       			realname : $("#realname").val(),
-	       			cardnum  : $("#cardnum").val(),
-	       			tel      : $("#tel").val()
-	       		},
-	       		success : function(result) {
-	       			if ( result.success ) {
-	       				window.location.href = "${APP_PATH}/member/uploadCert.htm";
-	       			} else {
-	       				layer.msg("基本信息更新失败", {time:1000, icon:5, shift:6});
-	       			}
-	       		}
-	       	});
+            var realname = $("#realname");
+            var cardnum = $("#cardnum");
+            //身份证格式验证正则表达式
+            var cardNumReg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+            var iFlag = cardNumReg.test(cardnum.val());
+            if($.trim(realname.val())==""){
+                layer.msg("真实姓名不能为空",{time:1000,icon:0,shift:0},function () {
+                    realname.val("");
+                    realname.focus();
+                });
+            }else if($.trim(cardnum.val())==""){
+                layer.msg("身份证号不能为空",{time:1000,icon:0,shift:0},function () {
+                    cardnum.val("");
+                    cardnum.focus();
+                });
+            }else if(!iFlag){
+                layer.msg("身份证号格式有误！",{time:1000,icon:0,shift:0},function () {
+                    cardnum.focus();
+                });
+            }else{
+                $.ajax({
+                    type : "POST",
+                    url  : "${APP_PATH}/member/updateBasicinfo.do",
+                    data : {
+                        "realname" : realname.val(),
+                        "cardnum"  : cardnum.val(),
+                    },
+                    success : function(result) {
+                        if ( result.data==true ) {
+                            window.location.href = "${APP_PATH}/member/uploadCert.htm";
+                        } else {
+                            layer.msg("系统错误！基本信息更新失败", {time:2000, icon:5, shift:6});
+                        }
+                    }
+                });
+            }
+
        });
 
 	</script>

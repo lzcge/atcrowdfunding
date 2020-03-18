@@ -4,14 +4,22 @@ import java.util.List;
 import java.util.Map;
 
 import lzcge.crowdfunding.entity.Member;
+import lzcge.crowdfunding.entity.Ticket;
 import lzcge.crowdfunding.entity.User;
 import lzcge.crowdfunding.potal.dao.MemberMapper;
 import lzcge.crowdfunding.result.JsonResult;
+import lzcge.crowdfunding.util.Const;
 import lzcge.crowdfunding.util.ExceptionUtil;
 import lzcge.crowdfunding.util.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.context.request.RequestContextHolder;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 
 @Service
@@ -19,6 +27,9 @@ public class MemberServiceImpl implements MemberService {
 
 	@Autowired
 	private MemberMapper memberMapper ;
+
+	@Autowired
+	private TicketService ticketService;
 
 
 	/**
@@ -39,6 +50,11 @@ public class MemberServiceImpl implements MemberService {
 		return member1;
 	}
 
+
+	@Override
+	public Member selectById(Member member) {
+		return memberMapper.selectById(member);
+	}
 
 
 	/**
@@ -88,5 +104,36 @@ public class MemberServiceImpl implements MemberService {
 		return jsonResult;
 
 	}
+
+	@Transactional
+	@Override
+	public void updateAcctType(Member member) {
+
+		// 更新账户类型
+		memberMapper.updateAcctType(member);
+
+		//记录流程步骤:
+//		Ticket ticket = ticketService.getTicketByMemberId(member.getId()) ;
+//		ticket.setPstep("accttype");
+//		ticketService.updatePstep(ticket);
+
+	}
+
+	/**
+	 * 实名认证-更新认证个人信息
+	 * @param loginMember
+	 */
+	@Transactional
+	@Override
+	public void updateBasicinfo(Member loginMember) {
+
+		memberMapper.updateBasicinfo(loginMember);
+		//记录流程步骤:
+//		Ticket ticket = ticketService.getTicketByMemberId(loginMember.getId()) ;
+//		ticket.setPstep("basicinfo");
+//		ticketService.updatePstep(ticket);
+	}
+
+
 	
 }

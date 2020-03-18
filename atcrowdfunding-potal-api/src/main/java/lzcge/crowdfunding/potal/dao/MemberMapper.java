@@ -18,5 +18,11 @@ public interface MemberMapper {
 
 	List<Member> selectByPhone(Member member);
 
+	Member selectById(Member member);
+
+	void updateAcctType(Member member);
+
+	void updateBasicinfo(Member member);
+
 
 }

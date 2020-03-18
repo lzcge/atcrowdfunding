@@ -65,7 +65,7 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> ${sessionScope.member.username }<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="member.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
+                    <li><a href="${APP_PATH}/member.htm"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
                     <li class="divider"></li>
                     <li><a href="${APP_PATH }/logout.do"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
@@ -84,20 +84,20 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="thumbnail" style="    border-radius: 0px;">
-						<img src="img/services-box1.jpg" class="img-thumbnail" alt="">
+						<img src="img/man.jpg" class="img-thumbnail" alt="">
 						<div class="caption" style="text-align:center;">
 							<h3>
 								${sessionScope.member.loginacct }
 							</h3>
 								<c:choose>
-								    <c:when test="${loginMember.authstatus eq '1'}">    
+								    <c:when test="${member.authstatus eq '1'}">
 									<span class="label label-warning" style="cursor:pointer;">实名认证申请中</span>
 								    </c:when>
-								    <c:when test="${loginMember.authstatus eq '2'}">    
+								    <c:when test="${member.authstatus eq '2'}">
 									<span class="label label-success" style="cursor:pointer;">已实名认证</span>
 								    </c:when>
 								    <c:otherwise>    
-									<span class="label label-danger" style="cursor:pointer;" onclick="window.location.href='${APP_PATH}/member/apply.htm'">未实名认证</span>
+									<span class="label label-danger" style="cursor:pointer;" onclick="window.location.href='${APP_PATH}/member/realNameAuth.htm'">未实名认证</span>
 								    </c:otherwise>
 								</c:choose>
 
