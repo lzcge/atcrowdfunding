@@ -25,6 +25,9 @@ public interface MemberService {
 
 	public void saveMemberCert(List<MemberCert> certimgs);
 
+	//更新会员认证审核状态
+	public void updateMemberAuthStatus(Member member);
+
 
 
 }

@@ -29,5 +29,11 @@ public interface MemberMapper {
 
 	void delteMemberCert(MemberCert memberCert);
 
+	/**
+	 * 更新会员认证状态
+	 * @param member
+	 */
+	void updateMemberAuthStatus(Member member);
+
 
 }

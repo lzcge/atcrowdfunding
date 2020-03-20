@@ -84,6 +84,13 @@
         where id = #{id,jdbcType=INTEGER}
     </update>
 
+    <update id="updateMemberAuthStatus" parameterType="lzcge.crowdfunding.entity.Member" >
+        update t_member
+        set
+        authstatus = #{authstatus,jdbcType=CHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
     <insert id="insertMemberCert">
         insert into t_member_cert(memberid,certid,iconpath) values(#{memberid},#{certid},#{iconpath});
     </insert>

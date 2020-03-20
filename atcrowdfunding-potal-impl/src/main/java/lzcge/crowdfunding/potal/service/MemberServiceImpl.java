@@ -152,4 +152,12 @@ public class MemberServiceImpl implements MemberService {
 			memberMapper.insertMemberCert(memberCert);
 		}
 	}
+
+
+	//更新会员认证审核状态
+	@Transactional
+	@Override
+	public void updateMemberAuthStatus(Member member) {
+		memberMapper.updateMemberAuthStatus(member);
+	}
 }

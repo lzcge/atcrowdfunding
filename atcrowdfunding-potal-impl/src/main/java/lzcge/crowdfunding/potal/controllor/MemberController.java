@@ -194,7 +194,7 @@ public class MemberController {
 	}
 
 	/**
-	 * 实名认证-发送验证码
+	 * 实名认证-邮箱发送验证码
 	 * @param session
 	 * @param
 	 * @return
@@ -227,16 +227,16 @@ public class MemberController {
 			// PS: 某些邮箱服务器要求 SMTP 连接需要使用 SSL 安全认证 (为了提高安全性, 邮箱支持SSL连接, 也可以自己开启),
 			//     如果无法连接邮件服务器, 仔细查看控制台打印的 log, 如果有有类似 “连接失败, 要求 SSL 安全连接” 等错误,
 			//     打开下面 /* ... */ 之间的注释代码, 开启 SSL 安全连接。
-			/*
-			// SMTP 服务器的端口 (非 SSL 连接的端口一般默认为 25, 可以不添加, 如果开启了 SSL 连接,
-			//                  需要改为对应邮箱的 SMTP 服务器的端口, 具体可查看对应邮箱服务的帮助,
-			//                  QQ邮箱的SMTP(SLL)端口为465或587, 其他邮箱自行去查看)
-			final String smtpPort = "465";
-			props.setProperty("mail.smtp.port", smtpPort);
-			props.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-			props.setProperty("mail.smtp.socketFactory.fallback", "false");
-			props.setProperty("mail.smtp.socketFactory.port", smtpPort);
-			*/
+//			/*
+//			// SMTP 服务器的端口 (非 SSL 连接的端口一般默认为 25, 可以不添加, 如果开启了 SSL 连接,
+//			//                  需要改为对应邮箱的 SMTP 服务器的端口, 具体可查看对应邮箱服务的帮助,
+//			//                  QQ邮箱的SMTP(SLL)端口为465或587, 其他邮箱自行去查看)
+//			final String smtpPort = "465";
+//			props.setProperty("mail.smtp.port", smtpPort);
+//			props.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+//			props.setProperty("mail.smtp.socketFactory.fallback", "false");
+//			props.setProperty("mail.smtp.socketFactory.port", smtpPort);
+//			*/
 			// 2. 根据配置创建会话对象, 用于和邮件服务器交互
 			Session mailSession = Session.getInstance(props);
 			mailSession.setDebug(true); // 设置为debug模式, 可以查看详细的发送 log
@@ -256,8 +256,11 @@ public class MemberController {
 
 			// 5. Content: 邮件正文（可以使用html标签）（内容有广告嫌疑，避免被邮件服务器误认为是滥发广告以至返回失败，请修改发送内容）
 			String MailVerifyCode = String.valueOf(new Random().nextInt(899999) + 100000);
-			message.setContent(receiveMailAccount+"用户你好, 你的实名认证验证码为："+MailVerifyCode, "text/html;charset=UTF-8");
+			message.setContent(receiveMailAccount+"你的实名认证验证码为："+MailVerifyCode, "text/html;charset=UTF-8");
 
+			//验证码和创建时间放入session域中
+			session.setAttribute("MailVerifyCode",MailVerifyCode);
+			session.setAttribute("MailVerifyCodeCreateTime",System.currentTimeMillis());
 			// 6. 设置发件时间
 			message.setSentDate(new Date());
 
@@ -294,6 +297,45 @@ public class MemberController {
 		}
 
 		//设置过期时间
+		return result;
+
+	}
+
+	/**
+	 * 实名认证-审核验证邮箱验证码
+	 * @param session
+	 * @param authcode
+	 * @return
+	 */
+	@ResponseBody
+	@PostMapping("/finishApply")
+	public JsonResult finishApply( HttpSession session, String authcode) {
+		JsonResult result = new JsonResult();
+		// 获取登录会员信息
+		Member loginMember = (Member)session.getAttribute(Const.LOGIN_MEMBER);
+
+		//获取系统发送验证码
+		String MailVerifyCode = (String) session.getAttribute("MailVerifyCode");
+		Long MailVerifyCodeCreateTime = (Long) session.getAttribute("MailVerifyCodeCreateTime");
+		if(MailVerifyCode==null || MailVerifyCodeCreateTime==null){
+			result.setInfo("false");
+			result.setData("验证码已失效，请重新发送！");
+		}else if(System.currentTimeMillis()-MailVerifyCodeCreateTime>1000*60){//判断验证码是否过期
+			result.setInfo("false");
+			result.setData("验证码过期，请重新发送！");
+			session.removeAttribute("MailVerifyCode");
+			session.removeAttribute("MailVerifyCodeCreateTime");
+		}else if(!authcode.equals(MailVerifyCode)){
+			result.setInfo("false");
+			result.setData("验证码错误！");
+		}else{
+			loginMember.setAuthstatus("1");
+			memberService.updateMemberAuthStatus(loginMember);
+			result.setData("success");
+			result.setInfo("success");
+			session.removeAttribute("MailVerifyCode");
+			session.removeAttribute("MailVerifyCodeCreateTime");
+		}
 
 
 		return result;
