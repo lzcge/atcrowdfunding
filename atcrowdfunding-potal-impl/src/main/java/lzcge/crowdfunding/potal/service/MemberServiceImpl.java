@@ -1,11 +1,12 @@
 package lzcge.crowdfunding.potal.service;
 
+import java.io.File;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
-import lzcge.crowdfunding.entity.Member;
-import lzcge.crowdfunding.entity.Ticket;
-import lzcge.crowdfunding.entity.User;
+import lzcge.crowdfunding.entity.*;
+import lzcge.crowdfunding.manager.service.CertService;
 import lzcge.crowdfunding.potal.dao.MemberMapper;
 import lzcge.crowdfunding.result.JsonResult;
 import lzcge.crowdfunding.util.Const;
@@ -15,8 +16,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -30,6 +34,9 @@ public class MemberServiceImpl implements MemberService {
 
 	@Autowired
 	private TicketService ticketService;
+
+	@Autowired
+	private CertService certService;
 
 
 	/**
@@ -112,11 +119,6 @@ public class MemberServiceImpl implements MemberService {
 		// 更新账户类型
 		memberMapper.updateAcctType(member);
 
-		//记录流程步骤:
-//		Ticket ticket = ticketService.getTicketByMemberId(member.getId()) ;
-//		ticket.setPstep("accttype");
-//		ticketService.updatePstep(ticket);
-
 	}
 
 	/**
@@ -126,14 +128,28 @@ public class MemberServiceImpl implements MemberService {
 	@Transactional
 	@Override
 	public void updateBasicinfo(Member loginMember) {
-
 		memberMapper.updateBasicinfo(loginMember);
-		//记录流程步骤:
-//		Ticket ticket = ticketService.getTicketByMemberId(loginMember.getId()) ;
-//		ticket.setPstep("basicinfo");
-//		ticketService.updatePstep(ticket);
+		//查询出下一步中需要上传的资质
+		//根据当前用户查询账户类型,然后根据账户类型查找需要上传的资质
+		List<Cert> queryCertByAccttype = certService.queryCertByAccttype(loginMember.getAccttype());
+		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+		request.getSession().setAttribute("queryCertByAccttype", queryCertByAccttype);
+
 	}
 
+	/**
+	 * 保存实名认证时会员上传的资质
+	 * @param certimgs
+	 */
+	@Transactional
+	@Override
+	public void saveMemberCert(List<MemberCert> certimgs) {
 
-	
+		//删除原有的关系
+		memberMapper.delteMemberCert(certimgs.get(0));
+		// 保存会员与资质关系数据.
+		for (MemberCert memberCert:certimgs ) {
+			memberMapper.insertMemberCert(memberCert);
+		}
+	}
 }

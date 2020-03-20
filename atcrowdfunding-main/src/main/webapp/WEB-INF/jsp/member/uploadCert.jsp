@@ -27,7 +27,7 @@
 			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			  <div class="container">
 				<div class="navbar-header">
-				  <a class="navbar-brand" href="index.html" style="font-size:32px;">人人筹-创意产品众筹平台</a>
+				  <a class="navbar-brand" href="${APP_PAHT}/index.htm" style="font-size:32px;">人人筹-创意产品众筹平台</a>
 				</div>
             <div id="navbar" class="navbar-collapse collapse" style="float:right;">
               <ul class="nav navbar-nav">
@@ -65,8 +65,8 @@
 			<c:forEach items="${queryCertByAccttype }" var="cert" varStatus="status">
 				<div class="form-group">
 					<label for="name">${cert.name }</label>
-					<input type="hidden" name="certimgs[${status.index }].certid" value="${cert.id }">
-					<input type="file" name="certimgs[${status.index }].fileImg" class="form-control" >
+					<input id="fhidden" type="hidden" name="certimgs[${status.index }].certid" value="${cert.id }">
+					<input id="ffile" type="file" name="certimgs[${status.index }].imgfile" class="form-control" >
 		            <br>
 		            <img src="${APP_PATH }/img/pic.jpg" style="display:none">
 			   </div>
@@ -83,10 +83,10 @@
                 <div class="col-md-12 column">
                     <div id="footer">
                         <div class="footerNav">
-                             <a rel="nofollow" href="http://www.atguigu.com">关于我们</a> | <a rel="nofollow" href="http://www.atguigu.com">服务条款</a> | <a rel="nofollow" href="http://www.atguigu.com">免责声明</a> | <a rel="nofollow" href="http://www.atguigu.com">网站地图</a> | <a rel="nofollow" href="http://www.atguigu.com">联系我们</a>
+                             <a rel="nofollow" href="#">关于我们</a> | <a rel="nofollow" href="#">服务条款</a> | <a rel="nofollow" href="#">免责声明</a> | <a rel="nofollow" href="#">网站地图</a> | <a rel="nofollow" href="#">联系我们</a>
                         </div>
                         <div class="copyRight">
-                            Copyright ?2017-2017 atguigu.com 版权所有
+                            Copyright ?2017-2017 lzcge.com 版权所有
                         </div>
                     </div>
                     
@@ -103,49 +103,69 @@
         $('#myTab a').click(function (e) {
           e.preventDefault()
           $(this).tab('show')
-        });  
-        
-        
+        });
+
+
         $(":file").change(function(event){
-        	var files = event.target.files;
-        	var file;
-        	
-        	if (files && files.length > 0) {
-        		file = files[0];
-        		
-        		var URL = window.URL || window.webkitURL;
-        		// 本地图片路径
-        		var imgURL = URL.createObjectURL(file);
-        		
-        		var imgObj = $(this).next().next(); //获取同辈紧邻的下一个元素
-        		//console.log(imgObj);
-        		imgObj.attr("src", imgURL);
-        		imgObj.show();
-        	}
-		});
+            var files = event.target.files;
+            var file;
+
+            if (files && files.length > 0) {
+                file = files[0];
+
+                var URL = window.URL || window.webkitURL;
+                // 本地图片路径
+                var imgURL = URL.createObjectURL(file);
+
+                var imgObj = $(this).next().next(); //获取同辈紧邻的下一个元素
+                //console.log(imgObj);
+                imgObj.attr("src", imgURL);
+                imgObj.show();
+            }
+        });
         
         
         $("#nextBtn").click(function(){
-        	var loadingIndex = -1 ;
-        	var options = {
-       			url:"${APP_PATH}/member/doUploadCert.do",
-   				beforeSubmit : function(){
-   					loadingIndex = layer.msg('数据正在保存中', {icon: 6});
-           			return true ; //必须返回true,否则,请求终止.
-   				},
-   				success : function(result){
-           			layer.close(loadingIndex);
-           			if(result.success){
-           				layer.msg("数据保存成功", {time:1000, icon:6});
-           				window.location.href="${APP_PATH}/member/apply.htm";
-           			}else{
-           				layer.msg("数据保存失败", {time:1000, icon:5, shift:6});
-           			}	
-           		}	
-       		};
-       		
-       		$("#uploadCertForm").ajaxSubmit(options); //异步提交
-       		return ; 
+            var arrayId=[];
+            // alert(cont.length);
+            $("input[id='ffile']").each(function(){
+                arrayId.push($(this).val());
+            });
+            var flag = true;
+            for(var i =0 ;i<arrayId.length;i++){
+                //alert(arrayId[i]);
+                if(!arrayId[i]){
+                    flag = false;
+                    break;
+                }
+
+            }
+
+            if(flag){
+                var loadingIndex = -1 ;
+                var options = {
+                    url:"${APP_PATH}/member/doUploadCert.do",
+                    beforeSubmit : function(){
+                        loadingIndex = layer.msg('数据正在保存中', {icon: 6});
+                        return true ; //必须返回true,否则,请求终止.
+                    },
+                    success : function(result){
+                        layer.close(loadingIndex);
+                        if(result.data==true){
+                            layer.msg("数据保存成功", {time:1000, icon:6});
+                            window.location.href="${APP_PATH}/member/checkemail.htm";
+                        }else{
+                            layer.msg("数据保存失败", {time:1000, icon:5, shift:6});
+                        }
+                    }
+                };
+
+                $("#uploadCertForm").ajaxSubmit(options); //异步提交
+                return ;
+            }else{
+                layer.msg("信息不能为空", {time:1000, icon:5, shift:6});
+            }
+
         });
 
 	</script>

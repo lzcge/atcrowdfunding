@@ -1,6 +1,7 @@
 package lzcge.crowdfunding.potal.service;
 
 import lzcge.crowdfunding.entity.Member;
+import lzcge.crowdfunding.entity.MemberCert;
 import lzcge.crowdfunding.entity.User;
 import lzcge.crowdfunding.result.JsonResult;
 
@@ -21,6 +22,8 @@ public interface MemberService {
 	void updateBasicinfo(Member member);
 
 	Member selectById(Member member);
+
+	public void saveMemberCert(List<MemberCert> certimgs);
 
 
 

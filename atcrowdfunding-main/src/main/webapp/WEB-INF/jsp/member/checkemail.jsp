@@ -26,18 +26,18 @@
 			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			  <div class="container">
 				<div class="navbar-header">
-				  <a class="navbar-brand" href="index.html" style="font-size:32px;">尚筹网-创意产品众筹平台</a>
+				  <a class="navbar-brand" href="${APP_PAHT}/index.htm" style="font-size:32px;">人人筹-创意产品众筹平台</a>
 				</div>
             <div id="navbar" class="navbar-collapse collapse" style="float:right;">
               <ul class="nav navbar-nav">
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> 张三<span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="member.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
-                    <li class="divider"></li>
-                    <li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
-                  </ul>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> ${sessionScope.member.username}<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="${APP_PATH}/member.htm"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
+                        <li class="divider"></li>
+                        <li><a href="${APP_PATH}/logout.htm"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
+                    </ul>
                 </li>
               </ul>
             </div>
@@ -62,9 +62,9 @@
 		<form role="form" style="margin-top:20px;">
 		  <div class="form-group">
 			<label for="memberEmail">邮箱地址</label>
-			<input type="text" class="form-control" id="memberEmail" value="${loginMember.email }" placeholder="请输入用于接收验证码的邮箱地址">
+			<input type="text" class="form-control" id="memberEmail" value="${member.email }" placeholder="请输入用于接收验证码的邮箱地址">
 		  </div>
-          <button type="button" onclick="window.location.href='apply-1.html'" class="btn btn-default">上一步</button>
+          <button type="button" onclick="window.location.href='${APP_PATH}/member/uploadCert.htm'" class="btn btn-default">上一步</button>
 		  <button type="button" id="nextBtn" class="btn btn-success">下一步</button>
 		</form>
 		<hr>
@@ -74,10 +74,10 @@
                 <div class="col-md-12 column">
                     <div id="footer">
                         <div class="footerNav">
-                             <a rel="nofollow" href="http://www.atguigu.com">关于我们</a> | <a rel="nofollow" href="http://www.atguigu.com">服务条款</a> | <a rel="nofollow" href="http://www.atguigu.com">免责声明</a> | <a rel="nofollow" href="http://www.atguigu.com">网站地图</a> | <a rel="nofollow" href="http://www.atguigu.com">联系我们</a>
+                            <a rel="nofollow" href="#">关于我们</a> | <a rel="nofollow" href="#">服务条款</a> | <a rel="nofollow" href="#">免责声明</a> | <a rel="nofollow" href="#">网站地图</a> | <a rel="nofollow" href="#">联系我们</a>
                         </div>
                         <div class="copyRight">
-                            Copyright ?2017-2017atguigu.com 版权所有
+                            Copyright ?2017-2017 lzcge.com 版权所有
                         </div>
                     </div>
                     
@@ -87,23 +87,32 @@
     <script src="${APP_PATH }/jquery/jquery-2.1.1.min.js"></script>
     <script src="${APP_PATH }/bootstrap/js/bootstrap.min.js"></script>
 	<script src="${APP_PATH }/script/docs.min.js"></script>
+    <script type="text/javascript" src="${APP_PATH }/jquery/layer/layer.js"></script>
 	<script>
         $('#myTab a').click(function (e) {
-          e.preventDefault()
+          e.preventDefault();
           $(this).tab('show')
         });    
         
         
         $("#nextBtn").click(function(){
+            var loadingIndex = -1 ;
         	$.ajax({
         		type : "POST",
-        		url  : "${APP_PATH}/member/startProcess.do",
+        		url  : "${APP_PATH}/member/sendCode.do",
         		data : {
         			"email" : $("#memberEmail").val()
         		},
+                beforeSend: function(){
+                    loadingIndex = layer.msg('验证码发送中', {icon: 6});
+                    return true ; //必须返回true,否则,请求终止.
+                },
         		success : function(result) {
-        			if ( result.success ) {
-        				window.location.href = "${APP_PATH}/member/apply.htm";
+        		    console.log(result);
+                    layer.close(loadingIndex);
+        			if ( !result.data==false ) {
+                        layer.msg("验证码发送成功", {time:2000, icon:6});
+        				window.location.href = "${APP_PATH}/member/checkauthcode.htm";
         			} else {
         				layer.msg("发送验证码失败", {time:1000, icon:5, shift:6});
         			}

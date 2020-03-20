@@ -179,41 +179,7 @@ public class AdvertController {
 	
 	
 	
-	//同步请求处理.
-	/*@RequestMapping("/doAdd")
-	public Object doAdd(HttpServletRequest request, Advert advert ,HttpSession session) {
-	
-		try {
-			MultipartHttpServletRequest mreq = (MultipartHttpServletRequest)request;
-			
-			MultipartFile mfile = mreq.getFile("advpic");
-			
-			String name = mfile.getOriginalFilename();//java.jpg
-			String extname = name.substring(name.lastIndexOf(".")); // .jpg
-			
-			String iconpath = UUID.randomUUID().toString()+extname; //  232243343.jpg
-			
-			ServletContext servletContext = session.getServletContext();
-			String realpath = servletContext.getRealPath("/pic");
-			
-			String path =realpath+ "\\adv\\"+iconpath;
-			
-			mfile.transferTo(new File(path)); //文件上传.
-			
-			User user = (User)session.getAttribute(Const.LOGIN_USER);
-			advert.setUserid(user.getId());
-			advert.setStatus("1");
-			advert.setIconpath(iconpath);
-			
-			int count = advertService.insertAdvert(advert);
-			
-		} catch ( Exception e ) {
-			e.printStackTrace();
-			
-		}
-		
-		return "redirect:/advert/index.htm";
-	}*/
+
 	
 	/**
 	 * 分页查询资质数据

@@ -84,10 +84,13 @@
         where id = #{id,jdbcType=INTEGER}
     </update>
 
+    <insert id="insertMemberCert">
+        insert into t_member_cert(memberid,certid,iconpath) values(#{memberid},#{certid},#{iconpath});
+    </insert>
 
-
-
-
+    <delete id="delteMemberCert">
+        delete from t_member_cert where memberid=#{memberid}
+    </delete>
 
 
 

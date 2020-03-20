@@ -1,6 +1,7 @@
 package lzcge.crowdfunding.potal.dao;
 
 import lzcge.crowdfunding.entity.Member;
+import lzcge.crowdfunding.entity.MemberCert;
 
 import java.util.List;
 import java.util.Map;
@@ -23,6 +24,10 @@ public interface MemberMapper {
 	void updateAcctType(Member member);
 
 	void updateBasicinfo(Member member);
+
+	void insertMemberCert(MemberCert memberCert);
+
+	void delteMemberCert(MemberCert memberCert);
 
 
 }

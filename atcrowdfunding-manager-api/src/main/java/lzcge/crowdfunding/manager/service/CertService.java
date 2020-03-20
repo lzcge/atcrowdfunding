@@ -38,7 +38,7 @@ public interface CertService {
 
 	public int deleteAccttypeCert(Map<String, Object> map);
 
-	public void saveMemberCert(List<MemberCert> certimgs);
+	//public void saveMemberCert(List<MemberCert> certimgs);
 
 
 }

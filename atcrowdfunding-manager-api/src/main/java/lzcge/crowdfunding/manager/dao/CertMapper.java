@@ -35,5 +35,5 @@ public interface CertMapper {
 
 	int deleteAccttypeCert(Map<String, Object> map);
 
-	void insertMemberCert(MemberCert memberCert);
+
 }

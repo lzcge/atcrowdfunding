@@ -1,5 +1,7 @@
 package lzcge.crowdfunding.entity;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class MemberCert {
     private Integer id;
 
@@ -9,7 +11,17 @@ public class MemberCert {
 
     private String iconpath;
 
-    public Integer getId() {
+	private MultipartFile imgfile;
+
+	public MultipartFile getImgfile() {
+		return imgfile;
+	}
+
+	public void setImgfile(MultipartFile imgfile) {
+		this.imgfile = imgfile;
+	}
+
+	public Integer getId() {
         return id;
     }
 

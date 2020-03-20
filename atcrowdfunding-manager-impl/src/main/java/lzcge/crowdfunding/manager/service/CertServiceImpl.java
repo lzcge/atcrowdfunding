@@ -84,11 +84,6 @@ public class CertServiceImpl implements CertService {
 	}
 
 
-	@Override
-	public void saveMemberCert(List<MemberCert> certimgs) {
-		for (MemberCert memberCert : certimgs) {
-			certDao.insertMemberCert(memberCert);
-		}
-	}
+
 
 }
