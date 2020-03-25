@@ -1,6 +1,7 @@
 package lzcge.crowdfunding.potal.service;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -8,10 +9,16 @@ import java.util.UUID;
 import lzcge.crowdfunding.entity.*;
 import lzcge.crowdfunding.manager.service.CertService;
 import lzcge.crowdfunding.potal.dao.MemberMapper;
+import lzcge.crowdfunding.potal.listener.PassListener;
+import lzcge.crowdfunding.potal.listener.RefuseListener;
 import lzcge.crowdfunding.result.JsonResult;
 import lzcge.crowdfunding.util.Const;
 import lzcge.crowdfunding.util.ExceptionUtil;
 import lzcge.crowdfunding.util.MD5Util;
+import org.activiti.engine.RepositoryService;
+import org.activiti.engine.RuntimeService;
+import org.activiti.engine.repository.ProcessDefinition;
+import org.activiti.engine.runtime.ProcessInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -37,6 +44,12 @@ public class MemberServiceImpl implements MemberService {
 
 	@Autowired
 	private CertService certService;
+
+	@Autowired
+	private RepositoryService repositoryService;
+
+	@Autowired
+	private RuntimeService runtimeService;
 
 
 	/**
@@ -154,10 +167,15 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 
-	//更新会员认证审核状态
+	//更新会员认证审核状态并启动后台认证流程
 	@Transactional
 	@Override
 	public void updateMemberAuthStatus(Member member) {
 		memberMapper.updateMemberAuthStatus(member);
+	}
+
+	@Override
+	public List<Map<String, Object>> queryCertByMemberid(Member member) {
+		return memberMapper.queryCertByMemberid(member);
 	}
 }

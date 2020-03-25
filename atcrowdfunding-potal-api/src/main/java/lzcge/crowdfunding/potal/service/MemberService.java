@@ -28,6 +28,6 @@ public interface MemberService {
 	//更新会员认证审核状态
 	public void updateMemberAuthStatus(Member member);
 
-
+	List<Map<String,Object>> queryCertByMemberid(Member member);
 
 }

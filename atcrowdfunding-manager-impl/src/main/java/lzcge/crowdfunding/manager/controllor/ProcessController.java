@@ -97,7 +97,13 @@ public class ProcessController {
 		
 		return result;
 	}
-	
+
+
+	/**
+	 * 流程定义部署
+	 * @param request
+	 * @return
+	 */
 	@ResponseBody
 	@PostMapping("/deploy")
 	public Object deploy(HttpServletRequest request){	
@@ -105,16 +111,12 @@ public class ProcessController {
 		JsonResult result = new JsonResult();
 		
 		try {
-			
 			MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest)request;
 			
 			MultipartFile multipartFile  = multipartHttpServletRequest.getFile("processDefFile");
-			
-			
-			
+
 			repositoryService.createDeployment().addInputStream(multipartFile.getOriginalFilename(), multipartFile.getInputStream()).deploy();
-			
-			
+
 			result.setInfo("success");
 			result.setData(200);
 		} catch (Exception e) {

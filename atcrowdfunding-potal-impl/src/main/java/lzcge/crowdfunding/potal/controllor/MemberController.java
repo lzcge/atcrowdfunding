@@ -3,6 +3,8 @@ package lzcge.crowdfunding.potal.controllor;
 import lzcge.crowdfunding.entity.Member;
 import lzcge.crowdfunding.entity.MemberCert;
 import lzcge.crowdfunding.entity.Ticket;
+import lzcge.crowdfunding.potal.listener.PassListener;
+import lzcge.crowdfunding.potal.listener.RefuseListener;
 import lzcge.crowdfunding.potal.service.MemberService;
 import lzcge.crowdfunding.potal.service.TicketService;
 import lzcge.crowdfunding.result.JsonResult;
@@ -10,6 +12,10 @@ import lzcge.crowdfunding.util.Const;
 import lzcge.crowdfunding.util.DesUtil;
 import lzcge.crowdfunding.util.ExceptionUtil;
 import lzcge.crowdfunding.vo.Data;
+import org.activiti.engine.RepositoryService;
+import org.activiti.engine.RuntimeService;
+import org.activiti.engine.repository.ProcessDefinition;
+import org.activiti.engine.runtime.ProcessInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -35,6 +41,15 @@ public class MemberController {
 
 	@Autowired
 	private MemberService memberService;
+
+	@Autowired
+	private RepositoryService repositoryService;
+
+	@Autowired
+	private RuntimeService runtimeService;
+
+	@Autowired
+	private TicketService ticketService;
 
 
 
@@ -256,7 +271,8 @@ public class MemberController {
 
 			// 5. Content: 邮件正文（可以使用html标签）（内容有广告嫌疑，避免被邮件服务器误认为是滥发广告以至返回失败，请修改发送内容）
 			String MailVerifyCode = String.valueOf(new Random().nextInt(899999) + 100000);
-			message.setContent(receiveMailAccount+"你的实名认证验证码为："+MailVerifyCode, "text/html;charset=UTF-8");
+
+			message.setContent(receiveMailAccount+":"+MailVerifyCode, "text/html;charset=UTF-8");
 
 			//验证码和创建时间放入session域中
 			session.setAttribute("MailVerifyCode",MailVerifyCode);
@@ -329,8 +345,27 @@ public class MemberController {
 			result.setInfo("false");
 			result.setData("验证码错误！");
 		}else{
+
+			//更新用户状态,启动后台流程认证
 			loginMember.setAuthstatus("1");
 			memberService.updateMemberAuthStatus(loginMember);
+
+			//启动后台认证流程
+			ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery().processDefinitionKey("auth").singleResult();
+
+			Map<String,Object> variables= new HashMap<String,Object>();
+			variables.put("passListener", new PassListener());
+			variables.put("refuseListener", new RefuseListener());
+
+			//记录流程状态
+			ProcessInstance processInstance = runtimeService.startProcessInstanceById(processDefinition.getId(),variables);
+			Ticket ticket = new Ticket();
+			ticket.setMemberid(loginMember.getId());
+			ticket.setPstep("finish");
+			ticket.setStatus("0");
+			ticket.setPiid(processInstance.getId());
+			ticketService.saveTicket(ticket);
+
 			result.setData("success");
 			result.setInfo("success");
 			session.removeAttribute("MailVerifyCode");

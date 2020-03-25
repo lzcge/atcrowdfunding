@@ -35,5 +35,12 @@ public interface MemberMapper {
 	 */
 	void updateMemberAuthStatus(Member member);
 
+	/**
+	 * 查询会员的上传资质
+	 * @param member
+	 * @return
+	 */
+	List<Map<String, Object>> queryCertByMemberid(Member member);
+
 
 }

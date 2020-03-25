@@ -69,6 +69,13 @@
         from t_member where loginacct=#{loginacct} and userpswd=#{userpswd}
     </select>
 
+    <select id="queryCertByMemberid" resultType="map">
+        SELECT t_cert.id,t_cert.name,t_member_cert.iconpath
+        FROM t_cert JOIN t_member_cert
+        ON t_cert.id = t_member_cert.certid
+        WHERE t_member_cert.memberid = #{id}
+    </select>
+
     <update id="updateAcctType" parameterType="lzcge.crowdfunding.entity.Member" >
         update t_member
         set
