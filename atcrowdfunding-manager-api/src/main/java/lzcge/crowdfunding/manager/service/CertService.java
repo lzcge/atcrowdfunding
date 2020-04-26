@@ -2,6 +2,7 @@ package lzcge.crowdfunding.manager.service;
 
 import lzcge.crowdfunding.entity.Cert;
 import lzcge.crowdfunding.entity.MemberCert;
+import lzcge.crowdfunding.result.JsonResult;
 import lzcge.crowdfunding.util.Page;
 import lzcge.crowdfunding.vo.Data;
 
@@ -18,9 +19,11 @@ public interface CertService {
 
 	public int queryCount(Map<String, Object> paramMap);
 
-	public void insertCert(Cert cert);
+	public JsonResult insertCert(Cert cert);
 
 	public Cert queryById(Integer id);
+
+	Cert queryCertByName(Cert cert);
 
 	public int updateCert(Cert cert);
 

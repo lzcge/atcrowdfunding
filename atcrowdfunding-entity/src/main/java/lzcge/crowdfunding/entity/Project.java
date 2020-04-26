@@ -1,133 +1,78 @@
 package lzcge.crowdfunding.entity;
 
-public class Project {
-    private Integer id;
+import lombok.Data;
 
-    private String name;
+import java.io.Serializable;
+import java.util.List;
 
-    private String remark;
+@Data
+public class Project implements Serializable {
+	private static final long serialVersionUID = 1L;
 
-    private Long money;
+	private Integer id;
 
-    private Integer day;
 
-    private String status;
+	private Byte status;
 
-    private String deploydate;
+	private String deploydate;
 
-    private Long supportmoney;
+	private Long supportmoney;
 
-    private Integer supporter;
+	private Integer supporter;
 
-    private Integer completion;
+	private Integer completion;
 
-    private Integer memberid;
+	private Integer memberid;
 
-    private String createdate;
+	private Integer follower;
 
-    private Integer follower;
+	// 分类id集合
+	private List<Integer> typeIdList;
 
-    public Integer getId() {
-        return id;
-    }
+	// 标签id集合
+	private List<Integer> tagIdList;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	// 项目名称
+	private String projectName;
 
-    public String getName() {
-        return name;
-    }
+	// 项目描述
+	private String projectDescription;
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
+	// 计划筹集的金额
+	private Long money;
 
-    public String getRemark() {
-        return remark;
-    }
+	// 筹集资金的天数
+	private Integer day;
 
-    public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
-    }
+	// 创建项目的日期
+	private String createdate;
 
-    public Long getMoney() {
-        return money;
-    }
+	// 头图的路径
+	private String headerPicturePath;
 
-    public void setMoney(Long money) {
-        this.money = money;
-    }
+	// 详情图片的路径
+	private List<String> detailPicturePathList;
 
-    public Integer getDay() {
-        return day;
-    }
 
-    public void setDay(Integer day) {
-        this.day = day;
-    }
+	public Project(Integer id, Byte status, String deploydate, Long supportmoney, Integer supporter, Integer completion, Integer memberid, Integer follower, List<Integer> typeIdList, List<Integer> tagIdList, String projectName, String projectDescription, Long money, Integer day, String createdate, String headerPicturePath, List<String> detailPicturePathList) {
+		this.id = id;
+		this.status = status;
+		this.deploydate = deploydate;
+		this.supportmoney = supportmoney;
+		this.supporter = supporter;
+		this.completion = completion;
+		this.memberid = memberid;
+		this.follower = follower;
+		this.typeIdList = typeIdList;
+		this.tagIdList = tagIdList;
+		this.projectName = projectName;
+		this.projectDescription = projectDescription;
+		this.money = money;
+		this.day = day;
+		this.createdate = createdate;
+		this.headerPicturePath = headerPicturePath;
+		this.detailPicturePathList = detailPicturePathList;
+	}
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
-    }
-
-    public String getDeploydate() {
-        return deploydate;
-    }
-
-    public void setDeploydate(String deploydate) {
-        this.deploydate = deploydate == null ? null : deploydate.trim();
-    }
-
-    public Long getSupportmoney() {
-        return supportmoney;
-    }
-
-    public void setSupportmoney(Long supportmoney) {
-        this.supportmoney = supportmoney;
-    }
-
-    public Integer getSupporter() {
-        return supporter;
-    }
-
-    public void setSupporter(Integer supporter) {
-        this.supporter = supporter;
-    }
-
-    public Integer getCompletion() {
-        return completion;
-    }
-
-    public void setCompletion(Integer completion) {
-        this.completion = completion;
-    }
-
-    public Integer getMemberid() {
-        return memberid;
-    }
-
-    public void setMemberid(Integer memberid) {
-        this.memberid = memberid;
-    }
-
-    public String getCreatedate() {
-        return createdate;
-    }
-
-    public void setCreatedate(String createdate) {
-        this.createdate = createdate == null ? null : createdate.trim();
-    }
-
-    public Integer getFollower() {
-        return follower;
-    }
-
-    public void setFollower(Integer follower) {
-        this.follower = follower;
-    }
+	public Project(){}
 }

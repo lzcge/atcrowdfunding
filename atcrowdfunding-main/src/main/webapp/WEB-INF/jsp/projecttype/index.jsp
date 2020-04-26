@@ -27,7 +27,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <div><a class="navbar-brand" style="font-size:32px;" href="#">人人筹 - 资质管理</a></div>
+          <div><a class="navbar-brand" style="font-size:32px;" href="#">人人筹 - 项目分类</a></div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -60,13 +60,13 @@
   <div class="form-group has-feedback">
     <div class="input-group">
       <div class="input-group-addon">查询条件</div>
-      <input id="queryText" class="form-control has-success" type="text" placeholder="请输入资质名称">
+      <input id="queryText" class="form-control has-success" type="text" placeholder="请输入类别名称">
     </div>
   </div>
-  <button type="button" class="btn btn-warning" onclick="queryCert()"><i class="glyphicon glyphicon-search"></i> 查询</button>
+  <button type="button" class="btn btn-warning" onclick="queryProjectType()"><i class="glyphicon glyphicon-search"></i> 查询</button>
 </form>
-<button type="button" class="btn btn-danger" style="float:right;margin-left:10px;" onclick="deleteCerts()"><i class=" glyphicon glyphicon-remove"></i> 删除</button>
-<button type="button" class="btn btn-primary" style="float:right;" onclick="window.location.href='${APP_PATH}/cert/add.htm'"><i class="glyphicon glyphicon-plus"></i> 新增</button>
+<button type="button" class="btn btn-danger" style="float:right;margin-left:10px;" onclick="deleteProjectTypes()"><i class=" glyphicon glyphicon-remove"></i> 删除</button>
+<button type="button" class="btn btn-primary" style="float:right;" onclick="window.location.href='${APP_PATH}/projectType/add.htm'"><i class="glyphicon glyphicon-plus"></i> 新增</button>
 <br>
  <hr style="clear:both;">
           <div class="table-responsive">
@@ -76,6 +76,7 @@
                   <th width="30">#</th>
 				  <th width="30"><input type="checkbox" onclick="allSel(this)"></th>
                   <th>名称</th>
+                  <%--<th>描述</th>--%>
                   <th width="100">操作</th>
                 </tr>
               </thead>
@@ -148,7 +149,7 @@
             	}
             	
             	$.ajax({
-            		url : "${APP_PATH}/cert/pageQuery.do",
+            		url : "${APP_PATH}/projectType/pageQuery.do",
             		type : "POST",
             		data : obj,
             		beforeSend : function() {
@@ -158,23 +159,24 @@
             		success : function( result ) {
             			layer.close(loadingIndex);
             			if ( result.info=="success") {
-            			    //console.log(result);
+            			    console.log(result);
             				// 将查询结果循环遍历，将数据展现出来
             				var pageObj = result.data;
             				var certList = pageObj.datas;
             				
             				var content = "";
-            				$.each(certList, function(i, cert){
+            				$.each(certList, function(i, projectType){
             				    console.log(i);
-            				    console.log(cert);
+            				    console.log(projectType);
              				   content = content +  '<tr>';
           	                   content = content +  '  <td>'+(i+1)+'</td>';
-          					   content = content +  '  <td><input type="checkbox" value="'+cert.id+'"></td>';
-          	                   content = content +  '  <td>'+cert.name+'</td>';
+          					   content = content +  '  <td><input type="checkbox" value="'+projectType.id+'"></td>';
+          	                   content = content +  '  <td>'+projectType.name+'</td>';
+          	                   // content = content +  '  <td>'+projectType.remark+'</td>';
           	                   content = content +  '  <td>';
           					   // content = content +  '      <button type="button" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>';
-          					   content = content +  '      <button type="button" onclick="window.location.href=\'${APP_PATH}/cert/edit.htm?pageNo='+pageObj.pageNo+'&id='+cert.id+'\'" class="btn btn-primary btn-xs"><i class=" glyphicon glyphicon-pencil"></i></button>';
-          					   content = content +  '	   <button type="button" onclick="deleteCert('+cert.id+', \''+cert.name+'\')" class="btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button>';
+          					   content = content +  '      <button type="button" onclick="window.location.href=\'${APP_PATH}/projectType/edit.htm?pageNo='+pageObj.pageNo+'&id='+projectType.id+'\'" class="btn btn-primary btn-xs"><i class=" glyphicon glyphicon-pencil"></i></button>';
+          					   content = content +  '	   <button type="button" onclick="deleteProjectType('+projectType.id+', \''+projectType.name+'\')" class="btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button>';
           					   content = content +  '  </td>';
           	                   content = content +  '</tr>';
             				});
@@ -200,23 +202,23 @@
             				
             				$("tbody").html(content);
             			} else {
-            				layer.msg("资质分页查询数据失败", {time:1000, icon:5, shift:6});
+            				layer.msg("项目分类信息查询失败", {time:1000, icon:5, shift:6});
             			}
             		}
             	});
             }
 
             var cond = false;
-            function queryCert() {
+            function queryProjectType() {
             	cond = true;
             	pageQuery(1);
             }
             
-            function deleteCert(id, name) {
-    			layer.confirm("删除账号为"+name+"资质, 是否继续？",  {icon: 3, title:'提示'}, function(cindex){
+            function deleteProjectType(id, name) {
+    			layer.confirm("确认删除名称为"+name+"的类别吗？",  {icon: 3, title:'提示'}, function(cindex){
     				// 删除数据
     				$.ajax({
-    					url : "${APP_PATH}/cert/delete.do",
+    					url : "${APP_PATH}/projectType/delete.do",
     					type : "POST",
     					data  : {
     						id : id
@@ -224,11 +226,11 @@
     					success : function(result) {
     					    console.log(result);
     						if ( result.data ) {
-                				layer.msg("资质信息删除成功", {time:1000, icon:6}, function(){
+                				layer.msg("信息删除成功", {time:1000, icon:6}, function(){
                 					pageQuery(1);
                 				});
     						} else {
-    							layer.msg("资质信息删除失败", {time:1000, icon:5, shift:6});
+    							layer.msg("信息删除失败", {time:1000, icon:5, shift:6});
     						}
     					}
     				});
@@ -253,29 +255,28 @@
             }
 
             //批量删除
-            function deleteCerts() {
+            function deleteProjectTypes() {
             	var checkBox = $("tbody :checked");
             	if ( checkBox.length == 0 ) {
-            		layer.msg("请选择需要删除的资质数据", {time:1000, icon:5, shift:6});
+            		layer.msg("请选择需要删除的数据", {time:1000, icon:5, shift:6});
             	} else {
-        			layer.confirm("删除选择的资质数据, 是否继续？",  {icon: 3, title:'提示'}, function(cindex){
+        			layer.confirm("删除选择的数据, 是否继续？",  {icon: 3, title:'提示'}, function(cindex){
         				// 删除数据
         				var obj = {}
         				$.each(checkBox, function(i, n){
         					obj["ids["+i+"]"] = n.value;
         				});
         				$.ajax({
-        					url : "${APP_PATH}/cert/deletes.do",
+        					url : "${APP_PATH}/projectType/deletes.do",
         					type : "POST",
         					data  : obj,
         					success : function(result) {
-        					    console.log(result);
         						if ( result.data  ) {
-                    				layer.msg("资质信息删除成功", {time:1000, icon:6}, function(){
+                    				layer.msg("信息删除成功", {time:1000, icon:6}, function(){
                     					pageQuery(1);
                     				});
         						} else {
-        							layer.msg("资质信息删除失败", {time:1000, icon:5, shift:6});
+        							layer.msg("信息删除失败", {time:1000, icon:5, shift:6});
         						}
         					}
         				});

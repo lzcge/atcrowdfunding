@@ -50,8 +50,8 @@
     
     <delete id="deleteCerts">
         delete from t_cert where id in 
-        <foreach collection="datas" item="cert" open="(" close=")" separator=",">
-        #{cert.id}
+        <foreach collection="ids" item="certid" open="(" close=")" separator=",">
+        #{certid}
         </foreach>
     </delete>
     
@@ -63,6 +63,16 @@
     
     <select id="queryAllCert" resultType="lzcge.crowdfunding.entity.Cert">
     	select * from t_cert
+    </select>
+
+    <select id="queryCertByName" resultType="lzcge.crowdfunding.entity.Cert" parameterType="lzcge.crowdfunding.entity.Cert">
+    	select * from t_cert
+    	<where>
+            <if test="name != null">
+                name = #{name}
+            </if>
+
+        </where>
     </select>
     
     <select id="queryAllAccttypeCert" resultType="map">

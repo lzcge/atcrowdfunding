@@ -4,4 +4,7 @@
     <!--<typeAliases>-->
         <!--<typeAlias type="User" alias="user"/>-->
     <!--</typeAliases>-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
 </configuration>

@@ -56,8 +56,8 @@
         </div>
         <div class="form-group has-success has-feedback">
             <select class="form-control" id="ftype" name="type">
-                <option value="member" selected>会员</option>
-                <option value="user" >管理</option>
+                <%--<option value="member" selected>会员</option>--%>
+                <option value="user" selected>管理</option>
             </select>
         </div>
         <div class="checkbox">

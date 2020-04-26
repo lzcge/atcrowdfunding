@@ -1,10 +1,8 @@
 package lzcge.crowdfunding.manager.controllor;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import lzcge.crowdfunding.entity.Cert;
-import lzcge.crowdfunding.manager.service.CertService;
+import lzcge.crowdfunding.entity.ProjectType;
+import lzcge.crowdfunding.entity.ProjectType;
+import lzcge.crowdfunding.manager.service.ProjectTypeService;
 import lzcge.crowdfunding.result.JsonResult;
 import lzcge.crowdfunding.util.Page;
 import lzcge.crowdfunding.util.StringUtil;
@@ -17,34 +15,36 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.HashMap;
+import java.util.Map;
 
 
 @Controller
-@RequestMapping("/cert")
-public class CertController {
+@RequestMapping("/projectType")
+public class ProjectTypeController {
 
 	@Autowired
-	private CertService certService;
+	private ProjectTypeService projectTypeService;
 	
 
 	@RequestMapping("/index")
 	public String index() {
-		return "cert/index";
+		return "projecttype/index";
 	}
 	
 	@RequestMapping("/add")
 	public String add() {
-		return "cert/add";
+		return "projecttype/add";
 	}
 	
 	@RequestMapping("/edit")
 	public String edit( Integer id, Model model ) {
 		
-		// 根据主键查询资质信息
-		Cert cert = certService.queryById(id);
-		model.addAttribute("cert", cert);
+		// 根据主键查询类别信息
+		ProjectType projectType = projectTypeService.queryById(id);
+		model.addAttribute("projectType", projectType);
 		
-		return "cert/edit";
+		return "projecttype/edit";
 	}
 	
 	@ResponseBody
@@ -53,7 +53,7 @@ public class CertController {
 		JsonResult result = new JsonResult();
 		
 		try {
-			int count = certService.deleteCerts(ds);
+			int count = projectTypeService.deleteProjectTypes(ds);
 			if ( count == ds.getIds().size() ) {
 				result.setData(true);
 			} else {
@@ -73,7 +73,7 @@ public class CertController {
 		JsonResult result = new JsonResult();
 		
 		try {
-			int count = certService.deleteCert(id);
+			int count = projectTypeService.deleteProjectType(id);
 			if ( count == 1 ) {
 				result.setData(true);
 			} else {
@@ -89,11 +89,11 @@ public class CertController {
 	
 	@ResponseBody
 	@RequestMapping("/update")
-	public Object update( Cert cert ) {
+	public Object update( ProjectType projectType ) {
 		JsonResult result = new JsonResult();
 		
 		try {
-			int count = certService.updateCert(cert);
+			int count = projectTypeService.updateProjectType(projectType);
 			if ( count == 1 ) {
 				result.setData(true);
 			} else {
@@ -108,16 +108,16 @@ public class CertController {
 	}
 	
 	/**
-	 * 新增资质数据
+	 * 新增类别数据
 	 * @return
 	 */
 	@ResponseBody
 	@RequestMapping("/insert")
-	public Object insert( Cert cert ) {
+	public Object insert( ProjectType projectType ) {
 		JsonResult result = new JsonResult();
 		
 		try {
-			result = certService.insertCert(cert);
+			result = projectTypeService.insertProjectType(projectType);
 		} catch ( Exception e ) {
 			e.printStackTrace();
 			result.setData(false);
@@ -127,7 +127,7 @@ public class CertController {
 	}
 	
 	/**
-	 * 分页查询资质数据
+	 * 分页查询类别数据
 	 * @return
 	 */
 	@ResponseBody
@@ -141,7 +141,7 @@ public class CertController {
 		JsonResult result = new JsonResult();
 		
 		try {
-			// 查询资质数据
+			// 查询类别数据
 			Map<String, Object> paramMap = new HashMap<String, Object>();
 			paramMap.put("pageno", pageno);
 			paramMap.put("pagesize", pagesize);
@@ -151,7 +151,7 @@ public class CertController {
 			paramMap.put("pagetext", pagetext);
 			
 			// 分页查询数据
-			Page<Cert> page = certService.pageQuery(paramMap);
+			Page<ProjectType> page = projectTypeService.pageQuery(paramMap);
 
 			result.setInfo("success");
 			result.setData(page);

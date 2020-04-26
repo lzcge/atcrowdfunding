@@ -6,10 +6,12 @@ import java.util.Map;
 import lzcge.crowdfunding.entity.Cert;
 import lzcge.crowdfunding.entity.MemberCert;
 import lzcge.crowdfunding.manager.dao.CertMapper;
+import lzcge.crowdfunding.result.JsonResult;
 import lzcge.crowdfunding.util.Page;
 import lzcge.crowdfunding.vo.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
@@ -39,22 +41,42 @@ public class CertServiceImpl implements CertService {
 		return certDao.queryCount(paramMap);
 	}
 
-	public void insertCert(Cert cert) {
+	@Transactional
+	public JsonResult insertCert(Cert cert) {
+		//判断资质是否已经存在
+		Cert cert1 = certDao.queryCertByName(cert);
+		JsonResult jsonResult = new JsonResult();
+		if(cert1!=null){
+			jsonResult.setInfo("资质已存在");
+			jsonResult.setData(false);
+			return jsonResult;
+		}
 		certDao.insertCert(cert);
+		jsonResult.setData(true);
+		 return jsonResult;
 	}
 
 	public Cert queryById(Integer id) {
 		return certDao.queryById(id);
 	}
 
+	@Override
+	public Cert queryCertByName(Cert cert) {
+		return certDao.queryCertByName(cert);
+	}
+
+	@Transactional
 	public int updateCert(Cert cert) {
 		return certDao.updateCert(cert);
 	}
 
+	@Transactional
 	public int deleteCert(Integer id) {
 		return certDao.deleteCert(id);
 	}
 
+
+	@Transactional
 	public int deleteCerts(Data ds) {
 		return certDao.deleteCerts(ds);
 	}
@@ -74,11 +96,13 @@ public class CertServiceImpl implements CertService {
 	}
 
 	@Override
+	@Transactional
 	public int insertAccttypeCert(Map<String, Object> map) {
 		return certDao.insertAccttypeCert(map);
 	}
 
 	@Override
+	@Transactional
 	public int deleteAccttypeCert(Map<String, Object> map) {
 		return certDao.deleteAccttypeCert(map);
 	}

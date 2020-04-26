@@ -25,7 +25,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" cert="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-            <div><a class="navbar-brand" style="font-size:32px;" href="user.html">人人筹 - 资质管理</a></div>
+            <div><a class="navbar-brand" style="font-size:32px;" href="projectType.html">人人筹 - 项目分类</a></div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -51,18 +51,18 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 				<ol class="breadcrumb">
 				  <li><a href="${APP_PATH}/main.htm">首页</a></li>
-				  <li><a href="${APP_PATH}/cert/index.htm">数据列表</a></li>
-				  <li class="active">新增</li>
+				  <li><a href="${APP_PATH}/projectType/index.htm">数据列表</a></li>
+				  <li class="active">修改</li>
 				</ol>
 			<div class="panel panel-default">
               <div class="panel-heading">表单数据<div style="float:right;cursor:pointer;" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></div></div>
 			  <div class="panel-body">
-				<form cert="form" id="form">
+				<form  id="form" name="form">
 				  <div class="form-group">
 					<label for="exampleInputPassword1">资质名称</label>
-					<input type="text" class="form-control" id="certname" placeholder="请输入资质名称">
+					<input type="text" class="form-control" id="projectTypeName" value="${projectType.name}" placeholder="请输入类别名称">
 				  </div>
-				  <button id="saveBtn" type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> 新增</button>
+				  <button id="updateBtn" type="button" class="btn btn-success"><i class="glyphicon glyphicon-pencil"></i> 修改</button>
 				  <button id="resetBtn" type="button" class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> 重置</button>
 				</form>
 			  </div>
@@ -70,32 +70,7 @@
         </div>
       </div>
     </div>
-	<div class="modal fade" id="myModal" tabindex="-1" cert="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			<h4 class="modal-title" id="myModalLabel">帮助</h4>
-		  </div>
-		  <div class="modal-body">
-			<div class="bs-callout bs-callout-info">
-				<h4>测试标题1</h4>
-				<p>测试内容1，测试内容1，测试内容1，测试内容1，测试内容1，测试内容1</p>
-			  </div>
-			<div class="bs-callout bs-callout-info">
-				<h4>测试标题2</h4>
-				<p>测试内容2，测试内容2，测试内容2，测试内容2，测试内容2，测试内容2</p>
-			  </div>
-		  </div>
-		  <!--
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			<button type="button" class="btn btn-primary">Save changes</button>
-		  </div>
-		  -->
-		</div>
-	  </div>
-	</div>
+
     <script src="${APP_PATH}/jquery/jquery-2.1.1.min.js"></script>
     <script src="${APP_PATH}/bootstrap/js/bootstrap.min.js"></script>
 	<script src="${APP_PATH}/script/docs.min.js"></script>
@@ -114,32 +89,32 @@
 				});
             });
             
-            $("#saveBtn").click(function(){
-                if($.trim( $("#certname").val())==''){
+            $("#updateBtn").click(function(){
+                if($.trim( $("#projectTypeName").val())==''){
                     layer.msg("名称不能为空",{time:1000,icon:0,shift:0},function () {
-                        $("#certname").val("");
-                        $("#certname").focus();
+                        $("#projectTypeName").val("${projectType.name}");
                     });
                 }else{
                     var loadingIndex = -1;
                     // 提交表单
                     $.ajax({
-                        url : "${APP_PATH}/cert/insert.do",
+                        url : "${APP_PATH}/projectType/update.do",
                         type : "POST",
                         data : {
-                            "name"  : $("#certname").val()
+                            "name"  : $("#projectTypeName").val(),
+                            "id" : "${projectType.id}"
                         },
                         beforeSend : function() {
-                            loadingIndex = layer.msg('数据保存中', {icon: 16});
+                            loadingIndex = layer.msg('数据修改中', {icon: 16});
                         },
                         success : function(result) {
                             layer.close(loadingIndex);
                             if ( result.data ) {
-                                layer.msg("资质信息保存成功", {time:1000, icon:6}, function(){
-                                    window.location.href = "${APP_PATH}/cert/index.htm";
+                                layer.msg("信息修改成功", {time:1000, icon:6}, function(){
+                                    window.location.href = "${APP_PATH}/projectType/index.htm?pageNo=${param.pageNo}";
                                 });
                             } else {
-                                layer.msg(result.info, {time:1000, icon:5, shift:6});
+                                layer.msg("信息修改失败", {time:1000, icon:5, shift:6});
                             }
                         }
                     });

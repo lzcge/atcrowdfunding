@@ -25,7 +25,7 @@
 	<bean id="workTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 		<property name="jobDetail" ref="workTask"></property>
 		<!--石英表达式，定义了任务的启动时间-->
-		<property name="cronExpression" value="0/3 * * * * ?"></property>
+		<property name="cronExpression" value="* 15 * * * ?"></property>
 	</bean>
 	 
 	<!-- 总调度,用于启动定时器 -->

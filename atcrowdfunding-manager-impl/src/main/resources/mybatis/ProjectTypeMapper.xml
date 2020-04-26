@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="lzcge.crowdfunding.manager.dao.ProjectTypeMapper">
+
+    <select id="queryById" resultType="lzcge.crowdfunding.entity.ProjectType">
+        select * from t_type where id = #{id}
+    </select>
+
+    <select id="queryCount" resultType="int">
+        select count(*) from t_type
+        <where>
+            <if test="pagetext != null">
+            and name like concat('%', #{pagetext}, '%')
+            </if>
+        </where>
+    </select>
+    
+    <select id="pageQuery" resultType="lzcge.crowdfunding.entity.ProjectType">
+        select * from t_type
+        <where>
+            <if test="pagetext != null">
+            and name like concat('%', #{pagetext}, '%')
+            </if>
+        </where>
+        limit #{startIndex}, #{pagesize}
+    </select>
+    
+    <insert id="insertProjectType">
+        insert into t_type (
+            name
+        ) values (
+            #{name}
+        )
+    </insert>
+    
+    <update id="updateProjectType">
+        update
+            t_type
+        set
+            name = #{name}
+        where id = #{id}
+    </update>
+    
+    <delete id="deleteProjectType">
+        delete from t_type where id = #{id}
+    </delete>
+    
+    <delete id="deleteProjectTypes">
+        delete from t_type where id in 
+        <foreach collection="ids" item="typeid" open="(" close=")" separator=",">
+        #{typeid}
+        </foreach>
+    </delete>
+    
+    
+
+
+    <select id="queryProjectTypeByName" resultType="lzcge.crowdfunding.entity.ProjectType" parameterType="lzcge.crowdfunding.entity.ProjectType">
+    	select * from t_type
+    	<where>
+            <if test="name != null">
+                name = #{name}
+            </if>
+
+        </where>
+    </select>
+
+    
+
+
+
+</mapper>

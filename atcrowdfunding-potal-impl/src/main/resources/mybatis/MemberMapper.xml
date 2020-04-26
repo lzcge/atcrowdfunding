@@ -7,7 +7,7 @@
 	<resultMap id="BaseResultMap" type="lzcge.crowdfunding.entity.Member">
 		<id column="id" property="id" jdbcType="INTEGER" />
 		<result column="loginacct" property="loginacct" jdbcType="VARCHAR" />
-		<result column="userpswd" property="userpswd" jdbcType="CHAR" />
+		<result column="userpswd" property="userpswd" jdbcType="VARCHAR" />
 		<result column="username" property="username" jdbcType="VARCHAR" />
 		<result column="email" property="email" jdbcType="VARCHAR" />
 		<result column="authstatus" property="authstatus" jdbcType="CHAR" />
@@ -25,7 +25,7 @@
 		)
 		values
 		(#{loginacct,jdbcType=VARCHAR},
-		#{userpswd,jdbcType=CHAR},
+		#{userpswd,jdbcType=VARCHAR},
 		#{username,jdbcType=VARCHAR},
 		#{email,jdbcType=VARCHAR},
 		#{authstatus,jdbcType=CHAR},

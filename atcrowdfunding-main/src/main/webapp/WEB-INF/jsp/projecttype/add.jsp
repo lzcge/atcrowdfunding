@@ -25,7 +25,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" cert="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-            <div><a class="navbar-brand" style="font-size:32px;" href="user.html">人人筹 - 资质管理</a></div>
+            <div><a class="navbar-brand" style="font-size:32px;" href="user.html">人人筹 - 项目分类</a></div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -51,16 +51,16 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 				<ol class="breadcrumb">
 				  <li><a href="${APP_PATH}/main.htm">首页</a></li>
-				  <li><a href="${APP_PATH}/cert/index.htm">数据列表</a></li>
+				  <li><a href="${APP_PATH}/projectType/index.htm">数据列表</a></li>
 				  <li class="active">新增</li>
 				</ol>
 			<div class="panel panel-default">
               <div class="panel-heading">表单数据<div style="float:right;cursor:pointer;" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></div></div>
 			  <div class="panel-body">
-				<form cert="form" id="form">
+				<form projectType="form" id="form">
 				  <div class="form-group">
-					<label for="exampleInputPassword1">资质名称</label>
-					<input type="text" class="form-control" id="certname" placeholder="请输入资质名称">
+					<label for="exampleInputPassword1">类别名称</label>
+					<input type="text" class="form-control" id="projectTypeName" placeholder="请输入类别名称">
 				  </div>
 				  <button id="saveBtn" type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> 新增</button>
 				  <button id="resetBtn" type="button" class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> 重置</button>
@@ -115,19 +115,19 @@
             });
             
             $("#saveBtn").click(function(){
-                if($.trim( $("#certname").val())==''){
+                if($.trim( $("#projectTypeName").val())==''){
                     layer.msg("名称不能为空",{time:1000,icon:0,shift:0},function () {
-                        $("#certname").val("");
-                        $("#certname").focus();
+                        $("#projectTypeName").val("");
+                        $("#projectTypeName").focus();
                     });
                 }else{
                     var loadingIndex = -1;
                     // 提交表单
                     $.ajax({
-                        url : "${APP_PATH}/cert/insert.do",
+                        url : "${APP_PATH}/projectType/insert.do",
                         type : "POST",
                         data : {
-                            "name"  : $("#certname").val()
+                            "name"  : $("#projectTypeName").val()
                         },
                         beforeSend : function() {
                             loadingIndex = layer.msg('数据保存中', {icon: 16});
@@ -135,8 +135,8 @@
                         success : function(result) {
                             layer.close(loadingIndex);
                             if ( result.data ) {
-                                layer.msg("资质信息保存成功", {time:1000, icon:6}, function(){
-                                    window.location.href = "${APP_PATH}/cert/index.htm";
+                                layer.msg("信息保存成功", {time:1000, icon:6}, function(){
+                                    window.location.href = "${APP_PATH}/projectType/index.htm";
                                 });
                             } else {
                                 layer.msg(result.info, {time:1000, icon:5, shift:6});

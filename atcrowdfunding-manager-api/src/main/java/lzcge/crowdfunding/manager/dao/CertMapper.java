@@ -19,6 +19,8 @@ public interface CertMapper {
 
 	Cert queryById(Integer id);
 
+	Cert queryCertByName(Cert cert);
+
 	int updateCert(Cert cert);
 
 	int deleteCert(Integer id);
