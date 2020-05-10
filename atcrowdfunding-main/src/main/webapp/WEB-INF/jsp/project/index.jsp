@@ -105,9 +105,9 @@ table tbody td:nth-child(even) {
 										<th style='font-size: 12px'>描述</th>
 										<th style='font-size: 12px'>筹集金额</th>
 										<th style='font-size: 12px'>回报内容</th>
-										<th style='font-size: 12px'>项目图片</th>
+										<%--<th style='font-size: 12px'>项目图片</th>--%>
 										<th style='font-size: 12px'>状态</th>
-										<th width="80">操作</th>
+										<th width="100">操作</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -115,7 +115,7 @@ table tbody td:nth-child(even) {
 								</tbody>
 								<tfoot>
 									<tr>
-										<td colspan="6" align="center">
+										<td colspan="7" align="center">
 											<!-- <ul class="pagination">
 												
 											</ul> -->
@@ -204,7 +204,7 @@ table tbody td:nth-child(even) {
 								content+="	<td style='font-size: 8px'>"+projectDetail.project.projectDescription+"</td>";
 								content+="	<td style='font-size: 8px'>"+projectDetail.project.money+"</td>";
 								content+="	<td style='font-size: 8px'>"+projectDetail.areturn.content+"</td>";
-								content+="	<td style='font-size: 8px'>"+projectDetail.project.headerPicturePath+"</td>";
+								// content+="	<td style='font-size: 8px'>"+projectDetail.project.headerPicturePath+"</td>";
 
 								if(projectDetail.project.status==0){
 									content+="	<td style='font-size: 8px'>未审核</td>";
@@ -215,6 +215,7 @@ table tbody td:nth-child(even) {
 								}
 								
 								content+="	<td>";
+                                content+="	    <button type='button' onclick=\"window.location.href='${APP_PATH}/project/show.do?id="+projectDetail.project.id+"'\" class='btn btn-success btn-xs'><i class=' glyphicon glyphicon-eye-open'></i></button>";
 								content+="		<button id='assignRoleBtn' onclick='authProject("+projectDetail.project.id+",1)' type='button' class='btn btn-success btn-xs'><i class=' glyphicon glyphicon-check'></i></button>";
 								// content+="			<i class=' glyphicon glyphicon-pencil'></i>";
 								content+="		</button>";

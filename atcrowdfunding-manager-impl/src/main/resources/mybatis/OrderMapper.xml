@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="lzcge.crowdfunding.manager.dao.OrderMapper" >
+
+
+    <insert id="saveOrder" useGeneratedKeys="true" keyProperty="id"  parameterType="lzcge.crowdfunding.entity.Order" >
+        insert into t_order
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+
+            <if test="memberid != null" >
+                memberid,
+            </if>
+            <if test="projectid != null" >
+                projectid,
+            </if>
+            <if test="returnid != null" >
+                returnid,
+            </if>
+            <if test="ordernum != null" >
+                ordernum,
+            </if>
+            <if test="createdate != null" >
+                createdate,
+            </if>
+            <if test="money != null" >
+                money,
+            </if>
+            <if test="rtncount != null" >
+                rtncount,
+            </if>
+            <if test="status != null" >
+                status,
+            </if>
+            <if test="address != null" >
+                address,
+            </if>
+            <if test="gainusername != null" >
+                gainusername,
+            </if>
+            <if test="gainphone != null" >
+                gainphone,
+            </if>
+            <if test="remark != null" >
+                remark,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+            <if test="memberid != null" >
+                #{memberid,jdbcType=INTEGER},
+            </if>
+            <if test="projectid != null" >
+                #{projectid,jdbcType=INTEGER},
+            </if>
+            <if test="returnid != null" >
+                #{returnid,jdbcType=INTEGER},
+            </if>
+            <if test="ordernum != null" >
+                #{ordernum,jdbcType=VARCHAR},
+            </if>
+            <if test="createdate != null" >
+                #{createdate,jdbcType=CHAR},
+            </if>
+            <if test="money != null" >
+                #{money,jdbcType=INTEGER},
+            </if>
+            <if test="rtncount != null" >
+                #{rtncount,jdbcType=INTEGER},
+            </if>
+            <if test="status != null" >
+                #{status,jdbcType=CHAR},
+            </if>
+            <if test="address != null" >
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="gainusername != null" >
+                #{gainusername,jdbcType=VARCHAR},
+            </if>
+            <if test="gainphone != null" >
+                #{gainphone,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null" >
+                #{remark,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+
+    <select id="queryCount" resultType="int">
+        select count(id) from t_order
+        <where>
+            <if test="pagetext != null">
+                and ordernum like concat('%', #{pagetext}, '%')
+            </if>
+        </where>
+    </select>
+
+    <select id="pageQueryOrder" resultType="lzcge.crowdfunding.entity.Order">
+        select
+        id,
+        memberid,
+        projectid,
+        returnid,
+        ordernum,
+        createdate,
+        money,
+        rtncount,
+        status,
+        address,
+        gainusername,
+        gainphone,
+        remark
+        from t_order
+        <where>
+            <if test="pagetext != null">
+                and ordernum like concat('%', #{pagetext}, '%')
+            </if>
+        </where>
+        limit #{startIndex}, #{pagesize}
+    </select>
+
+
+
+
+    <select id="queryOrderById" resultType="lzcge.crowdfunding.entity.Order" parameterType="java.lang.Integer">
+        SELECT
+        id,
+        memberid,
+        projectid,
+        returnid,
+        ordernum,
+        createdate,
+        money,
+        rtncount,
+        status,
+        address,
+        gainusername,
+        gainphone,
+        remark
+        FROM
+        t_order
+        WHERE
+        id = #{id,jdbcType=INTEGER}
+
+    </select>
+
+    <select id="queryOrderBymemberid" resultType="lzcge.crowdfunding.entity.Order" parameterType="java.lang.Integer">
+        SELECT
+        id,
+        memberid,
+        projectid,
+        returnid,
+        ordernum,
+        createdate,
+        money,
+        rtncount,
+        status,
+        address,
+        gainusername,
+        gainphone,
+        remark
+        FROM
+        t_order
+        WHERE
+        memberid = #{memberid,jdbcType=INTEGER}
+
+    </select>
+
+    <select id="querySupportOrderOrPay" resultType="lzcge.crowdfunding.entity.Order" parameterType="lzcge.crowdfunding.entity.Order">
+        SELECT
+        id,
+        memberid,
+        projectid,
+        returnid,
+        ordernum,
+        createdate,
+        money,
+        rtncount,
+        status,
+        address,
+        gainusername,
+        gainphone,
+        remark
+        FROM
+        t_order
+        WHERE
+        memberid = #{memberid,jdbcType=INTEGER}
+        AND
+        status = #{status,jdbcType=CHAR}
+
+    </select>
+
+
+    <select id="queryByStatus" resultType="lzcge.crowdfunding.entity.Order" parameterType="Map">
+        SELECT
+        id,
+        memberid,
+        projectid,
+        returnid,
+        ordernum,
+        createdate,
+        money,
+        rtncount,
+        status,
+        address,
+        gainusername,
+        gainphone,
+        remark
+        FROM
+        t_order
+        where status in
+        <foreach collection="statulist" item="sta" separator="," open="(" close=")">
+            #{sta}
+        </foreach>
+    </select>
+
+
+    <update id="updateOrder" parameterType="lzcge.crowdfunding.entity.Order" >
+        update t_order
+        <set >
+
+            <if test="memberid != null" >
+                memberid =  #{memberid,jdbcType=INTEGER},
+            </if>
+            <if test="projectid != null" >
+                projectid = #{projectid,jdbcType=INTEGER},
+            </if>
+            <if test="returnid != null" >
+                returnid =  #{returnid,jdbcType=INTEGER},
+            </if>
+            <if test="createdate != null" >
+                createdate = #{createdate,jdbcType=CHAR},
+            </if>
+            <if test="money != null" >
+                money = #{money,jdbcType=INTEGER},
+            </if>
+            <if test="rtncount != null" >
+                rtncount = #{rtncount,jdbcType=INTEGER},
+            </if>
+            <if test="status != null" >
+                status = #{status,jdbcType=CHAR},
+            </if>
+            <if test="address != null" >
+                address =  #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="gainusername != null" >
+                gainusername = #{gainusername,jdbcType=VARCHAR},
+            </if>
+            <if test="gainphone != null" >
+                gainphone = #{gainphone,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null" >
+                remark =  #{remark,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id =  #{id,jdbcType=INTEGER}
+    </update>
+
+
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from t_order
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <delete id="deleteOrders" >
+        delete from t_order where id in
+        <foreach collection="ids" item="p" open="(" close=")" separator=",">
+            #{p}
+        </foreach>
+    </delete>
+
+
+
+
+
+</mapper>

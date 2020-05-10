@@ -21,6 +21,10 @@ public class Order {
 
     private String address;
 
+	private String gainusername;
+
+	private String gainphone;
+
     private String invoice;
 
     private String invoictitle;
@@ -107,7 +111,23 @@ public class Order {
         this.address = address == null ? null : address.trim();
     }
 
-    public String getInvoice() {
+	public String getGainusername() {
+		return gainusername;
+	}
+
+	public void setGainusername(String gainusername) {
+		this.gainusername = gainusername;
+	}
+
+	public String getGainphone() {
+		return gainphone;
+	}
+
+	public void setGainphone(String gainphone) {
+		this.gainphone = gainphone;
+	}
+
+	public String getInvoice() {
         return invoice;
     }
 

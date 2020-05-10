@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="lzcge.crowdfunding.manager.dao.MemberMapper">
+
+
+
+	<resultMap id="BaseResultMap" type="lzcge.crowdfunding.entity.Member">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="loginacct" property="loginacct" jdbcType="VARCHAR" />
+		<result column="userpswd" property="userpswd" jdbcType="VARCHAR" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="authstatus" property="authstatus" jdbcType="CHAR" />
+		<result column="phoneNum" property="phoneNum" jdbcType="VARCHAR" />
+		<result column="realname" property="realname" jdbcType="VARCHAR" />
+		<result column="cardnum" property="cardnum" jdbcType="VARCHAR" />
+		<result column="accttype" property="accttype" jdbcType="CHAR" />
+	</resultMap>
+
+
+	<insert id="insert" parameterType="lzcge.crowdfunding.entity.Member" useGeneratedKeys="true" keyProperty="id">
+		insert into t_member (loginacct, userpswd,
+		username, email, authstatus,usertype,phoneNum,realname,cardnum,
+		accttype
+		)
+		values
+		(#{loginacct,jdbcType=VARCHAR},
+		#{userpswd,jdbcType=VARCHAR},
+		#{username,jdbcType=VARCHAR},
+		#{email,jdbcType=VARCHAR},
+		#{authstatus,jdbcType=CHAR},
+		#{usertype,jdbcType=CHAR},
+		#{phoneNum,jdbcType=VARCHAR},
+		#{realname,jdbcType=VARCHAR},
+		#{cardnum,jdbcType=VARCHAR},
+		#{accttype,jdbcType=CHAR}
+		)
+	</insert>
+
+
+	<select id="selectByAcct" resultMap="BaseResultMap"	parameterType="lzcge.crowdfunding.entity.Member">
+		select id, loginacct
+		from t_member
+		where loginacct = #{loginacct,jdbcType=VARCHAR}
+	</select>
+
+    <select id="selectByEmail" resultMap="BaseResultMap"	parameterType="lzcge.crowdfunding.entity.Member">
+		select id, email
+		from t_member
+		where email = #{email,jdbcType=VARCHAR}
+	</select>
+
+    <select id="selectByPhone" resultMap="BaseResultMap"	parameterType="lzcge.crowdfunding.entity.Member">
+		select id, phoneNum
+		from t_member
+		where phoneNum = #{phoneNum,jdbcType=VARCHAR}
+	</select>
+
+    <select id="selectById" resultMap="BaseResultMap"	parameterType="lzcge.crowdfunding.entity.Member">
+		select id, loginacct, userpswd,
+		username, email, authstatus,usertype,phoneNum,realname,cardnum,accttype
+		from t_member
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+
+    <select id="login" parameterType="lzcge.crowdfunding.entity.Member" resultMap="BaseResultMap">
+        select id, loginacct, userpswd,
+		username, email, authstatus,usertype,phoneNum,realname,cardnum,accttype
+        from t_member where loginacct=#{loginacct} and userpswd=#{userpswd}
+    </select>
+
+    <select id="queryCertByMemberid" resultType="map">
+        SELECT t_cert.id,t_cert.name,t_member_cert.iconpath
+        FROM t_cert JOIN t_member_cert
+        ON t_cert.id = t_member_cert.certid
+        WHERE t_member_cert.memberid = #{id}
+    </select>
+
+    <select id="selectMemberCertByMemberId" resultType="map" parameterType="java.lang.Integer">
+        SELECT t_member_cert.*,t_cert.*
+        FROM t_member_cert,t_cert
+        WHERE t_member_cert.certid = t_cert.id AND t_member_cert.memberid=#{memberid}
+    </select>
+
+
+    <select id="queryCount" resultType="int">
+        select count(id) from t_member
+        <where>
+            <if test="pagetext != null">
+                and loginacct like concat('%', #{pagetext}, '%') OR phoneNum like concat('%', #{pagetext}, '%') OR email like concat('%', #{pagetext}, '%')
+            </if>
+        </where>
+    </select>
+
+    <select id="selectMemberAuth" resultType="lzcge.crowdfunding.entity.Member">
+        select * from t_member
+        <where>
+            authstatus IN ('1')
+            <if test="pagetext != null">
+                and loginacct like concat('%', #{pagetext}, '%') OR phoneNum like concat('%', #{pagetext}, '%') OR email like concat('%', #{pagetext}, '%')
+            </if>
+        </where>
+        limit #{startIndex}, #{pagesize}
+    </select>
+
+    <select id="pageQueryMember" resultType="lzcge.crowdfunding.entity.Member">
+        select * from t_member
+        <where>
+            <if test="authstatus != null">
+                authstatus IN (#{authstatus})
+            </if>
+            <if test="pagetext != null">
+                and loginacct like concat('%', #{pagetext}, '%') OR phoneNum like concat('%', #{pagetext}, '%') OR email like concat('%', #{pagetext}, '%')
+            </if>
+        </where>
+        limit #{startIndex}, #{pagesize}
+    </select>
+
+    <update id="updateMember" parameterType="lzcge.crowdfunding.entity.Member">
+        update t_member
+        set
+        <trim suffixOverrides=",">
+            <if test="loginacct != null">
+                loginacct = #{loginacct,jdbcType=VARCHAR},
+            </if>
+            <if test="userpswd != null">
+                userpswd = #{userpswd,jdbcType=VARCHAR},
+            </if>
+            <if test="username != null">
+                username = #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                email = #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="phoneNum != null">
+                phoneNum = #{phoneNum,jdbcType=VARCHAR},
+            </if>
+            <if test="authstatus != null">
+                authstatus = #{authstatus,jdbcType=CHAR},
+            </if>
+            <if test="realname != null">
+                realname = #{realname,jdbcType=VARCHAR},
+            </if>
+            <if test="cardnum != null">
+                cardnum = #{cardnum,jdbcType=VARCHAR},
+            </if>
+
+        </trim>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+
+    <delete id="deleteByPrimaryKey">
+        delete from t_member where id = #{id}
+    </delete>
+
+    <delete id="deleteMembers">
+        delete from t_member where id in
+        <foreach collection="ids" item="p" open="(" close=")" separator=",">
+            #{p}
+        </foreach>
+    </delete>
+
+
+    <update id="updateAcctType" parameterType="lzcge.crowdfunding.entity.Member" >
+        update t_member
+        set
+        accttype = #{accttype,jdbcType=CHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateBasicinfo" parameterType="lzcge.crowdfunding.entity.Member" >
+        update t_member
+        set
+        realname = #{realname,jdbcType=VARCHAR},
+        cardnum = #{cardnum,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateMemberAuthStatus" parameterType="lzcge.crowdfunding.entity.Member" >
+        update t_member
+        set
+        authstatus = #{authstatus,jdbcType=CHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <insert id="insertMemberCert">
+        insert into t_member_cert(memberid,certid,iconpath) values(#{memberid},#{certid},#{iconpath});
+    </insert>
+
+    <delete id="delteMemberCert">
+        delete from t_member_cert where memberid=#{memberid}
+    </delete>
+
+
+
+
+
+
+</mapper>

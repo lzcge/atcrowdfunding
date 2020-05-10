@@ -103,12 +103,12 @@ table tbody td:nth-child(even) {
 										<th width="30"><input type="checkbox"></th>
 										<th style='font-size: 12px'>项目名称</th>
 										<th style='font-size: 12px'>项目描述</th>
-										<th style='font-size: 12px'>项目图片地址</th>
+										<%--<th style='font-size: 12px'>项目图片地址</th>--%>
 										<th style='font-size: 12px'>筹集金额（元）</th>
 										<th style='font-size: 12px'>已筹金额（元）</th>
 										<th style='font-size: 12px'>结束时间</th>
 										<th style='font-size: 12px'>状态</th>
-										<th style='font-size: 12px' width="80">操作</th>
+										<th style='font-size: 12px' width="100">操作</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -116,7 +116,7 @@ table tbody td:nth-child(even) {
 								</tbody>
 								<tfoot>
 									<tr>
-										<td colspan="6" align="center">
+										<td colspan="9" align="center">
 											<!-- <ul class="pagination">
 												
 											</ul> -->
@@ -203,7 +203,7 @@ table tbody td:nth-child(even) {
 								content+="	<td><input type='checkbox' value='"+n.id+"'></td>";
 								content+="	<td style='font-size: 5px'>"+n.projectName+"</td>";
 								content+="	<td style='font-size: 5px'>"+n.projectDescription+"</td>";
-								content+="	<td style='font-size: 5px'>"+n.headerPicturePath+"</td>";
+								// content+="	<td style='font-size: 5px'>"+n.headerPicturePath+"</td>";
 								content+="	<td>"+n.money+"</td>";
 								content+="	<td>"+n.supportmoney+"</td>";
 								content+="	<td style='font-size: 5px'>"+n.deploydate+"</td>";
@@ -221,6 +221,7 @@ table tbody td:nth-child(even) {
                                 }
 								
 								content+="	<td>";
+                                content+="	    <button type='button' onclick=\"window.location.href='${APP_PATH}/projectManager/show.do?id="+n.id+"'\" class='btn btn-success btn-xs'><i class=' glyphicon glyphicon-eye-open'></i></button>";
 								content+="		<button type='button' onclick='window.location.href=\"${APP_PATH}/projectManager/edit.htm?pageNo="+pageObj.pageNo+"&id="+n.id+"\"' class='btn btn-primary btn-xs'>";
 								content+="			<i class=' glyphicon glyphicon-pencil'></i>";
 								content+="		</button>";

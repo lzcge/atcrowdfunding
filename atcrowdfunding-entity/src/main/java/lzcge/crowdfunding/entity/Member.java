@@ -21,14 +21,14 @@ public class Member {
 
     private String accttype;
 
-    private String phone;
+    private String phoneNum;
 
 	public String getPhone() {
-		return phone;
+		return phoneNum;
 	}
 
 	public void setPhone(String phone) {
-		this.phone = phone;
+		this.phoneNum = phone;
 	}
 
 	public Integer getId() {

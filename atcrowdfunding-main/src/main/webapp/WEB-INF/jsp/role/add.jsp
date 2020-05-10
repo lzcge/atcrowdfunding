@@ -49,7 +49,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <ol class="breadcrumb">
                 <li><a href="#">首页</a></li>
-                <li><a href="#">数据列表</a></li>
+                <li><a href="${APP_PATH}/role/toIndex.htm">数据列表</a></li>
                 <li class="active">新增</li>
             </ol>
             <div class="panel panel-default">

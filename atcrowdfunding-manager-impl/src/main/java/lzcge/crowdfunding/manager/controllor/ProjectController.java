@@ -1,10 +1,12 @@
 package lzcge.crowdfunding.manager.controllor;
 
 import lzcge.crowdfunding.entity.Advert;
+import lzcge.crowdfunding.entity.Member;
 import lzcge.crowdfunding.entity.Project;
 import lzcge.crowdfunding.entity.User;
 import lzcge.crowdfunding.manager.service.AdvertService;
 import lzcge.crowdfunding.manager.service.ProjectService;
+import lzcge.crowdfunding.po.MemberDetail;
 import lzcge.crowdfunding.po.ProjectDetailPO;
 import lzcge.crowdfunding.result.JsonResult;
 import lzcge.crowdfunding.util.Const;
@@ -17,6 +19,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -43,8 +46,14 @@ public class ProjectController {
 	public String index() {
 		return "project/index";
 	}
-	
 
+
+	@RequestMapping("/show")
+	public String show(@RequestParam("id") Integer id, Model model){
+		Project project = projectService.queryById(id);
+		model.addAttribute("project",project);
+		return "project/show";
+	}
 
 
 	

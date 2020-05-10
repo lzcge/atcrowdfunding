@@ -1,10 +1,11 @@
 package lzcge.crowdfunding.manager.controllor;
 
+import lzcge.crowdfunding.entity.Member;
 import lzcge.crowdfunding.entity.Project;
-
+import lzcge.crowdfunding.manager.service.MemberService;
 import lzcge.crowdfunding.manager.service.ProjectService;
+import lzcge.crowdfunding.po.MemberDetail;
 import lzcge.crowdfunding.result.JsonResult;
-
 import lzcge.crowdfunding.util.Page;
 import lzcge.crowdfunding.util.StringUtil;
 import lzcge.crowdfunding.vo.Data;
@@ -20,49 +21,41 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.HashMap;
 import java.util.Map;
 
-
 /**
  * @description:
  * @author: lzcge
- * @create: 2020-04-26
+ * @create: 2020-04-28
  **/
-
 @Controller
-@RequestMapping("/projectManager")
-public class ProjectManagerController {
-
+@RequestMapping("/member")
+public class MemberController {
 
 	@Autowired
-	private ProjectService projectService;
+	private MemberService memberService;
 
 
 	@RequestMapping("/index")
 	public String index() {
-		return "projectmanager/index";
+		return "member/index";
 	}
 
 	@RequestMapping("/add")
 	public String add() {
-		return "projectmanager/add";
+		return "member/add";
 	}
 
-
-	@RequestMapping("/show")
-	public String show(@RequestParam("id") Integer id, Model model){
-		Project project = projectService.queryById(id);
-		model.addAttribute("project",project);
-		return "projectmanager/show";
-	}
 
 
 	@RequestMapping("/edit")
 	public String edit( Integer id, Model model ) {
 
+		Member membervo = new Member();
+		membervo.setId(id);
 		// 根据主键查询项目信息
-		Project project = projectService.queryById(id);
-		model.addAttribute("project", project);
+		Member member = memberService.selectById(membervo);
+		model.addAttribute("member", member);
 
-		return "projectmanager/edit";
+		return "member/edit";
 	}
 
 
@@ -79,7 +72,7 @@ public class ProjectManagerController {
 		JsonResult result = new JsonResult();
 
 		try {
-			int count = projectService.deleteProjects(ds);
+			int count = memberService.deleteMembers(ds);
 			if ( count == ds.getIds().size() ) {
 				result.setData(200);
 				result.setInfo("success");
@@ -100,7 +93,7 @@ public class ProjectManagerController {
 		JsonResult result = new JsonResult();
 
 		try {
-			int count = projectService.deleteProject(id);
+			int count = memberService.deleteMember(id);
 			if ( count == 1 ) {
 				result.setData(200);
 				result.setInfo("success");
@@ -118,11 +111,11 @@ public class ProjectManagerController {
 
 	@ResponseBody
 	@RequestMapping("/update")
-	public Object update( Project project ) {
+	public Object update( Member member ) {
 		JsonResult result = new JsonResult();
 
 		try {
-			projectService.updateProject(project);
+			memberService.updateMember(member);
 			result.setData(200);
 			result.setInfo("success");
 
@@ -140,7 +133,7 @@ public class ProjectManagerController {
 
 
 	/**
-	 * 分页查询项目数据
+	 * 分页查询用户数据
 	 * @return
 	 */
 	@ResponseBody
@@ -153,17 +146,15 @@ public class ProjectManagerController {
 
 		try {
 			// 查询项目数据
-			Map<String, Object> projectMap = new HashMap<String, Object>();
-			projectMap.put("pageno", pageno);
-			projectMap.put("pagesize", pagesize);
+			Map<String, Object> memberMap = new HashMap<String, Object>();
+			memberMap.put("pageno", pageno);
+			memberMap.put("pagesize", pagesize);
 			if ( StringUtil.isNotEmpty(pagetext) ) {
 				pagetext = pagetext.replaceAll("%", "\\\\%");
 			}
-			projectMap.put("pagetext", pagetext);
-
+			memberMap.put("pagetext", pagetext);
 			// 分页查询
-			Page<Project> page = projectService.pageQueryProject(projectMap);
-			//result.setPage(page);
+			Page<MemberDetail> page = memberService.pageQueryMember(memberMap);
 			result.setData(page);
 			result.setInfo("success");
 		} catch ( Exception e ) {

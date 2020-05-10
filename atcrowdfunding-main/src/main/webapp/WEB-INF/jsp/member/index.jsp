@@ -36,7 +36,7 @@ table tbody td:nth-child(even) {
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<div>
-					<a class="navbar-brand" style="font-size: 32px;" href="#">人人筹 - 实名认证审核</a>
+					<a class="navbar-brand" style="font-size: 32px;" href="#">人人筹 - 会员管理</a>
 				</div>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
@@ -85,14 +85,11 @@ table tbody td:nth-child(even) {
 								<i class="glyphicon glyphicon-search"></i> 查询
 							</button>
 						</form>
-						<%--<button id="batchDelete" type="button" class="btn btn-danger"--%>
-							<%--style="float: right; margin-left: 10px;">--%>
-							<%--<i class="glyphicon glyphicon-remove"></i> 删除--%>
-						<%--</button>--%>
-						<%--<button type="button" class="btn btn-primary"--%>
-							<%--style="float: right;" onclick="window.location.href='${APP_PATH}/advert/add.htm'">--%>
-							<%--<i class="glyphicon glyphicon-plus"></i> 新增--%>
-						<%--</button>--%>
+						<button id="batchDelete" type="button" class="btn btn-danger"
+							style="float: right; margin-left: 10px;">
+							<i class="glyphicon glyphicon-remove"></i> 删除
+						</button>
+
 						<br>
 						<hr style="clear: both;">
 						<div class="table-responsive">
@@ -100,15 +97,16 @@ table tbody td:nth-child(even) {
 								<thead>
 									<tr>
 										<th width="30">#</th>
-										<%--<th width="30"><input type="checkbox"></th>--%>
+										<th width="30"><input type="checkbox"></th>
 										<th style='font-size: 12px'>登录账号</th>
-										<th style='font-size: 12px'>用户名</th>
-										<th style='font-size: 12px'>邮箱</th>
-										<th style='font-size: 12px'>电话</th>
-										<th style='font-size: 12px'>用户类型</th>
+                                        <th style='font-size: 12px'>昵称</th>
+                                        <th style='font-size: 12px'>手机号</th>
+                                        <th style='font-size: 12px'>邮箱</th>
+										<th style='font-size: 12px'>账号类型</th>
 										<th style='font-size: 12px'>真实姓名</th>
 										<th style='font-size: 12px'>身份证号</th>
-										<th style='font-size: 12px'>操作</th>
+										<th style='font-size: 12px'>状态</th>
+										<th style='font-size: 12px' width="100">操作</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -116,7 +114,7 @@ table tbody td:nth-child(even) {
 								</tbody>
 								<tfoot>
 									<tr>
-										<td colspan="9" align="center">
+										<td colspan="11" align="center">
 											<!-- <ul class="pagination">
 												
 											</ul> -->
@@ -160,10 +158,7 @@ table tbody td:nth-child(even) {
                 showMenu();
             });
             
-            <%--function changepageNo( pageNo ) {--%>
-            	<%--//window.location.href = "<%=request.getContextPath() %>/advert/index.htm?pageNo="+pageNo;--%>
-            	<%--queryPage(pageNo-1);--%>
-            <%--}--%>
+
             
             //使用Ajax异步查询数据
             function queryPage( pageIndex ){
@@ -178,7 +173,7 @@ table tbody td:nth-child(even) {
             	var loadingIndex = -1 ;
             	$.ajax({
             		
-            		url : "${APP_PATH}/authcert/pageQueryMember.do",
+            		url : "${APP_PATH}/member/pageQuery.do",
             		type : "POST",
             		data : dataObj,
                     dataType:"JSON",
@@ -200,26 +195,41 @@ table tbody td:nth-child(even) {
             					
             					content+="<tr>";
 								content+="	<td>"+(i+1)+"</td>";
-								content+="	<td style='font-size: 8px'>"+memberDetail.member.loginacct+"</td>";
-								content+="	<td style='font-size: 8px'>"+memberDetail.member.username+"</td>";
-								content+="	<td style='font-size: 8px'>"+memberDetail.member.email+"</td>";
-								content+="	<td style='font-size: 8px'>"+memberDetail.member.phone+"</td>";
+								content+="	<td><input type='checkbox' value='"+memberDetail.member.id+"'></td>";
+								content+="	<td style='font-size: 5px'>"+memberDetail.member.loginacct+"</td>";
+								content+="	<td style='font-size: 5px'>"+memberDetail.member.username+"</td>";
+								content+="	<td style='font-size: 5px'>"+memberDetail.member.phone+"</td>";
+								content+="	<td style='font-size: 5px'>"+memberDetail.member.email+"</td>";
 								if(memberDetail.member.usertype==0){
-
-                                    content+="	<td style='font-size: 8px'>个人</td>";
-                                }else{
-                                    content+="	<td style='font-size: 8px'>企业</td>";
+                                    content+="	<td style='font-size: 5px'>个人</td>";
                                 }
-								content+="	<td style='font-size: 8px'>"+memberDetail.member.realname+"</td>";
-								content+="	<td style='font-size: 8px'>"+memberDetail.member.cardnum+"</td>";
+                                else{
+                                    content+="	<td style='font-size: 5px'>企业</td>";
+                                }
 
+								if(memberDetail.member.authstatus==0){
+                                    content+="	<td style='font-size: 5px'>尚未实名</td>";
+                                    content+="	<td style='font-size: 5px'>尚未实名</td>";
+									content+="	<td style='font-size: 5px;color: #ec971f'>未实名认证</td>";
+								}else if(memberDetail.member.authstatus==1){
+                                    content+="	<td style='font-size: 5px'>实名认证中</td>";
+                                    content+="	<td style='font-size: 5px'>实名认证中</td>";
+									content+="	<td style='font-size: 5px;color: #3e8f3e'>实名认证中</td>";
+								}else if(memberDetail.member.authstatus==2){
+                                    content+="	<td style='font-size: 5px'>"+memberDetail.member.realname+"</td>";
+                                    content+="	<td style='font-size: 5px'>"+memberDetail.member.cardnum+"</td>";
+									content+="	<td style='font-size: 5px;color: #3e8f3e'>已实名认证</td>";
+								}else if(memberDetail.member.authstatus==3){
+                                    content+="	<td style='font-size: 5px'>实名认证失败</td>";
+                                    content+="	<td style='font-size: 5px'>实名认证失败</td>";
+									content+="	<td style='font-size: 5px;color: #ac2925'>实名认证失败</td>";
+								}
 								
 								content+="	<td>";
-                                content+="	    <button type='button' onclick=\"window.location.href='${APP_PATH}/authcert/show.do?id="+memberDetail.member.id+"'\" class='btn btn-success btn-xs'><i class=' glyphicon glyphicon-eye-open'></i></button>";
-								content+="		<button id='assignRoleBtn' onclick='authMember("+memberDetail.member.id+",1)' type='button' class='btn btn-success btn-xs'><i class=' glyphicon glyphicon-check'></i></button>";
-								// content+="			<i class=' glyphicon glyphicon-pencil'></i>";
-								content+="		</button>";
-								content+="		<button type='button' class='btn btn-danger btn-xs' onclick='authMember("+memberDetail.member.id+",2)'>";
+								<%--content+="		<button type='button' onclick='window.location.href=\"${APP_PATH}/member/edit.htm?pageNo="+pageObj.pageNo+"&id="+memberDetail.member.id+"\"' class='btn btn-primary btn-xs'>";--%>
+								<%--content+="			<i class=' glyphicon glyphicon-pencil'></i>";--%>
+								<%--content+="		</button>";--%>
+								content+="		<button type='button' class='btn btn-danger btn-xs' onclick='deleteMember("+memberDetail.member.id+")'>";
 								content+="			<i class=' glyphicon glyphicon-remove'></i>";
 								content+="		</button>";
 								content+="	</td>";
@@ -243,12 +253,12 @@ table tbody td:nth-child(even) {
             				
             			}else{
             				
-            				layer.msg("查询数据失败", {time:2000, icon:5, shift:6});
+            				layer.msg("分页查询数据失败", {time:2000, icon:5, shift:6});
             				
             			}
             		},
             		error : function(){
-            			layer.msg("查询数据错误", {time:2000, icon:5, shift:6});
+            			layer.msg("分页查询数据错误", {time:2000, icon:5, shift:6});
             		}
             		
             	});
@@ -270,71 +280,79 @@ table tbody td:nth-child(even) {
             	queryPage(0);
             }
 
-            //审核不通过/通过
-            function authMember(id,index){
-                //审核通过
-                if(index==1){
-                    layer.confirm("确定审核通过吗?",  {icon: 3, title:'提示'}, function(cindex){
+            //删除广告
+            function deleteMember(id){
 
-                        $.ajax({
-                            url : "${APP_PATH}/authcert/update.do",
-                            type : "POST",
-                            data : {
-                                "id":id,
-                                "authstatus":'2'
-
-                            },
-                            success : function(result){
-                                console.log(result);
-                                if(result.info=="success"){
-                                    layer.msg("操作成功!", {time:2000, icon:6}, function(){
-                                        queryPage(0);
-                                    });
-                                }else{
-                                    layer.msg("操作失败!", {time:2000, icon:5, shift:6});
-                                }
-                            }
-                        });
-
-                        layer.close(cindex);
-                    }, function(cindex){
-                        layer.close(cindex);
-                    });
-                }
-                //审核不通过
-                if(index==2){
-                    layer.confirm("确定审核失败吗?",  {icon: 3, title:'提示'}, function(cindex){
-
-                        $.ajax({
-                            url : "${APP_PATH}/authcert/update.do",
-                            type : "POST",
-                            data : {
-                                "id":id,
-                                "authstatus":'3'
-
-                            },
-                            success : function(result){
-                                console.log(result);
-                                if(result.info=="success"){
-                                    layer.msg("操作成功!", {time:2000, icon:6}, function(){
-                                        queryPage(0);
-                                    });
-                                }else{
-                                    layer.msg("操作失败!", {time:2000, icon:5, shift:6});
-                                }
-                            }
-                        });
-
-                        layer.close(cindex);
-                    }, function(cindex){
-                        layer.close(cindex);
-                    });
-                }
-
+    			layer.confirm("确认要删除该用户吗?",  {icon: 3, title:'提示'}, function(cindex){
+    				
+    				$.ajax({
+    					url : "${APP_PATH}/member/delete.do",
+    					type : "POST",
+    					data : {id:id},
+    					success : function(result){
+    					    console.log(result);
+    						if(result.info=="success"){
+    							layer.msg("删除成功!", {time:2000, icon:6}, function(){
+    								queryPage(0);
+    							});
+    						}else{
+    							layer.msg("删除失败!", {time:2000, icon:5, shift:6});
+    						}
+    					}
+    				});
+    				
+    			    layer.close(cindex);
+    			}, function(cindex){    				
+    			    layer.close(cindex);
+    			});
             	
             }
             
-
+            
+            $(".table thead :checkbox").click(function(){
+            	var checked = this.checked ;
+            	var checkboxList = $(".table tbody :checkbox");
+            	$.each(checkboxList,function(i,n){
+            		n.checked = checked ;
+            	});
+            });
+           
+            
+			//传递多个对象的方式
+            $("#batchDelete").click(function(){
+            	var checkedList = $("table tbody input:checked");
+            	if(checkedList.length>0){
+            		layer.confirm("确定要删除吗?",  {icon: 3, title:'提示'}, function(cindex){
+            			
+            			var datas = {};
+            			
+            			$.each(checkedList,function(i,n){
+            				
+            				datas["ids["+i+"]"]=n.value;
+            			});
+            			
+            			$.ajax({
+            				url : "${APP_PATH}/member/batchDelete.do",
+            				type : "POST",
+            				data : datas ,
+            				success : function(result){
+            					if(result.info=="success"){
+	            					layer.msg("删除成功!", {time:2000, icon:6}, function(){
+	    								queryPage(0);
+	    							});
+            					}else{
+            						layer.msg("删除失败!", {time:2000, icon:5});
+            					}
+            				}
+            			});
+        			    layer.close(cindex);
+        			}, function(cindex){
+        			    layer.close(cindex);
+        			});
+            	}else{
+                    layer.msg("请先选中需要删除的用户!", {time:2000, icon:5, shift:6});
+                }
+            });
             
 
         </script>

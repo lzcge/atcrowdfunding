@@ -33,11 +33,11 @@
                 <li style="padding-top:8px;">
                     <jsp:include page="/WEB-INF/jsp/common/top.jsp"/>
                 </li>
-                <li style="margin-left:10px;padding-top:8px;">
-                    <button type="button" class="btn btn-default btn-danger">
-                        <span class="glyphicon glyphicon-question-sign"></span> 帮助
-                    </button>
-                </li>
+                <%--<li style="margin-left:10px;padding-top:8px;">--%>
+                    <%--<button type="button" class="btn btn-default btn-danger">--%>
+                        <%--<span class="glyphicon glyphicon-question-sign"></span> 帮助--%>
+                    <%--</button>--%>
+                <%--</li>--%>
             </ul>
             <%--<form class="navbar-form navbar-right">--%>
                 <%--<input type="text" class="form-control" placeholder="Search...">--%>

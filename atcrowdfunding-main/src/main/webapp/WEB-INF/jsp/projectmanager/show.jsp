@@ -27,7 +27,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-            <div><a class="navbar-brand" style="font-size:32px;" href="#">人人筹 - 资质信息</a></div>
+            <div><a class="navbar-brand" style="font-size:32px;" href="#">人人筹 - 项目图片信息</a></div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -50,8 +50,8 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 				<ol class="breadcrumb">
 				  <li><a href="#">首页</a></li>
-				  <li><a href="${APP_PATH}/authcert/index.htm">数据列表</a></li>
-				  <li class="active">资质信息</li>
+				  <li><a href="${APP_PATH}/projectManager/index.htm">数据列表</a></li>
+				  <li class="active">图片信息</li>
 				</ol>
 			<div class="panel panel-default">
               <div class="panel-heading">表单数据<div style="float:right;cursor:pointer;" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></div></div>
@@ -59,14 +59,10 @@
 			  <div class="panel-body">
 				<form>
 
-				  <c:forEach items="${memberDetail.memberCertPOList }" var="a">
-					  <div class="form-group">
-						<label>${a.cert.name }：</label><br>
-						<img src="${a.memberCert.iconpath}">
-						<%--<img src="http://lzcgecrowd.oss-cn-chengdu.aliyuncs.com/crowd/20200402/e8088490e8d24e079241387c1ca8c21a.jpg">--%>
-					  </div>
-                      <hr>
-				  </c:forEach>
+
+
+						<img src="${project.headerPicturePath}">
+
 				  
 				  <%--<button id="passBtn" type="button" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> 审核通过</button>--%>
 				  <%--<button id="refuseBtn" type="button" class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> 审核拒绝</button>--%>

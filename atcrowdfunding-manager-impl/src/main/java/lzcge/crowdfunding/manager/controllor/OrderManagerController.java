@@ -1,10 +1,8 @@
 package lzcge.crowdfunding.manager.controllor;
 
-import lzcge.crowdfunding.entity.Project;
-
-import lzcge.crowdfunding.manager.service.ProjectService;
+import lzcge.crowdfunding.entity.Order;
+import lzcge.crowdfunding.manager.service.OrderService;
 import lzcge.crowdfunding.result.JsonResult;
-
 import lzcge.crowdfunding.util.Page;
 import lzcge.crowdfunding.util.StringUtil;
 import lzcge.crowdfunding.vo.Data;
@@ -14,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.HashMap;
@@ -28,45 +25,33 @@ import java.util.Map;
  **/
 
 @Controller
-@RequestMapping("/projectManager")
-public class ProjectManagerController {
+@RequestMapping("/orderManager")
+public class OrderManagerController {
 
 
 	@Autowired
-	private ProjectService projectService;
+	private OrderService orderService;
 
 
 	@RequestMapping("/index")
 	public String index() {
-		return "projectmanager/index";
+		return "order/index";
 	}
 
 	@RequestMapping("/add")
 	public String add() {
-		return "projectmanager/add";
+		return "order/add";
 	}
-
-
-	@RequestMapping("/show")
-	public String show(@RequestParam("id") Integer id, Model model){
-		Project project = projectService.queryById(id);
-		model.addAttribute("project",project);
-		return "projectmanager/show";
-	}
-
 
 	@RequestMapping("/edit")
 	public String edit( Integer id, Model model ) {
 
 		// 根据主键查询项目信息
-		Project project = projectService.queryById(id);
-		model.addAttribute("project", project);
+		Order order = orderService.queryById(id);
+		model.addAttribute("order", order);
 
-		return "projectmanager/edit";
+		return "order/edit";
 	}
-
-
-
 
 	/**
 	 * 批量删除
@@ -79,7 +64,7 @@ public class ProjectManagerController {
 		JsonResult result = new JsonResult();
 
 		try {
-			int count = projectService.deleteProjects(ds);
+			int count = orderService.deleteOrders(ds);
 			if ( count == ds.getIds().size() ) {
 				result.setData(200);
 				result.setInfo("success");
@@ -100,7 +85,7 @@ public class ProjectManagerController {
 		JsonResult result = new JsonResult();
 
 		try {
-			int count = projectService.deleteProject(id);
+			int count = orderService.deleteOrder(id);
 			if ( count == 1 ) {
 				result.setData(200);
 				result.setInfo("success");
@@ -118,11 +103,11 @@ public class ProjectManagerController {
 
 	@ResponseBody
 	@RequestMapping("/update")
-	public Object update( Project project ) {
+	public Object update( Order order ) {
 		JsonResult result = new JsonResult();
 
 		try {
-			projectService.updateProject(project);
+			orderService.updateOrder(order);
 			result.setData(200);
 			result.setInfo("success");
 
@@ -153,16 +138,16 @@ public class ProjectManagerController {
 
 		try {
 			// 查询项目数据
-			Map<String, Object> projectMap = new HashMap<String, Object>();
-			projectMap.put("pageno", pageno);
-			projectMap.put("pagesize", pagesize);
+			Map<String, Object> orderMap = new HashMap<String, Object>();
+			orderMap.put("pageno", pageno);
+			orderMap.put("pagesize", pagesize);
 			if ( StringUtil.isNotEmpty(pagetext) ) {
 				pagetext = pagetext.replaceAll("%", "\\\\%");
 			}
-			projectMap.put("pagetext", pagetext);
+			orderMap.put("pagetext", pagetext);
 
 			// 分页查询
-			Page<Project> page = projectService.pageQueryProject(projectMap);
+			Page<Order> page = orderService.pageQueryOrder(orderMap);
 			//result.setPage(page);
 			result.setData(page);
 			result.setInfo("success");
